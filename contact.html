@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tel.: +48 890-890-890, Adres email: biuro@forest.pl, Adres: ul. Jasnogórska 2, 31-000 Kraków. Wybierz wygodną formę kontaktu i odwiedź Forest Park">
+    <meta name="keywords" content="kontakt, adres, email, telefon, forest, najpiękniejszy park, spędzanie czasu z rodziną, weekend, czas wolny, urlop">
+    <link rel="icon" href="dist/img/pine-icon.png" type="image/png">
+    <title>Kontakt | Forest - Najpiękniejszy Park w Twojej Okolicy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+
+<body id="contact-page">
+
+    <!-- =====================================
+NAV
+====================================== -->
+<nav class="nav paddingForThreeTopParts">
+    <div class="logo">
+        <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+        <p class="logo__text"><a href="#">Forest</a></p>
+    </div>
+    <button class="burger-btn">
+        <img src="dist/img/menu.svg" class="burger-btn__img">
+    </button>
+    <div class="containerForSideMenu">
+        <ul class="nav-list" onclick="classCheck()">
+            <li class="nav-list__item"><a href="index.html#home" class="nav__link">Home</a></li>
+            <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
+            <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
+            <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- =====================================
+CONTACT PAGE
+======================================= -->
+    <main>
+        <section class="contact section smallerWrapper">
+            <h1 class="section__title">kontakt</h1>
+            <!-- MAP AND ADDRESS 
+====================-->
+            <div class="address">
+                <div class="address__map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.975805237627!2d19.925234743349026!3d50.06299282571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b10235794ff%3A0xe0ba86c80b8e37ae!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1689677747871!5m2!1spl!2spl"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="address__data">
+                    <p>Forest Group Company Ltd.</p>
+                    <p>ul. Jasnogórska 2</p>
+                    <p>31-000 Kraków</p>
+                    <p>890-890-890</p>
+                    <div class="address__data-socials">
+                        <div class="icon"><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer nofollow"><i class="ti ti-brand-facebook"></i></a>
+                        </div>
+                        <div class="icon"><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer nofollow"><i class="ti ti-brand-instagram"></i></a>
+                        </div>
+                        <div class="icon"><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer nofollow"><i class="ti ti-brand-twitter"></i></a></div>
+                    </div>
+                    <img src="dist/img/pine-gdacd9ee42_640.png" class="pinetree" alt="drzewo ozdoba">
+                    <img src="dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--two" alt="gałązka ozdoba">
+                </div>
+            </div>
+        </section>
+
+        <!-- FORM
+============== -->
+<h2 class="section__title contact__heading">napisz do nas</h2>
+<form action="" class="form">
+    <div class="form__innerContainer smallerWrapper">
+                <p class="sendingMsg">Dziękujemy za wiadomość!</p>
+                <div class="form__box">
+                    <input type="text" name="name" id="name" required>
+                    <span>Imię</span>
+                    <p class="error-text">error</p>
+                </div>
+                <div class="form__box">
+                    <input type="text" name="email" id="email" required>
+                    <span>Adres mailowy</span>
+                    <p class="error-text">error</p>
+                </div>
+                <div class="form__box">
+                    <textarea id="msg" maxlength="1000" required></textarea>
+                    <span>Treść wiadomości</span>
+                    <p class="error-text">error</p>
+                </div>
+                <div class="control-buttons">
+                    <button class="btn clear" onclick="this.blur()">Wyczyść</button>
+                    <button class="btn send" onclick="this.blur()">Wyślij</button>
+                </div>
+            </div>
+        </form>
+    </main>
+
+
+    <!-- =====================================
+"PREFOOTER" SECTION && FOOTER
+======================================= -->
+    <footer>
+        <section class="prefooter section contactPrefooter">
+            <div class="smallerWrapper">
+                <div class="logo">
+                    <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                    <p class="logo__text"><a href="index.html">Forest</a></p>
+                </div>
+                <div class="prefooter__links">
+                    <div class="prefooter__links-box">
+                        <h3 class="subHeading">O nas</h3>
+                        <ul class="prefooter__links-list">
+                            <li><a href="#">Historia</a></li>
+                            <li><a href="#">Parki</a></li>
+                            <li><a href="#">Opinie</a></li>
+                        </ul>
+                    </div>
+                    <div class="secondList prefooter__links-box">
+                        <h3 class="subHeading">Nasza firma</h3>
+                        <ul class="prefooter__links-list">
+                            <li><a href="#">Praca</a></li>
+                            <li><a href="#">Kadry</a></li>
+                            <li><a href="#">Zarząd</a></li>
+                        </ul>
+                    </div>
+                    <div class="prefooter__links-box">
+                        <h3 class="subHeading">Dokumenty</h3>
+                        <ul class="prefooter__links-list">
+                            <li><a href="#">Wnioski</a></li>
+                            <li><a href="#">Rezerwacje</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p>&copy; <span id="year"></span> Forest Group Company Ltd.</p>
+    </footer>
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>

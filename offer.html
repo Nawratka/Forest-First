@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Wybierz spośród najlepszych ofert, nowości, bestsellery, limitowana oferta. Każdy znajdzie coś dla siebie i najbliższych. Najlepsze pomysły jak spędzić czas">
+    <meta name="keywords"
+        content="oferta, opcje, wycieczki, rodzaje, cena, cennik, propozycje, pomysł, jak spędzić czas z rodziną, integracja, camping, obóz">
+    <link rel="icon" href="./dist/img/pine-icon.png" type="image/png">
+    <title>Oferta | Forest - Najpiękniejszy Park w Twojej Okolicy</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+
+    <!-- =====================================
+NAV
+====================================== -->
+<nav class="nav paddingForThreeTopParts">
+    <div class="logo">
+        <img src="./dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+        <p class="logo__text"><a href="#">Forest</a></p>
+    </div>
+    <button class="burger-btn">
+        <img src="dist/img/menu.svg" class="burger-btn__img">
+    </button>
+    <div class="containerForSideMenu">
+        <ul class="nav-list" onclick="classCheck()">
+            <li class="nav-list__item"><a href="index.html#home" class="nav__link">Home</a></li>
+            <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
+            <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
+            <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+    <!-- =====================================
+"OFERTA" SECTION
+======================================= -->
+    <main>
+        <section class="offer section">
+            <h2 class="section__title">oferta</h2>
+            <div class="bgBox--first">
+                <h3 class="offer__subtitle">Nowości</h3>
+                <p class="offer__p--page">Na życzenie naszych klientów rozszerzamy ofertę o nowości!</p>
+                <div class="offer__box offer__box-page smallerWrapper">
+                    <div class="offer__box-card">
+                        <p class="offer__box-card--name">Wycieczka</p>
+                        <p class="offer__box-card--price">$20</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                    <div class="offer__box-card">
+                        <p class="offer__box-card--name">Animator</p>
+                        <p class="offer__box-card--price">$60</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                    <div class="offer__box-card">
+                        <p class="offer__box-card--name">Integracja</p>
+                        <p class="offer__box-card--price">$90</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bgBox--second">
+                <h3 class="offer__subtitle">Nasze bestsellery</h3>
+                <p class="offer__p--page">Wybierz jedną z naszych wspaniałych ofert!</p>
+                <div class="offer__box offer__box-page offer__box-page--second smallerWrapper">
+                    <div class="offer__box-card">
+                        <p class="offer__box-card--name">Demo</p>
+                        <p class="offer__box-card--price">$0</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                    <div class="offer__box-card">
+                        <p class="offer__box-card--name">Standard</p>
+                        <p class="offer__box-card--price">$99</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                    <div class="offer__box-card">
+                        <p class="offer__box-card--name">Premium</p>
+                        <p class="offer__box-card--price">$299</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bgBox--third">
+                <h3 class="offer__subtitle">Oferta limitowana</h3>
+                <p class="offer__p--page">Gratka dla największych fanów Forest!</p>
+                <div class="offer__box offer__box-page offer__box-page--third smallerWrapper">
+                    <div class="offer__box-card limitedOffer">
+                        <p class="offer__box-card--name">Camping</p>
+                        <p class="offer__box-card--price">Ustalane indywidualnie</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                        </ul>
+                        <button class="offer__box-btn">Wybierz</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =====================================
+"PREFOOTER" SECTION && FOOTER
+======================================= -->
+    <footer>
+        <section class="prefooter">
+            <div class="smallerWrapper">
+                <div class="logo">
+                    <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                    <p class="logo__text"><a href="index.html">Forest</a></p>
+                </div>
+                <div class="prefooter__links">
+                    <div class="prefooter__links-box">
+                        <h3 class="subHeading">O nas</h3>
+                        <ul class="prefooter__links-list">
+                            <li><a href="#">Historia</a></li>
+                            <li><a href="#">Parki</a></li>
+                            <li><a href="#">Opinie</a></li>
+                        </ul>
+                    </div>
+                    <div class="secondList prefooter__links-box">
+                        <h3 class="subHeading">Nasza firma</h3>
+                        <ul class="prefooter__links-list">
+                            <li><a href="#">Praca</a></li>
+                            <li><a href="#">Kadry</a></li>
+                            <li><a href="#">Zarząd</a></li>
+                        </ul>
+                    </div>
+                    <div class="prefooter__links-box">
+                        <h3 class="subHeading">Dokumenty</h3>
+                        <ul class="prefooter__links-list">
+                            <li><a href="#">Wnioski</a></li>
+                            <li><a href="#">Rezerwacje</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <p>&copy; <span id="year"></span> Forest Group Company Ltd.</p>
+    </footer>
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
