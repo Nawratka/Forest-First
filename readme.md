@@ -11,9 +11,13 @@ Technologies used:
 * CSS (Sass)
 * JavaScript
 
+## Live:
+https://nawratka.github.io/Forest-First/
+
 Screenshots of mockup:
 ![Screenshot of mockup of home page Forest](/dist/img/screenshot1.pdf)
-![Second screenshot of mockup of home page Forest](/dist/img/screenshot2.pdf)
+
+![Second screenshot of mockup of home page Forest](/dist/img/Screenshot2.pdf)
 
 
 
