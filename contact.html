@@ -19,13 +19,18 @@
 
 <body id="contact-page">
 
+    <div class="cookie-box">
+        <p>Nasza strona korzysta z ciasteczek!</p>
+        <button class="cookie-btn">Akceptuję</button>
+    </div>
+
     <!-- =====================================
 NAV
 ====================================== -->
     <nav class="nav paddingForThreeTopParts">
         <div class="logo">
             <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="#">Forest</a></p>
+            <p class="logo__text"><a href="index.html">Forest</a></p>
         </div>
         <button class="burger-btn">
             <img src="dist/img/menu.svg" class="burger-btn__img">
@@ -44,7 +49,7 @@ CONTACT PAGE
 ======================================= -->
     <main>
         <section class="contact section smallerWrapper">
-            <h1 class="section__title">kontakt</h1>
+            <h1 class="section__title subpage-title">kontakt</h1>
             <!-- MAP AND ADDRESS 
 ====================-->
             <div class="address">
@@ -77,9 +82,9 @@ CONTACT PAGE
 
         <!-- FORM
 ============== -->
-        <h2 class="section__title contact__heading">napisz do nas</h2>
-        <form action="" class="form">
-            <div class="form__innerContainer smallerWrapper">
+<form action="" class="form">
+    <div class="form__innerContainer smallerWrapper">
+                <h2 class="section__title contact__heading">napisz do nas</h2>
                 <p class="sendingMsg">Dziękujemy za wiadomość!</p>
                 <div class="form__box">
                     <input type="text" name="name" id="name" required>
@@ -87,6 +92,7 @@ CONTACT PAGE
                     <p class="error-text">error</p>
                 </div>
                 <div class="form__box">
+                    <!-- input type="text" to correct span animation -->
                     <input type="text" name="email" id="email" required>
                     <span>Adres mailowy</span>
                     <p class="error-text">error</p>
@@ -96,6 +102,11 @@ CONTACT PAGE
                     <span>Treść wiadomości</span>
                     <p class="error-text">error</p>
                 </div>
+                <div class="form__box form__box-agreement">
+                    <input type="checkbox" id="agreement" name="agreement" class="agreement-checkbox" required/>
+                    <p class="agreement-text">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem danych osobowych jest Forest Group Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.</p>
+                </div>
+
                 <div class="control-buttons">
                     <button class="btn clear" onclick="this.blur()">Wyczyść</button>
                     <button class="btn send" onclick="this.blur()">Wyślij</button>
@@ -147,5 +158,4 @@ CONTACT PAGE
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>
-
 </html>
