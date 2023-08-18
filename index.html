@@ -19,28 +19,30 @@
 <body class="main-page">
 
     <div class="cookie-box">
-        <p>Nasza strona korzysta z ciasteczek!</p>
+        <p>Nasza strona korzysta z ciasteczek! <i class="ti ti-cookie"></i></p>
         <button class="cookie-btn">Akceptuję</button>
     </div>
 
     <!-- =====================================
 NAV
 ====================================== -->
-    <nav class="nav paddingForThreeTopParts">
-        <div class="logo">
-            <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="#">Forest</a></p>
-        </div>
-        <button class="burger-btn">
-            <img src="dist/img/menu.svg" class="burger-btn__img">
-        </button>
-        <div class="containerForSideMenu">
-            <ul class="nav-list" onclick="classCheck()">
-                <li class="nav-list__item"><a href="#home" class="nav__link active">Home</a></li>
-                <li class="nav-list__item"><a href="#aboutus" class="nav__link">O nas</a></li>
-                <li class="nav-list__item"><a href="#offer" class="nav__link">Oferta</a></li>
-                <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
-            </ul>
+    <nav class="nav">
+        <div class="wrapperForThreeTopParts">
+            <div class="logo">
+                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                <p class="logo__text"><a href="#">Forest</a></p>
+            </div>
+            <button class="burger-btn">
+                <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
+            </button>
+            <div class="containerForSideMenu">
+                <ul class="nav-list" onclick="classCheck()">
+                    <li class="nav-list__item"><a href="#home" class="nav__link active">Home</a></li>
+                    <li class="nav-list__item"><a href="#aboutus" class="nav__link">O nas</a></li>
+                    <li class="nav-list__item"><a href="#offer" class="nav__link">Oferta</a></li>
+                    <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -50,7 +52,7 @@ HEADER
     <header class="header scrollSection" id="home">
         <div class="header__hero-img">
             <div class="header__bg"></div>
-            <div class="header__text paddingForThreeTopParts">
+            <div class="header__text wrapperForThreeTopParts">
                 <p class="header__text-p">Forest Group</p>
                 <h1 class="header__text-title">Najpiękniejszy park w Twojej okolicy!</h1>
                 <button class="header__btn"><a href="#aboutus">Odkryj</a></button>
@@ -61,7 +63,7 @@ HEADER
         "O NAS" SECTION
         ====================================== -->
     <main>
-        <section id="aboutus" class="about-us section paddingForThreeTopParts scrollSection">
+        <section id="aboutus" class="about-us section scrollSection">
             <h2 class="section__title">o nas</h2>
             <div class="about-us__innerContainer">
                 <img src="dist/img/waters-3095682_640.jpg" class="about-us__img"
@@ -131,8 +133,7 @@ HEADER
                     <button class="offer__box-btn">Wybierz</button>
                 </div>
             </div>
-            <!-- <p class="offer__p offer__p--link"><a href="offer.html">To nie wszystko, <span>poznaj</span> pozostałe propozycje ➜</a></p> -->
-            <p class="offer__p offer__p--link"><a href="offer.html">To nie wszystko, <span>poznaj</span> pozostałe propozycje <i class="ti ti-math-greater"></i><i class="ti ti-math-greater"></i></a></p>
+            <p class="offer__p offer__p--link"><a href="offer.html">Dowiedz się <span>więcej </span><i class="ti ti-chevrons-right"></i></a></p>
         </section>
     </main>
 
@@ -177,4 +178,5 @@ HEADER
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>
+
 </html>

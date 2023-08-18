@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-    content="Wybierz spośród najlepszych ofert, nowości, bestsellery, limitowana oferta. Każdy znajdzie coś dla siebie i najbliższych. Najlepsze pomysły jak spędzić czas">
+        content="Wybierz spośród najlepszych ofert, nowości, bestsellery, limitowana oferta. Każdy znajdzie coś dla siebie i najbliższych. Najlepsze pomysły jak spędzić czas">
     <meta name="keywords"
-    content="oferta, opcje, wycieczki, rodzaje, cena, cennik, propozycje, pomysł, jak spędzić czas z rodziną, integracja, camping, obóz">
+        content="oferta, opcje, wycieczki, rodzaje, cena, cennik, propozycje, pomysł, jak spędzić czas z rodziną, integracja, camping, obóz">
     <link rel="icon" href="dist/img/pine-icon.png" type="image/png">
     <title>Oferta | Forest - Najpiękniejszy Park w Twojej Okolicy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,26 +27,171 @@
     <!-- =====================================
 NAV
 ====================================== -->
-    <nav class="nav paddingForThreeTopParts">
-        <div class="logo">
-            <img src="./dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="index.html">Forest</a></p>
-        </div>
-        <button class="burger-btn">
-            <img src="dist/img/menu.svg" class="burger-btn__img">
-        </button>
-        <div class="containerForSideMenu">
-            <ul class="nav-list" onclick="classCheck()">
-                <li class="nav-list__item"><a href="index.html#home" class="nav__link">Home</a></li>
-                <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
-                <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
-                <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
-            </ul>
+    <nav class="nav">
+        <div class="wrapperForThreeTopParts">
+            <div class="logo">
+                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                <p class="logo__text"><a href="index.html">Forest</a></p>
+            </div>
+            <button class="burger-btn">
+                <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
+            </button>
+            <div class="containerForSideMenu">
+                <ul class="nav-list" onclick="classCheck()">
+                    <li class="nav-list__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
+                    <li class="nav-list__item"><a href="index.html#offer" class="nav__link active">Oferta</a></li>
+                    <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
+
+    <!-- =====================================
+HEADER
+====================================== -->
+    <header class="header header--subpage scrollSection" id="home">
+        <div class="header__hero-img">
+            <div class="header__bg"></div>
+            <div class="header__text wrapperForThreeTopParts">
+                <p class="header__text-p">Forest Group</p>
+                <h1 class="header__text-title">Najpiękniejszy park <br class="brMobile">w Twojej okolicy!</h1>
+            </div>
+        </div>
+    </header>
     <!-- =====================================
 "OFERTA" SECTION
 ======================================= -->
+    <main>
+        <section class="section offerpage">
+            <h1 class="section__title subpage-title">oferta</h1>
+            <div class="offerpage__greenBg"></div>
+            <div class="offerpage__box wrapperForThreeTopParts">
+                <div class="offerpage__card offerpage__card--first">
+                    <div class="offerpage__card-picture">
+                        <div class="offerpage__card-img offerpage__card-img--firstImg"></div>
+                        <p class="offerpage__card-tag">Demo</p>
+                    </div>
+                    <div class="offerpage__card-info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde totam?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                        </p>
+                    </div>
+                    <div class="offerpage__card-price">
+                        <p class="offerpage__card-price-name">Demo</p>
+                        <p class="offerpage__card-price-value">$0</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offerpage__card-btn">Wybierz</button>
+                    </div>
+                </div>
+                <div class="offerpage__card offerpage__card--second">
+                    <div class="offerpage__card-picture">
+                        <div class="offerpage__card-img offerpage__card-img--secondImg"></div>
+                        <p class="offerpage__card-tag">Standard</p>
+                    </div>
+                    <div class="offerpage__card-info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde totam?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                        </p>
+                    </div>
+                    <div class="offerpage__card-price">
+                        <p class="offerpage__card-price-name">Standard</p>
+                        <p class="offerpage__card-price-value">$99</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offerpage__card-btn">Wybierz</button>
+                    </div>
+                </div>
+                <div class="offerpage__card offerpage__card--third">
+                    <div class="offerpage__card-picture">
+                        <div class="offerpage__card-img offerpage__card-img--thirdImg"></div>
+                        <p class="offerpage__card-tag">Premium</p>
+                    </div>
+                    <div class="offerpage__card-info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde totam?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                        </p>
+                    </div>
+                    <div class="offerpage__card-price">
+                        <p class="offerpage__card-price-name">Premium</p>
+                        <p class="offerpage__card-price-value">$299</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                        </ul>
+                        <button class="offerpage__card-btn">Wybierz</button>
+                    </div>
+                </div>
+
+            <!-- <div class="offerpage__card offerpage__card--second">
+                    <div class="offerpage__card-price">
+                        <p class="offerpage__card-priceName">Standard</p>
+                        <p class="offerpage__card-priceValue">$99</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                        </ul>
+                        <button class="offerpage__card-btn">Wybierz</button>
+                    </div>
+                    <div class="offerpage__card-info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde totam?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                        </p>
+                    </div>
+                    <div class="offerpage__card-img secondImg">
+                        <p class="offerpage__card-tag">Standard</p>
+                    </div>
+
+                </div>
+                <div class="offerpage__card offerpage__card--third">
+                    <div class="offerpage__card-img thirdImg">
+                        <p class="offerpage__card-tag">Premium</p>
+                    </div>
+                    <div class="offerpage__card-info">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde totam?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                        </p>
+                    </div>
+                    <div class="offerpage__card-price">
+                        <p class="offerpage__card-priceName">Premium</p>
+                        <p class="offerpage__card-priceValue">$299</p>
+                        <ul>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                        </ul>
+                        <button class="offerpage__card-btn">Wybierz</button>
+                    </div> -->
+            <!-- </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- 
     <main>
         <section class="offer section offer--page">
             <h2 class="section__title subpage-title">oferta</h2>
@@ -155,7 +300,8 @@ NAV
                 </div>
             </div>
         </section>
-    </main>
+    </main> 
+-->
 
     <!-- =====================================
 "PREFOOTER" SECTION && FOOTER

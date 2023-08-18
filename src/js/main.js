@@ -5,7 +5,7 @@ const container = document.querySelector('.containerForSideMenu');
 const year = document.getElementById('year');
 const menuItems = document.querySelectorAll('.nav__link');
 const scrollSpySections = document.querySelectorAll('.scrollSection');
-const media = window.matchMedia('(min-width: 463px)');
+// const media = window.matchMedia('(min-width: 463px)');
 const cookieBox = document.querySelector('.cookie-box')
 const cookieBtn = document.querySelector('.cookie-btn')
 
@@ -25,32 +25,32 @@ const handleCookieBox = () => {
 // SHOW AND HIDE SIDE MENU FOR MOBILE DEVICES & DISABLE SCROLLING
 // ==============================================
 const classCheck = () => {
-	if (window.innerWidth <= 480) {
+	
 		if (container.classList.contains('show')) {
-			container.classList.add('close');
+			body.classList.remove('bodyHidden')
+			body.classList.add('bodyShow')
 			container.classList.remove('show');
-			body.style.overflow = 'visible';
-			html.style.overflow = 'visible';
+			container.classList.add('close');
 		} else {
-			container.classList.add('show');
+			body.classList.remove('bodyShow')
+			body.classList.add('bodyHidden')
 			container.classList.remove('close');
-			body.style.overflow = 'hidden';
-			html.style.overflow = 'hidden';
+			container.classList.add('show');
 		}
-	}
+	
 };
 
 // CHECKS IF MEDIA MATHCES AND DELETES FALSE VISIBILITY OF NAVBAR-UL LIST BY PAGE RESIZING
 //==============================================
-function testMedia(media) {
-	if (media.matches) {
-		container.classList.add('show2');
-		container.classList.remove('close');
-	} else {
-		container.classList.remove('show');
-		container.classList.remove('show2');
-	}
-}
+// function testMedia(media) {
+// 	if (media.matches) {
+// 		container.classList.add('show2');
+// 		container.classList.remove('close');
+// 	} else {
+// 		container.classList.remove('show');
+// 		container.classList.remove('show2');
+// 	}
+// }
 
 //REFRESH YEAR IN FOOTER
 // ==============================================
@@ -178,13 +178,13 @@ burgerBtn.addEventListener('click', classCheck);
 window.addEventListener('click', (e) =>
 	e.target === container ? classCheck() : false
 );
-media.addEventListener('change', testMedia);
+// media.addEventListener('change', testMedia);
 window.addEventListener('scroll', handleScrollSpy);
 cookieBtn.addEventListener('click', handleCookieBox);
 
 // MAIN FUNCTIONS AT START
 // =============================================
-testMedia(media);
+// testMedia(media);
 whatsPage();
 showYear();
 showCookie();

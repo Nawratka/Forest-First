@@ -18,7 +18,6 @@
 </head>
 
 <body id="contact-page">
-
     <div class="cookie-box">
         <p>Nasza strona korzysta z ciasteczek!</p>
         <button class="cookie-btn">Akceptuję</button>
@@ -27,39 +26,74 @@
     <!-- =====================================
 NAV
 ====================================== -->
-    <nav class="nav paddingForThreeTopParts">
-        <div class="logo">
-            <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="index.html">Forest</a></p>
-        </div>
-        <button class="burger-btn">
-            <img src="dist/img/menu.svg" class="burger-btn__img">
-        </button>
-        <div class="containerForSideMenu">
-            <ul class="nav-list" onclick="classCheck()">
-                <li class="nav-list__item"><a href="index.html#home" class="nav__link">Home</a></li>
-                <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
-                <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
-                <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
-            </ul>
+    <nav class="nav">
+        <div class="wrapperForThreeTopParts">
+            <div class="logo">
+                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                <p class="logo__text"><a href="index.html">Forest</a></p>
+            </div>
+            <button class="burger-btn">
+                <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
+            </button>
+            <div class="containerForSideMenu">
+                <ul class="nav-list" onclick="classCheck()">
+                    <li class="nav-list__item"><a href="index.html#home" class="nav__link">Home</a></li>
+                    <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
+                    <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
+                    <li class="nav-list__item"><a href="contact.html" class="nav__link  active">Kontakt</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
     <!-- =====================================
 CONTACT PAGE
-======================================= -->
-    <main>
-        <section class="contact section smallerWrapper">
-            <h1 class="section__title subpage-title">kontakt</h1>
-            <!-- MAP AND ADDRESS 
-====================-->
+=======================================  -->
+    <main class="contact-subpage">
+        <h1 class="section__title subpage-title">kontakt</h1>
+        <section class="contact section wrapperForThreeTopParts">
             <div class="address">
-                <div class="address__map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.975805237627!2d19.925234743349026!3d50.06299282571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b10235794ff%3A0xe0ba86c80b8e37ae!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1689677747871!5m2!1spl!2spl"
-                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="address__form">
+                    <div class="form__innerContainer">
+                        <h2 class="section__title contact__heading">napisz do nas</h2>
+                        <p class="sendingMsg">Dziękujemy za wiadomość!</p>
+                        <form action="" class="form">
+                            <div class="form__box">
+                                <input type="text" name="name" id="name" required>
+                                <span>Imię</span>
+                                <p class="error-text">error</p>
+                            </div>
+                            <div class="form__box">
+                                <!-- input type="text" to correct span animation -->
+                                <input type="text" name="email" id="email" required>
+                                <span>Adres mailowy</span>
+                                <p class="error-text">error</p>
+                            </div>
+                            <div class="form__box">
+                                <textarea id="msg" maxlength="1000" required></textarea>
+                                <span>Treść wiadomości</span>
+                                <p class="error-text">error</p>
+                            </div>
+                            <div class="form__box form__box-agreement">
+                                <input type="checkbox" id="agreement" name="agreement" class="agreement-checkbox"
+                                    required />
+                                <p class="agreement-text">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie
+                                    z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie
+                                    danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem
+                                    danych osobowych jest Forest Group Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.
+                                </p>
+                            </div>
+
+                            <div class="control-buttons">
+                                <button class="btn clear" onclick="this.blur()">Wyczyść</button>
+                                <button class="btn send" onclick="this.blur()">Wyślij</button>
+                            </div>
+                        </form>
+                        <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--one" alt="">
+                        <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--two" alt="">
+                    </div>
                 </div>
                 <div class="address__data">
+                    <h2 class="section__title contact__heading">adres</h2>
                     <p>Forest Group Company Ltd.</p>
                     <p>ul. Jasnogórska 2</p>
                     <p>31-000 Kraków</p>
@@ -77,46 +111,15 @@ CONTACT PAGE
                     <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--one" alt="">
                     <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--two" alt="">
                 </div>
+                <div class="map wrapperForThreeTopParts">
+                    <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.975805237627!2d19.925234743349026!3d50.06299282571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b10235794ff%3A0xe0ba86c80b8e37ae!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1689677747871!5m2!1spl!2spl"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </div>
         </section>
-
-        <!-- FORM
-============== -->
-<form action="" class="form">
-    <div class="form__innerContainer smallerWrapper">
-                <h2 class="section__title contact__heading">napisz do nas</h2>
-                <p class="sendingMsg">Dziękujemy za wiadomość!</p>
-                <div class="form__box">
-                    <input type="text" name="name" id="name" required>
-                    <span>Imię</span>
-                    <p class="error-text">error</p>
-                </div>
-                <div class="form__box">
-                    <!-- input type="text" to correct span animation -->
-                    <input type="text" name="email" id="email" required>
-                    <span>Adres mailowy</span>
-                    <p class="error-text">error</p>
-                </div>
-                <div class="form__box">
-                    <textarea id="msg" maxlength="1000" required></textarea>
-                    <span>Treść wiadomości</span>
-                    <p class="error-text">error</p>
-                </div>
-                <div class="form__box form__box-agreement">
-                    <input type="checkbox" id="agreement" name="agreement" class="agreement-checkbox" required/>
-                    <p class="agreement-text">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem danych osobowych jest Forest Group Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.</p>
-                </div>
-
-                <div class="control-buttons">
-                    <button class="btn clear" onclick="this.blur()">Wyczyść</button>
-                    <button class="btn send" onclick="this.blur()">Wyślij</button>
-                </div>
-            </div>
-
-        </form>
     </main>
-
-
     <!-- =====================================
 "PREFOOTER" SECTION && FOOTER
 ======================================= -->
@@ -158,4 +161,5 @@ CONTACT PAGE
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>
+
 </html>
