@@ -98,7 +98,8 @@ const whatsPage = () => {
 		// FUNCTION CHECKS ALL INPUTS LENGTH AND MATCHES ID WITH SERIAL NR TO CONNECT WITH RIGHT errorText UNDER INPUT. FOR EACH INPUT ARE DEDICATED ERROR MESSAGES. WHEN ERROR DISAPPEARS FUNCTION PUSHES [1] TO correctFieldsArray. 3 ELEMENTS = SUCCESS
 		// ==============================================
 		const engine = (id, serial, valueMinLength, msgerror) => {
-			if (id.value === '' || id.value.length < valueMinLength) {
+			const innerValue = id.value;
+			if (innerValue.trim() === '' || innerValue.trim().length < valueMinLength) {
 				errorText[serial].textContent = msgerror;
 				errorText[serial].style.opacity = '1';
 			} else {
