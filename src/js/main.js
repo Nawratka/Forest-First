@@ -1,54 +1,52 @@
 const body = document.querySelector('body');
 const html = document.querySelector('html');
-const burgerBtn = document.querySelector('.burger-btn');
-const container = document.querySelector('.containerForSideMenu');
+const burgerBtn = document.querySelector('.nav__btn');
+const sideMenu = document.querySelector('.side-menu');
 const year = document.getElementById('year');
-const menuItems = document.querySelectorAll('.nav__link');
-const scrollSpySections = document.querySelectorAll('.scrollSection');
+const menuItems = document.querySelectorAll('.nav__list-link');
+const scrollSpySections = document.querySelectorAll('.scroll-section');
 // const media = window.matchMedia('(min-width: 463px)');
-const cookieBox = document.querySelector('.cookie-box')
-const cookieBtn = document.querySelector('.cookie-btn')
+const cookieBox = document.querySelector('.cookie');
+const cookieBtn = document.querySelector('.cookie__btn');
 
 // COOKIES HANDLE
 // ==============================================
 const showCookie = () => {
-	const cookieAcceptation = localStorage.getItem('cookie')
+	const cookieAcceptation = localStorage.getItem('cookie');
 	if (cookieAcceptation) {
-		cookieBox.classList.add('cookiehide')
+		cookieBox.classList.add('cookiehide');
 	}
-}
+};
 const handleCookieBox = () => {
-	localStorage.setItem('cookie', 'true')
-	cookieBox.classList.add('cookiehide')
-}
+	localStorage.setItem('cookie', 'true');
+	cookieBox.classList.add('cookiehide');
+};
 
 // SHOW AND HIDE SIDE MENU FOR MOBILE DEVICES & DISABLE SCROLLING
 // ==============================================
 const classCheck = () => {
-	
-		if (container.classList.contains('show')) {
-			body.classList.remove('bodyHidden')
-			body.classList.add('bodyShow')
-			container.classList.remove('show');
-			container.classList.add('close');
-		} else {
-			body.classList.remove('bodyShow')
-			body.classList.add('bodyHidden')
-			container.classList.remove('close');
-			container.classList.add('show');
-		}
-	
+	if (sideMenu.classList.contains('show')) {
+		body.classList.remove('bodyHidden');
+		body.classList.add('bodyShow');
+		sideMenu.classList.remove('show');
+		sideMenu.classList.add('close');
+	} else {
+		body.classList.remove('bodyShow');
+		body.classList.add('bodyHidden');
+		sideMenu.classList.remove('close');
+		sideMenu.classList.add('show');
+	}
 };
 
 // CHECKS IF MEDIA MATHCES AND DELETES FALSE VISIBILITY OF NAVBAR-UL LIST BY PAGE RESIZING
 //==============================================
 // function testMedia(media) {
 // 	if (media.matches) {
-// 		container.classList.add('show2');
-// 		container.classList.remove('close');
+// 		sideMenu.classList.add('show2');
+// 		sideMenu.classList.remove('close');
 // 	} else {
-// 		container.classList.remove('show');
-// 		container.classList.remove('show2');
+// 		sideMenu.classList.remove('show');
+// 		sideMenu.classList.remove('show2');
 // 	}
 // }
 
@@ -86,12 +84,13 @@ const whatsPage = () => {
 	if (body.id === 'contact-page') {
 		const name = document.querySelector('#name');
 		const email = document.querySelector('#email');
+		const emailLabel = email.nextElementSibling;
 		const msg = document.querySelector('#msg');
-		const clearBtn = document.querySelector('.clear');
-		const sendBtn = document.querySelector('.send');
-		let errorText = document.getElementsByClassName('error-text');
-		const sendingMsg = document.querySelector('.sendingMsg');
-		const checkbox = document.querySelector('.agreement-checkbox');
+		const clearBtn = document.querySelector('.clear-btn');
+		const sendBtn = document.querySelector('.send-btn');
+		let errorText = document.getElementsByClassName('form-box__error-text');
+		const sendingMsg = document.querySelector('.sending-msg');
+		const checkbox = document.querySelector('.agreement-box__checkbox');
 		let correctFieldsArray = [];
 		checkbox.checked = false;
 
@@ -99,7 +98,10 @@ const whatsPage = () => {
 		// ==============================================
 		const engine = (id, serial, valueMinLength, msgerror) => {
 			const innerValue = id.value;
-			if (innerValue.trim() === '' || innerValue.trim().length < valueMinLength) {
+			if (
+				innerValue.trim() === '' ||
+				innerValue.trim().length < valueMinLength
+			) {
 				errorText[serial].textContent = msgerror;
 				errorText[serial].style.opacity = '1';
 			} else {
@@ -130,29 +132,25 @@ const whatsPage = () => {
 		const clearStuff = () => {
 			[name, email, msg].forEach((item) => {
 				item.value = '';
-				const allErrors = document.querySelectorAll('.error-text');
+				const allErrors = document.querySelectorAll('.form-box__error-text');
 				allErrors.forEach((el) => {
 					el.style.opacity = '0';
 				});
 			});
-			checkbox.classList.remove('checkboxError');
+			checkbox.classList.remove('checkbox-error');
 			checkbox.checked = false;
 		};
 
 		const checkboxControl = () => {
 			if (checkbox.checked === true) {
-				checkbox.classList.remove('checkboxError');
+				checkbox.classList.remove('checkbox-error');
 			} else {
-				checkbox.classList.add('checkboxError');
+				checkbox.classList.add('checkbox-error');
 			}
 		};
 
 		// CONTACT-PAGE LISTENERS
 		// ==============================================
-
-		checkbox.addEventListener('change', () => {
-			checkboxControl();
-		});
 		clearBtn.addEventListener('click', (e) => {
 			e.preventDefault();
 			clearStuff();
@@ -170,6 +168,24 @@ const whatsPage = () => {
 				sendingMsg.classList.add('afterSendingMsg');
 			}
 		});
+		body.onload = clearStuff();
+		// LABEL FLOATING HANDLE FOR INPUT TYPE = 'EMAIL'
+		// ==============================================
+		document.addEventListener('click', (e) => {
+			if (e.target === email) {
+				emailLabel.style.top = '-2px';
+			} else if (e.target !== email && email.value === '') {
+				emailLabel.style.top = '21px';
+			}
+		});
+		document.addEventListener('keyup', (e) => {
+			if (e.target === email) {
+				emailLabel.style.top = '-2px';
+			} else if (e.target !== email && email.value === '') {
+				emailLabel.style.top = '21px';
+			}
+
+		});
 	}
 };
 
@@ -177,7 +193,7 @@ const whatsPage = () => {
 // ==============================================
 burgerBtn.addEventListener('click', classCheck);
 window.addEventListener('click', (e) =>
-	e.target === container ? classCheck() : false
+	e.target === sideMenu ? classCheck() : false
 );
 // media.addEventListener('change', testMedia);
 window.addEventListener('scroll', handleScrollSpy);

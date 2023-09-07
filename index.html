@@ -9,38 +9,39 @@
     <meta name="keywords" content="najpiękniejszy park, spędzanie czasu z rodziną, weekend, czas wolny, urlop">
     <link rel="icon" href="dist/img/pine-icon.png" type="image/png">
     <title>Forest | Najpięknieszy park w Twojej okolicy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body class="main-page">
 
-    <div class="cookie-box">
-        <p>Nasza strona korzysta z ciasteczek! <i class="ti ti-cookie"></i></p>
-        <button class="cookie-btn">Akceptuję</button>
+    <div class="cookie">
+        <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
+                class="cookie__img"></p>
+        <button class="cookie__btn" tabindex="1">Akceptuję</button>
     </div>
 
     <!-- =====================================
 NAV
 ====================================== -->
     <nav class="nav">
-        <div class="wrapperForThreeTopParts">
+        <div class="main-wrapper">
             <div class="logo">
                 <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                <p class="logo__text"><a href="#">Forest</a></p>
+                <p class="logo__text"><a href="#" class="logo__link" tabindex="2">Forest</a></p>
             </div>
-            <button class="burger-btn">
-                <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
+            <button class="nav__btn" tabindex="3">
+                <img src="dist/img/menu.svg" class="nav__btn-img" alt="burger button">
             </button>
-            <div class="containerForSideMenu">
-                <ul class="nav-list" onclick="classCheck()">
-                    <li class="nav-list__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav-list__item"><a href="#aboutus" class="nav__link">O nas</a></li>
-                    <li class="nav-list__item"><a href="#offer" class="nav__link">Oferta</a></li>
-                    <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
+            <div class="side-menu">
+                <ul class="nav__list" onclick="classCheck()">
+                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link active"
+                            tabindex="4">Home</a></li>
+                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5">O
+                            nas</a></li>
+                    <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" tabindex="6">Oferta</a>
+                    </li>
+                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link" tabindex="7">Kontakt</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -49,13 +50,13 @@ NAV
     <!-- =====================================
 HEADER
 ====================================== -->
-    <header class="header scrollSection" id="home">
+    <header class="header scroll-section" id="home">
         <div class="header__hero-img">
             <div class="header__bg"></div>
-            <div class="header__text wrapperForThreeTopParts">
+            <div class="header__text main-wrapper">
                 <p class="header__text-p">Forest Group</p>
-                <h1 class="header__text-title">Najpiękniejszy park w Twojej okolicy!</h1>
-                <button class="header__btn"><a href="#aboutus">Odkryj</a></button>
+                <h1 class="header__text-title">Najpiękniejszy park <br class="break__line">w Twojej okolicy!</h1>
+                <button class="header__btn"><a href="#about-us" class="header__btn-link">Odkryj</a></button>
             </div>
         </div>
     </header>
@@ -63,14 +64,16 @@ HEADER
         "O NAS" SECTION
         ====================================== -->
     <main>
-        <section id="aboutus" class="about-us section scrollSection">
+        <section id="about-us" class="about-us section scroll-section">
             <h2 class="section__title">o nas</h2>
-            <div class="about-us__innerContainer">
-                <img src="dist/img/waters-3095682_640.jpg" class="about-us__img"
-                    alt="jezioro otoczone drzewami, z wody wystaje kamień na którym rosnie drzewko">
+            <div class="about-us__inner-container">
+                <div class="about-us__picture">
+                    <img src="dist/img/waters-3095682_640.jpg" class="about-us__picture-img"
+                        alt="jezioro otoczone drzewami, z wody wystaje kamień na którym rosnie drzewko">
+                </div>
                 <div class="about-us__text">
-                    <h3>Niezapomniane przygody</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    <h3 class="about-us__text-title">Niezapomniane przygody</h3>
+                    <p class="about-us__text-p">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
                         commodo consequat.
@@ -86,95 +89,111 @@ HEADER
 ====================================== -->
         <section class="hero-img">
             <div class="hero-img__bg"></div>
-            <p class="hero-img__text smallerWrapper">Przygoda dla całej rodziny</p>
+            <p class="hero-img__text smaller-wrapper">Przygoda dla całej rodziny</p>
         </section>
 
         <!-- =====================================
 "OFERTA" SECTION
 ======================================= -->
-        <section id="offer" class="offer section scrollSection">
+        <section id="offer" class="offer section scroll-section">
             <h2 class="section__title">oferta</h2>
             <p class="offer__p">Wybierz jedną z naszych wspaniałych ofert!</p>
-            <div class="offer__box smallerWrapper">
-                <div class="offer__box-card">
-                    <p class="offer__box-card--name">Demo</p>
-                    <p class="offer__box-card--price">$0</p>
-                    <ul>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+            <div class="offer__box smaller-wrapper">
+                <div class="card">
+                    <p class="card__name">Demo</p>
+                    <p class="card__price">$0</p>
+                    <ul class="card__list">
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item card__list-item--negative"><img src="dist/img/minus2.svg" alt=""
+                                class="card__list-icon">opcja poza pakietem</li>
+                        <li class="card__list-item card__list-item--negative"><img src="dist/img/minus2.svg" alt=""
+                                class="card__list-icon">opcja poza pakietem</li>
+                        <li class="card__list-item card__list-item--negative"><img src="dist/img/minus2.svg" alt=""
+                                class="card__list-icon">opcja poza pakietem</li>
                     </ul>
-                    <button class="offer__box-btn">Wybierz</button>
+                    <button class="card__btn" tabindex="8">Wybierz</button>
                 </div>
-                <div class="offer__box-card">
-                    <p class="offer__box-card--name">Standard</p>
-                    <p class="offer__box-card--price">$99</p>
-                    <ul>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                <div class="card">
+                    <p class="card__name">Standard</p>
+                    <p class="card__price">$99</p>
+                    <ul class="card__list">
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item card__list-item--negative"><img src="dist/img/minus2.svg" alt=""
+                                class="card__list-icon">opcja poza pakietem</li>
+                        <li class="card__list-item card__list-item--negative"><img src="dist/img/minus2.svg" alt=""
+                                class="card__list-icon">opcja poza pakietem</li>
                     </ul>
-                    <button class="offer__box-btn">Wybierz</button>
+                    <button class="card__btn" tabindex="9">Wybierz</button>
                 </div>
-                <div class="offer__box-card">
-                    <p class="offer__box-card--name">Premium</p>
-                    <p class="offer__box-card--price">$299</p>
-                    <ul>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                <div class="card">
+                    <p class="card__name">Premium</p>
+                    <p class="card__price">$299</p>
+                    <ul class="card__list">
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
+                        <li class="card__list-item"><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja
+                            w pakiecie</li>
                     </ul>
-                    <button class="offer__box-btn">Wybierz</button>
+                    <button class="card__btn" tabindex="10">Wybierz</button>
                 </div>
             </div>
-            <p class="offer__p offer__p--link"><a href="offer.html">Dowiedz się <span>więcej </span><i class="ti ti-chevrons-right"></i></a></p>
+            <p class="offer__p offer__p--last"><a href="offer.html" class="offer__link" tabindex="11">Dowiedz się <span
+                        class="offer__link--bold">więcej...</span></a></p>
         </section>
     </main>
 
     <!-- =====================================
 "PREFOOTER" SECTION && FOOTER
 ======================================= -->
-    <footer>
+    <footer class="footer">
         <section class="prefooter section">
-            <div class="smallerWrapper">
+            <div class="smaller-wrapper">
                 <div class="logo">
                     <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                    <p class="logo__text"><a href="index.html">Forest</a></p>
+                    <p class="logo__text"><a href="index.html" class="logo__link" tabindex="12">Forest</a></p>
                 </div>
-                <div class="prefooter__links">
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">O nas</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Parki</a></li>
-                            <li><a href="#">Opinie</a></li>
+                <div class="prefooter-links">
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">O nas</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="13">Historia</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="14">Parki</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="15">Opinie</a></li>
                         </ul>
                     </div>
-                    <div class="secondList prefooter__links-box">
-                        <h3 class="subHeading">Nasza firma</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Praca</a></li>
-                            <li><a href="#">Kadry</a></li>
-                            <li><a href="#">Zarząd</a></li>
+                    <div class="prefooter-links__box prefooter-links__box--second">
+                        <h3 class="prefooter-links__subheading">Nasza firma</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="16">Praca</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="17">Kadry</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="18">Zarząd</a></li>
                         </ul>
                     </div>
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">Dokumenty</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Wnioski</a></li>
-                            <li><a href="#">Rezerwacje</a></li>
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">Dokumenty</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="19">Wnioski</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="20">Rezerwacje</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <p>&copy; <span id="year"></span> Forest Group Company Ltd.</p>
+        <p class="footer__p">&copy; <span id="year"></span> Forest Group Company Ltd.</p>
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>

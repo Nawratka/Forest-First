@@ -10,38 +10,33 @@
         content="oferta, opcje, wycieczki, rodzaje, cena, cennik, propozycje, pomysł, jak spędzić czas z rodziną, integracja, camping, obóz">
     <link rel="icon" href="dist/img/pine-icon.png" type="image/png">
     <title>Oferta | Forest - Najpiękniejszy Park w Twojej Okolicy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body>
-
-    <div class="cookie-box">
-        <p>Nasza strona korzysta z ciasteczek!</p>
-        <button class="cookie-btn">Akceptuję</button>
+    <div class="cookie">
+        <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
+                class="cookie__img"></p>
+        <button class="cookie__btn" tabindex="1">Akceptuję</button>
     </div>
-
-    <!-- =====================================
+<!-- =====================================
 NAV
 ====================================== -->
     <nav class="nav">
-        <div class="wrapperForThreeTopParts">
+        <div class="main-wrapper">
             <div class="logo">
                 <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                <p class="logo__text"><a href="index.html">Forest</a></p>
+                <p class="logo__text"><a href="index.html" class="logo__link" tabindex="2">Forest</a></p>
             </div>
-            <button class="burger-btn">
-                <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
+            <button class="nav__btn" tabindex="3">
+                <img src="dist/img/menu.svg" class="nav__btn-img" alt="burger button">
             </button>
-            <div class="containerForSideMenu">
-                <ul class="nav-list" onclick="classCheck()">
-                    <li class="nav-list__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
-                    <li class="nav-list__item"><a href="index.html#offer" class="nav__link active">Oferta</a></li>
-                    <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
+            <div class="side-menu">
+                <ul class="nav__list" onclick="classCheck()">
+                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link" tabindex="4">Home</a></li>
+                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5">O nas</a></li>
+                    <li class="nav__list-item"><a href="#" class="nav__list-link active" tabindex="6">Oferta</a></li>
+                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link" tabindex="7">Kontakt</a></li>
                 </ul>
             </div>
         </div>
@@ -50,10 +45,10 @@ NAV
     <!-- =====================================
 HEADER
 ====================================== -->
-    <header class="header header--subpage scrollSection" id="home">
+    <header class="header header--subpage">
         <div class="header__hero-img">
             <div class="header__bg"></div>
-            <div class="header__text wrapperForThreeTopParts">
+            <div class="header__text main-wrapper">
                 <p class="header__text-p">Forest Group</p>
                 <h1 class="header__text-title">Najpiękniejszy park <br class="brMobile">w Twojej okolicy!</h1>
             </div>
@@ -66,281 +61,127 @@ HEADER
         <section class="section offerpage">
             <h1 class="section__title subpage-title">oferta</h1>
             <div class="offerpage__greenBg"></div>
-            <div class="offerpage__box wrapperForThreeTopParts">
-                <div class="offerpage__card offerpage__card--first">
-                    <div class="offerpage__card-picture">
-                        <div class="offerpage__card-img offerpage__card-img--firstImg"></div>
-                        <p class="offerpage__card-tag">Demo</p>
+            <div class="offerpage__box main-wrapper">
+                <div class="subpage-card subpage-card--first">
+                    <div class="subpage-card__picture">
+                        <div class="subpage-card__img subpage-card__img--first-img"></div>
+                        <p class="subpage-card__tag">Demo</p>
                     </div>
-                    <div class="offerpage__card-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
-                            id nulla ab accusantium aspernatur inventore unde totam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                    <div class="subpage-card__info">
+                        <p class="subpage-card__info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Error possimus aliquam voluptatum, id nulla ab accusantium aspernatur inventore unde totam.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
                         </p>
                     </div>
-                    <div class="offerpage__card-price">
-                        <p class="offerpage__card-price-name">Demo</p>
-                        <p class="offerpage__card-price-value">$0</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                    <div class="subpage-price">
+                        <p class="subpage-price__name">Demo</p>
+                        <p class="subpage-price__value">$0</p>
+                        <ul class="subpage-price__list">
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li class="negative-item"><img src="dist/img/minus2.svg" alt=""
+                                    class="card__list-icon">opcja poza pakietem</li>
+                            <li class="negative-item"><img src="dist/img/minus2.svg" alt=""
+                                    class="card__list-icon">opcja poza pakietem</li>
+                            <li class="negative-item"><img src="dist/img/minus2.svg" alt=""
+                                    class="card__list-icon">opcja poza pakietem</li>
                         </ul>
-                        <button class="offerpage__card-btn">Wybierz</button>
+                        <button class="regular-button subpage-price__btn" tabindex="8">Wybierz</button>
                     </div>
                 </div>
-                <div class="offerpage__card offerpage__card--second">
-                    <div class="offerpage__card-picture">
-                        <div class="offerpage__card-img offerpage__card-img--secondImg"></div>
-                        <p class="offerpage__card-tag">Standard</p>
+                <div class="subpage-card subpage-card--second">
+                    <div class="subpage-card__picture">
+                        <div class="subpage-card__img subpage-card__img--second-img"></div>
+                        <p class="subpage-card__tag">Standard</p>
                     </div>
-                    <div class="offerpage__card-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
-                            id nulla ab accusantium aspernatur inventore unde totam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                    <div class="subpage-card__info">
+                        <p class="subpage-card__info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde totam. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Error possimus aliquam voluptatum.
                         </p>
                     </div>
-                    <div class="offerpage__card-price">
-                        <p class="offerpage__card-price-name">Standard</p>
-                        <p class="offerpage__card-price-value">$99</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
+                    <div class="subpage-price">
+                        <p class="subpage-price__name">Standard</p>
+                        <p class="subpage-price__value">$99</p>
+                        <ul class="subpage-price__list">
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li class="negative-item"><img src="dist/img/minus2.svg" alt=""
+                                    class="card__list-icon">opcja poza pakietem</li>
+                            <li class="negative-item"><img src="dist/img/minus2.svg" alt=""
+                                    class="card__list-icon">opcja poza pakietem</li>
                         </ul>
-                        <button class="offerpage__card-btn">Wybierz</button>
+                        <button class="regular-button subpage-price__btn" tabindex="9">Wybierz</button>
                     </div>
                 </div>
-                <div class="offerpage__card offerpage__card--third">
-                    <div class="offerpage__card-picture">
-                        <div class="offerpage__card-img offerpage__card-img--thirdImg"></div>
-                        <p class="offerpage__card-tag">Premium</p>
+                <div class="subpage-card subpage-card--third">
+                    <div class="subpage-card__picture">
+                        <div class="subpage-card__img subpage-card__img--third-img"></div>
+                        <p class="subpage-card__tag">Premium</p>
                     </div>
-                    <div class="offerpage__card-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
-                            id nulla ab accusantium aspernatur inventore unde totam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
+                    <div class="subpage-card__info">
+                        <p class="subpage-card__info-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Error possimus aliquam voluptatum,
+                            id nulla ab accusantium aspernatur inventore unde. Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Error possimus aliquam voluptatum. Lorem ipsum dolor sit.
                         </p>
                     </div>
-                    <div class="offerpage__card-price">
-                        <p class="offerpage__card-price-name">Premium</p>
-                        <p class="offerpage__card-price-value">$299</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
+                    <div class="subpage-price">
+                        <p class="subpage-price__name">Premium</p>
+                        <p class="subpage-price__value">$299</p>
+                        <ul class="subpage-price__list">
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
                         </ul>
-                        <button class="offerpage__card-btn">Wybierz</button>
-                    </div>
-                </div>
-
-            <!-- <div class="offerpage__card offerpage__card--second">
-                    <div class="offerpage__card-price">
-                        <p class="offerpage__card-priceName">Standard</p>
-                        <p class="offerpage__card-priceValue">$99</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        </ul>
-                        <button class="offerpage__card-btn">Wybierz</button>
-                    </div>
-                    <div class="offerpage__card-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
-                            id nulla ab accusantium aspernatur inventore unde totam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
-                        </p>
-                    </div>
-                    <div class="offerpage__card-img secondImg">
-                        <p class="offerpage__card-tag">Standard</p>
-                    </div>
-
-                </div>
-                <div class="offerpage__card offerpage__card--third">
-                    <div class="offerpage__card-img thirdImg">
-                        <p class="offerpage__card-tag">Premium</p>
-                    </div>
-                    <div class="offerpage__card-info">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum,
-                            id nulla ab accusantium aspernatur inventore unde totam?</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error possimus aliquam voluptatum.
-                        </p>
-                    </div>
-                    <div class="offerpage__card-price">
-                        <p class="offerpage__card-priceName">Premium</p>
-                        <p class="offerpage__card-priceValue">$299</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        </ul>
-                        <button class="offerpage__card-btn">Wybierz</button>
-                    </div> -->
-            <!-- </div> -->
-            </div>
-        </section>
-    </main>
-
-    <!-- 
-    <main>
-        <section class="offer section offer--page">
-            <h2 class="section__title subpage-title">oferta</h2>
-            <div class="bgBox--first">
-                <h3 class="offer__subtitle">Nowości</h3>
-                <p class="offer__p--page">Na życzenie naszych klientów rozszerzamy ofertę o nowości!</p>
-                <div class="offer__box offer__box-page smallerWrapper">
-                    <div class="offer__box-card">
-                        <p class="offer__box-card--name">Wycieczka</p>
-                        <p class="offer__box-card--price">$20</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
-                    </div>
-                    <div class="offer__box-card">
-                        <p class="offer__box-card--name">Animator</p>
-                        <p class="offer__box-card--price">$60</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
-                    </div>
-                    <div class="offer__box-card">
-                        <p class="offer__box-card--name">Integracja</p>
-                        <p class="offer__box-card--price">$90</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bgBox--second">
-                <h3 class="offer__subtitle">Nasze bestsellery</h3>
-                <p class="offer__p--page">Wybierz jedną z naszych wspaniałych ofert!</p>
-                <div class="offer__box offer__box-page offer__box-page--second smallerWrapper">
-                    <div class="offer__box-card">
-                        <p class="offer__box-card--name">Demo</p>
-                        <p class="offer__box-card--price">$0</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
-                    </div>
-                    <div class="offer__box-card">
-                        <p class="offer__box-card--name">Standard</p>
-                        <p class="offer__box-card--price">$99</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                            <li class="negative"><i class="ti ti-minus"></i>opcja poza pakietem</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
-                    </div>
-                    <div class="offer__box-card">
-                        <p class="offer__box-card--name">Premium</p>
-                        <p class="offer__box-card--price">$299</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bgBox--third">
-                <h3 class="offer__subtitle">Oferta limitowana</h3>
-                <p class="offer__p--page">Gratka dla największych fanów Forest!</p>
-                <div class="offer__box offer__box-page offer__box-page--third smallerWrapper">
-                    <div class="offer__box-card limitedOffer">
-                        <p class="offer__box-card--name">Camping</p>
-                        <p class="offer__box-card--price">Ustalane indywidualnie</p>
-                        <ul>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                            <li><i class="ti ti-check"></i>opcja w pakiecie</li>
-                        </ul>
-                        <button class="offer__box-btn">Wybierz</button>
+                        <button class="regular-button subpage-price__btn" tabindex="10">Wybierz</button>
                     </div>
                 </div>
             </div>
         </section>
-    </main> 
--->
-
+    </main>
     <!-- =====================================
 "PREFOOTER" SECTION && FOOTER
 ======================================= -->
-    <footer>
-        <section class="prefooter">
-            <div class="smallerWrapper">
+    <footer class="footer">
+        <section class="prefooter section">
+            <div class="main-wrapper">
                 <div class="logo">
                     <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                    <p class="logo__text"><a href="index.html">Forest</a></p>
+                    <p class="logo__text"><a href="index.html" class="logo__link">Forest</a></p>
                 </div>
-                <div class="prefooter__links">
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">O nas</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Parki</a></li>
-                            <li><a href="#">Opinie</a></li>
+                <div class="prefooter-links">
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">O nas</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item">Historia</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Parki</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Opinie</a></li>
                         </ul>
                     </div>
-                    <div class="secondList prefooter__links-box">
-                        <h3 class="subHeading">Nasza firma</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Praca</a></li>
-                            <li><a href="#">Kadry</a></li>
-                            <li><a href="#">Zarząd</a></li>
+                    <div class="prefooter-links__box prefooter-links__box--second">
+                        <h3 class="prefooter-links__subheading">Nasza firma</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item">Praca</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Kadry</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Zarząd</a></li>
                         </ul>
                     </div>
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">Dokumenty</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Wnioski</a></li>
-                            <li><a href="#">Rezerwacje</a></li>
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">Dokumenty</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item">Wnioski</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Rezerwacje</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <p>&copy; <span id="year"></span> Forest Group Company Ltd.</p>
+        <p class="footer__p">&copy; <span id="year"></span> Forest Group Company Ltd.</p>
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>

@@ -6,90 +6,105 @@
     <meta name="robots" content="noindex">
     <link rel="icon" href="dist/img/pine-icon.png" type="image/png">
     <title>Page 404 | Forest - Najpiękniejszy Park w Twojej Okolicy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 
 <body>
+    <div class="cookie">
+        <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
+                class="cookie__img"></p>
+        <button class="cookie__btn" tabindex="1">Akceptuję</button>
+    </div>
     <!-- =====================================
 NAV
 ====================================== -->
-<nav class="nav">
-    <div class="wrapperForThreeTopParts">
-        <div class="logo">
-            <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="index.html">Forest</a></p>
+    <nav class="nav">
+        <div class="main-wrapper">
+            <div class="logo">
+                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                <p class="logo__text"><a href="index.html" class="logo__link" tabindex="2">Forest</a></p>
+            </div>
+            <button class="nav__btn" tabindex="3">
+                <img src="dist/img/menu.svg" class="nav__btn-img" alt="burger button">
+            </button>
+            <div class="side-menu">
+                <ul class="nav__list" onclick="classCheck()">
+                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link" tabindex="4">Home</a></li>
+                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5">O nas</a></li>
+                    <li class="nav__list-item"><a href="#" class="nav__list-link" tabindex="6">Oferta</a></li>
+                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link" tabindex="7">Kontakt</a></li>
+                </ul>
+            </div>
         </div>
-        <button class="burger-btn">
-            <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
-        </button>
-        <div class="containerForSideMenu">
-            <ul class="nav-list" onclick="classCheck()">
-                <li class="nav-list__item"><a href="index.html" class="nav__link">Home</a></li>
-                <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
-                <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
-                <li class="nav-list__item"><a href="contact.html" class="nav__link">Kontakt</a></li>
-            </ul>
+    </nav>
+
+    <!-- =====================================
+HEADER
+====================================== -->
+    <header class="header header--subpage">
+        <div class="header__hero-img">
+            <div class="header__bg"></div>
+            <div class="header__text main-wrapper">
+                <p class="header__text-p">Forest Group</p>
+                <h1 class="header__text-title">Najpiękniejszy park <br class="brMobile">w Twojej okolicy!</h1>
+            </div>
         </div>
-    </div>
-</nav>
+    </header>
     <!-- =====================================
 MAIN
 ======================================= -->
     <main>
-        <section class="section page404 smallerWrapper">
-            <div class="owl">
-                <img src="dist/img/owl640.jpg" class="owlImage" alt="sowa">
-                <div class="owl-text">
-                    <p class="p--first">Hu, hu... Wygląda na to, że zabłądziłeś!</p>
-                    <p class="p--second">Page 404 - page not found</p>
-                    <p class="p--third">Wróć na dobrą ścieżkę...</p>
-                </div>
+        <section class="section page404 smaller-wrapper">
+            <div class="page404__picture-part">
+                <img src="dist/img/owl640.jpg" class="page404__img" alt="sowa">
             </div>
-            <button class="page404__btn"><a href="index.html">Powrót na Stronę Główną</a></button>
+            <div class="page404__text-part">
+                <p class="page404__p">Wygląda na to, że zabłądziłeś!</p>
+                <p class="page404__p">Page 404 - PAGE NOT FOUND</p>
+                <p class="page404__p">Wróć na dobrą ścieżkę...</p>
+                <button class="page404__btn regular-button" tabindex="8"><a href="index.html">Strona Główna</a></button>
+            </div>
+
         </section>
     </main>
-    <!-- =====================================
+    <!--=====================================
 "PREFOOTER" SECTION && FOOTER
 ======================================= -->
-    <footer>
+    <footer class="footer">
         <section class="prefooter section">
-            <div class="smallerWrapper">
+            <div class="main-wrapper">
                 <div class="logo">
-                    <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                    <p class="logo__text"><a href="index.html">Forest</a></p>
+                    <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon-box">
+                    <p class="logo__text"><a href="index.html" class="logo__link" tabindex="9">Forest</a></p>
                 </div>
-                <div class="prefooter__links">
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">O nas</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Parki</a></li>
-                            <li><a href="#">Opinie</a></li>
+                <div class="prefooter-links">
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">O nas</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="10">Historia</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="11">Parki</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="12">Opinie</a></li>
                         </ul>
                     </div>
-                    <div class="secondList prefooter__links-box">
-                        <h3 class="subHeading">Nasza firma</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Praca</a></li>
-                            <li><a href="#">Kadry</a></li>
-                            <li><a href="#">Zarząd</a></li>
+                    <div class="prefooter-links__box prefooter-links__box--second">
+                        <h3 class="prefooter-links__subheading">Nasza firma</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="13">Praca</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="14">Kadry</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="15">Zarząd</a></li>
                         </ul>
                     </div>
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">Dokumenty</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Wnioski</a></li>
-                            <li><a href="#">Rezerwacje</a></li>
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">Dokumenty</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="16">Wnioski</a></li>
+                            <li><a href="#" class="prefooter-links__list-item" tabindex="17">Rezerwacje</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <p>&copy; <span id="year"></span> Forest Group Company Ltd.</p>
+        <p class="footer__p">&copy; <span id="year"></span> Forest Group Company Ltd.</p>
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>

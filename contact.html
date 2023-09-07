@@ -8,158 +8,170 @@
         content="Tel.: +48 890-890-890, Adres email: biuro@forest.pl, Adres: ul. Jasnogórska 2, 31-000 Kraków. Wybierz wygodną formę kontaktu i odwiedź Forest Park">
     <meta name="keywords"
         content="kontakt, adres, email, telefon, forest, najpiękniejszy park, spędzanie czasu z rodziną, weekend, czas wolny, urlop">
-    <link rel="icon" href="dist/img/pine-icon.png" type="image/png">
+    <link rel="icon-box" href="dist/img/pine-icon-box.png" type="image/png">
     <title>Kontakt | Forest - Najpiękniejszy Park w Twojej Okolicy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
     <link rel="stylesheet" href="./dist/css/style.min.css">
 </head>
 
 <body id="contact-page">
-    <div class="cookie-box">
-        <p>Nasza strona korzysta z ciasteczek!</p>
-        <button class="cookie-btn">Akceptuję</button>
+    <div class="cookie">
+        <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
+                class="cookie__img"></p>
+        <button class="cookie__btn" tabindex="1">Akceptuję</button>
     </div>
-
-    <!-- =====================================
+<!-- =====================================
 NAV
 ====================================== -->
     <nav class="nav">
-        <div class="wrapperForThreeTopParts">
+        <div class="main-wrapper">
             <div class="logo">
                 <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                <p class="logo__text"><a href="index.html">Forest</a></p>
+                <p class="logo__text"><a href="index.html" class="logo__link" tabindex="2">Forest</a></p>
             </div>
-            <button class="burger-btn">
-                <img src="dist/img/menu.svg" class="burger-btn__img" alt="burger button">
+            <button class="nav__btn" tabindex="3">
+                <img src="dist/img/menu.svg" class="nav__btn-img" alt="burger button">
             </button>
-            <div class="containerForSideMenu">
-                <ul class="nav-list" onclick="classCheck()">
-                    <li class="nav-list__item"><a href="index.html#home" class="nav__link">Home</a></li>
-                    <li class="nav-list__item"><a href="index.html#aboutus" class="nav__link">O nas</a></li>
-                    <li class="nav-list__item"><a href="index.html#offer" class="nav__link">Oferta</a></li>
-                    <li class="nav-list__item"><a href="contact.html" class="nav__link  active">Kontakt</a></li>
+            <div class="side-menu">
+                <ul class="nav__list" onclick="classCheck()">
+                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link" tabindex="4">Home</a></li>
+                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5">O nas</a></li>
+                    <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" tabindex="6">Oferta</a></li>
+                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link active" tabindex="7">Kontakt</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+<!-- =====================================
+HEADER
+====================================== -->
+    <header class="header header--subpage">
+        <div class="header__hero-img">
+            <div class="header__bg"></div>
+            <div class="header__text main-wrapper">
+                <p class="header__text-p">Forest Group</p>
+                <h1 class="header__text-title">Najpiękniejszy park <br class="brMobile">w Twojej okolicy!</h1>
+            </div>
+        </div>
+    </header>
     <!-- =====================================
 CONTACT PAGE
 =======================================  -->
     <main class="contact-subpage">
-        <h1 class="section__title subpage-title">kontakt</h1>
-        <section class="contact section wrapperForThreeTopParts">
+        <section class="contact section main-wrapper">
+            <h1 class="section__title subpage-title">kontakt</h1>
+            <p class="contact__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquam saepe alias</p>
             <div class="address">
-                <div class="address__form">
-                    <div class="form__innerContainer">
-                        <h2 class="section__title contact__heading">napisz do nas</h2>
-                        <p class="sendingMsg">Dziękujemy za wiadomość!</p>
-                        <form action="" class="form">
-                            <div class="form__box">
-                                <input type="text" name="name" id="name" required>
-                                <span>Imię</span>
-                                <p class="error-text">error</p>
+                <div class="address-data">
+                    <div class="address-data__vertical-container">
+                        <div class="address-data__line-container">
+                            <div class="icon-box"><img src="./dist/img/map-pin.svg" alt="address icon"
+                                    class="icon-box__img">
                             </div>
-                            <div class="form__box">
-                                <!-- input type="text" to correct span animation -->
-                                <input type="text" name="email" id="email" required>
-                                <span>Adres mailowy</span>
-                                <p class="error-text">error</p>
+                            <p class="address-data__p">ul. Jasnogórska 2<br> 31-000 Kraków</p>
+                        </div>
+                        <div class="address-data__line-container">
+                            <div class="icon-box"><img src="./dist/img/phone-call.svg" alt="phone number icon"
+                                    class="icon-box__img"></div>
+                            <p class="address-data__p">890 890 890</p>
+                        </div>
+                        <div class="address-data__line-container">
+                            <div class="icon-box"><img src="./dist/img/mail.svg" alt="email icon" class="icon-box__img">
                             </div>
-                            <div class="form__box">
-                                <textarea id="msg" maxlength="1000" required></textarea>
-                                <span>Treść wiadomości</span>
-                                <p class="error-text">error</p>
-                            </div>
-                            <div class="form__box form__box-agreement">
-                                <input type="checkbox" id="agreement" name="agreement" class="agreement-checkbox"
-                                    required />
-                                <p class="agreement-text">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie
-                                    z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie
-                                    danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem
-                                    danych osobowych jest Forest Group Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.
-                                </p>
-                            </div>
-
-                            <div class="control-buttons">
-                                <button class="btn clear" onclick="this.blur()">Wyczyść</button>
-                                <button class="btn send" onclick="this.blur()">Wyślij</button>
-                            </div>
-                        </form>
-                        <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--one" alt="">
-                        <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--two" alt="">
+                            <p class="address-data__p"><a href="mailto:kontakt@forest.pl" class="address-data__mail-link" tabindex="8">kontakt@forest.pl</a></p>
+                        </div>
+                    </div>
+                    <div class="address-data__socials">
+                        <div class="icon-box"><a href="https://www.facebook.com/" target="_blank"
+                                rel="noopener" class="icon-box__a" tabindex="9"><img
+                                    src="./dist/img/facebook.svg" alt="facebook icon-box" class="icon-box__img"></a>
+                        </div>
+                        <div class="icon-box"><a href="https://www.instagram.com/" target="_blank"
+                                rel="noopener" class="icon-box__a" tabindex="10"><img
+                                    src="./dist/img/instagram.svg" alt="instagram icon-box" class="icon-box__img"></a>
+                        </div>
+                        <div class="icon-box"><a href="https://twitter.com/" target="_blank"
+                                rel="noopener" class="icon-box__a" tabindex="11"><img src="./dist/img/twitter.svg" alt="twitter icon-box" class="icon-box__img"></a></div>
                     </div>
                 </div>
-                <div class="address__data">
-                    <h2 class="section__title contact__heading">adres</h2>
-                    <p>Forest Group Company Ltd.</p>
-                    <p>ul. Jasnogórska 2</p>
-                    <p>31-000 Kraków</p>
-                    <p>890-890-890</p>
-                    <div class="address__data-socials">
-                        <div class="icon"><a href="https://www.facebook.com/" target="_blank"
-                                rel="noopener noreferrer nofollow"><i class="ti ti-brand-facebook"></i></a>
-                        </div>
-                        <div class="icon"><a href="https://www.instagram.com/" target="_blank"
-                                rel="noopener noreferrer nofollow"><i class="ti ti-brand-instagram"></i></a>
-                        </div>
-                        <div class="icon"><a href="https://twitter.com/" target="_blank"
-                                rel="noopener noreferrer nofollow"><i class="ti ti-brand-twitter"></i></a></div>
-                    </div>
-                    <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--one" alt="">
-                    <img src="./dist/img/pine-gdacd9ee42_640.png" class="pinetree pinetree--two" alt="">
-                </div>
-                <div class="map wrapperForThreeTopParts">
+                <div class="address__map">
                     <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.975805237627!2d19.925234743349026!3d50.06299282571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b10235794ff%3A0xe0ba86c80b8e37ae!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1689677747871!5m2!1spl!2spl"
-                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.975805237627!2d19.925234743349026!3d50.06299282571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b10235794ff%3A0xe0ba86c80b8e37ae!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1689677747871!5m2!1spl!2spl"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
+        <form action="" class="form">
+            <div class="form__innerContainer smaller-wrapper">
+                <h2 class="section__title contact__heading">napisz do nas</h2>
+                <p class="sending-msg">Dziękujemy za wiadomość!</p>
+                <div class="form-box">
+                    <input type="text" name="name" id="name" class="form-box__input" required>
+                    <label for="name" class="form-box__label"><span>Imię</span></label>
+                    <p class="form-box__error-text">error</p>
+                </div>
+                <div class="form-box">
+                    <input type="email" name="email" id="email" class="form-box__input" required>
+                    <label for="email" class="form-box__label"><span class="form-box__span">Adres mailowy</span></label>
+                    <p class="form-box__error-text">error</p>
+                </div>
+                <div class="form-box">
+                    <textarea id="msg" maxlength="1000" class="form-box__textarea" required></textarea>
+                    <label for="msg" class="form-box__label"><span class="form-box__span">Treść wiadomości</span></label>
+                    <p class="form-box__error-text">error</p>
+                </div>
+                <div class="form-box agreement-box">
+                    <input type="checkbox" id="agreement" name="agreement" class="agreement-box__checkbox" required />
+                    <p class="agreement-box__text">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą
+                        o ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem danych osobowych jest Forest Group
+                        Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.</p>
+                </div>
+                <div class="form__control-buttons">
+                    <button class="regular-button clear-btn" onclick="this.blur()">Wyczyść</button>
+                    <button class="regular-button send-btn" onclick="this.blur()">Wyślij</button>
+                </div>
+            </div>
+        </form>
     </main>
-    <!-- =====================================
+<!--=====================================
 "PREFOOTER" SECTION && FOOTER
 ======================================= -->
-    <footer>
-        <section class="prefooter section contactPrefooter">
-            <div class="smallerWrapper">
+    <footer class="footer">
+        <section class="prefooter section">
+            <div class="main-wrapper">
                 <div class="logo">
-                    <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                    <p class="logo__text"><a href="index.html">Forest</a></p>
+                    <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon-box">
+                    <p class="logo__text"><a href="index.html" class="logo__link">Forest</a></p>
                 </div>
-                <div class="prefooter__links">
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">O nas</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Historia</a></li>
-                            <li><a href="#">Parki</a></li>
-                            <li><a href="#">Opinie</a></li>
+                <div class="prefooter-links">
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">O nas</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item">Historia</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Parki</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Opinie</a></li>
                         </ul>
                     </div>
-                    <div class="secondList prefooter__links-box">
-                        <h3 class="subHeading">Nasza firma</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Praca</a></li>
-                            <li><a href="#">Kadry</a></li>
-                            <li><a href="#">Zarząd</a></li>
+                    <div class="prefooter-links__box prefooter-links__box--second">
+                        <h3 class="prefooter-links__subheading">Nasza firma</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item">Praca</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Kadry</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Zarząd</a></li>
                         </ul>
                     </div>
-                    <div class="prefooter__links-box">
-                        <h3 class="subHeading">Dokumenty</h3>
-                        <ul class="prefooter__links-list">
-                            <li><a href="#">Wnioski</a></li>
-                            <li><a href="#">Rezerwacje</a></li>
+                    <div class="prefooter-links__box">
+                        <h3 class="prefooter-links__subheading">Dokumenty</h3>
+                        <ul class="prefooter-links__list">
+                            <li><a href="#" class="prefooter-links__list-item">Wnioski</a></li>
+                            <li><a href="#" class="prefooter-links__list-item">Rezerwacje</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <p>&copy; <span id="year"></span> Forest Group Company Ltd.</p>
+        <p class="footer__p">&copy; <span id="year"></span> Forest Group Company Ltd.</p>
     </footer>
     <script src="dist/js/main.min.js"></script>
 </body>
-
 </html>
