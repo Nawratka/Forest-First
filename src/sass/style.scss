@@ -944,6 +944,9 @@ body {
 	&__btn {
 		width: 90%;
 	}
+	.section__title {
+		padding: 0 1rem;
+	}
 }
 
 @import './animations.scss';
