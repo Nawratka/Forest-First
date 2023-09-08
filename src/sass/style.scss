@@ -114,18 +114,18 @@ body {
 	max-width: 20rem;
 	padding: 1rem 2rem;
 	font-size: 1.3rem;
+	font-family: 'Raleway', sans-serif;
 	border: none;
 	border-radius: 8px;
 	box-shadow: 0px 2px 4px 1px rgba(66, 68, 90, 0.45);
 	background-color: var(--btn-hover);
-	transition: background-color 0.3s, box-shadow 0.3s;
+	transition: background-color 0.3s;
 	cursor: pointer;
 }
 
 .regular-button:hover,
 .regular-button:focus {
 	background-color: var(--main-color);
-	box-shadow: 0px 2px 4px 1px rgba(105, 239, 105, 0.6);
 }
 
 .cookie {
@@ -137,7 +137,6 @@ body {
 	text-align: center;
 	background-color: rgba(0, 0, 0, 0.767);
 	opacity: 0;
-	// transform: translateY(100%);
 	animation: show-cookies 0.3s 0.3s forwards;
 	z-index: 500;
 	&__p {
