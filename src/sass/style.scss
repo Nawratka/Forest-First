@@ -259,7 +259,6 @@ body {
 	&__hero-img {
 		width: 100%;
 		height: 100%;
-		background-image: url('../img/jungle-1807476_1280.jpg');
 		background-image: url('../img/jungle640cut.jpg');
 		background-size: cover;
 		background-position-y: 70%;
@@ -764,7 +763,13 @@ body {
 	&__socials {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
+		width: 60%;
+		justify-content: space-around;
+		.icon-box__img {
+			padding: 0;
+			width: 40px;
+			height: 40px;
+		}
 	}
 	&__mail-link {
 		color: var(--bg-color);
@@ -775,6 +780,8 @@ body {
 	margin-top: 1.7rem;
 	border: none;
 	&__img {
+		width: 44px;
+		height: 44px;
 		padding: 1rem;
 		transition: color 0.2s;
 	}
