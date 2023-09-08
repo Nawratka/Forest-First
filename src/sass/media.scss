@@ -165,31 +165,26 @@ $navbarHeight: 67px;
 				margin-bottom: 1rem;
 			}
 		}
-		&__btn-link {
-			width: 50%;
-			height: 4rem;
+		&__link {
 			margin-top: 20px;
 			padding: 1rem 2rem;
-border: 1px solid white;
+			width: 50%;
+			height: 4rem;
+			border: 1px solid white;
 			border-radius: 10px;
 			transform: translate(50%);
-			text-align: center;
-			transition: background-color 0.3s;
-		}
-		&__btn {
 			font-size: 1.5rem;
 			font-family: 'Ralewaybold', sans-serif;
 			text-transform: uppercase;
+			text-align: center;
 			letter-spacing: 3px;
 			background-color: transparent;
 			color: #fff;
-			transition: color 0.3s;
+			transition: background-color 0.3s, color 0.3s;
 		}
-		&__btn-link:hover,
-		&__btn-link:active {
+		&__link:hover,
+		&__link:active {
 			background-color: var(--bg-color);
-		}
-		&__btn-link:hover &__btn {
 			color: var(--font-color);
 		}
 	}
@@ -303,8 +298,9 @@ border: 1px solid white;
 		padding-left: 1.5rem;
 	}
 	.header__hero-img {
-			background-image: url('../img/jungle-1807476_1280.jpg');
-}}
+		background-image: url('../img/jungle-1807476_1280.jpg');
+	}
+}
 
 @media (min-width: 463px) and (max-width: 620px) {
 	.about-us__picture {
