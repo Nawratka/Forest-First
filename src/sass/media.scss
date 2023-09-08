@@ -13,7 +13,7 @@ $navbarHeight: 67px;
 		}
 	}
 	.hero-img {
-		background-image: url('/forest/dist/img/girl-5785590_640.jpg');
+		background-image: url('../img/girl-5785590_640.jpg');
 		&__bg {
 			background-color: rgba(7, 19, 9, 0.4);
 		}
@@ -150,7 +150,7 @@ $navbarHeight: 67px;
 		width: 100vw;
 		height: 90vh;
 		&__hero-img {
-			background-image: url('../img/jungle-gcce056fd6_640.jpg');
+			aspect-ratio: auto 640 / 360;
 			background-position-x: 42%;
 		}
 		&__text {
@@ -252,9 +252,6 @@ $navbarHeight: 67px;
 		.logo {
 			margin: 4rem auto 2rem 1.5rem;
 			padding-left: 0;
-			&__img {
-				width: 3rem;
-			}
 			&__text {
 				margin-left: 1px;
 				font-size: 3rem;
@@ -305,7 +302,9 @@ $navbarHeight: 67px;
 	.header__text {
 		padding-left: 1.5rem;
 	}
-}
+	.header__hero-img {
+			background-image: url('../img/jungle-1807476_1280.jpg');
+}}
 
 @media (min-width: 463px) and (max-width: 620px) {
 	.about-us__picture {
