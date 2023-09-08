@@ -76,10 +76,6 @@ $navbarHeight: 67px;
 	.bodyHidden {
 		overflow: hidden;
 	}
-	.bodyShow {
-		overflow: visible;
-		overflow-x: hidden;
-	}
 	.main-wrapper {
 		width: 100vw;
 	}
@@ -89,18 +85,6 @@ $navbarHeight: 67px;
 	}
 
 	.nav {
-		&__btn {
-			position: absolute;
-			top: 0;
-			right: 0;
-			padding: 2rem;
-			background-color: transparent;
-			z-index: 500;
-		}
-		&__btn-img {
-			color: #141414;
-			height: 3rem;
-		}
 		&__list {
 			flex-direction: column;
 			padding-top: 10%;
@@ -124,6 +108,10 @@ $navbarHeight: 67px;
 			}
 		}
 	}
+	.active {
+		color: var(--bg-color);
+		background-color: var(--font-color);
+	}
 	// WRAPPER FOR SIDE MENU WHILE SLIDING
 	.side-menu {
 		position: fixed;
@@ -137,24 +125,13 @@ $navbarHeight: 67px;
 		transform: translateX(100vw);
 		overflow-x: hidden;
 	}
-	.active {
-		color: var(--bg-color);
-		background-color: var(--font-color);
-	}
-
 	// VISIBLE STATE OF SIDE MENU
 	// =====================================
 	.side-menu.show {
 		transform: translateX(0);
 		animation: showMenuAnimation 0.4s;
 	}
-
-	.side-menu.close {
-		transform: translateX(100vw);
-		animation: closeMenuAnimation 0.4s;
-	}
-
-	// ANIMATIONS FOR SIDE MENU
+	// ANIMATION FOR SIDE MENU
 	// =====================================
 	@keyframes showMenuAnimation {
 		0% {
@@ -169,19 +146,6 @@ $navbarHeight: 67px;
 		}
 	}
 
-	@keyframes closeMenuAnimation {
-		0% {
-			transform: translateX(0);
-		}
-		10% {
-			background-color: transparent;
-		}
-		100% {
-			transform: translateX(100vw);
-			background-color: transparent;
-		}
-	}
-
 	.header {
 		width: 100vw;
 		height: 90vh;
@@ -192,8 +156,8 @@ $navbarHeight: 67px;
 		&__text {
 			width: 100%;
 			top: 37%;
+			padding-left: 0;
 			text-align: center;
-			padding: 4rem;
 			&-title {
 				font-size: 2.5rem;
 			}
@@ -260,7 +224,7 @@ $navbarHeight: 67px;
 		}
 		&__text {
 			margin: 0;
-			padding: 2rem 1.5rem 0;
+			padding: 2rem 2rem 0;
 			width: 100%;
 			&-title {
 				margin-bottom: 1.5rem;
@@ -337,6 +301,9 @@ $navbarHeight: 67px;
 	}
 	.regular-button {
 		letter-spacing: 1px;
+	}
+	.header__text {
+		padding-left: 1.5rem;
 	}
 }
 
@@ -437,9 +404,6 @@ $navbarHeight: 67px;
 // WHEN VW > 1000PX (main-wrapper)
 // -------------------
 @media (max-width: 1030px) {
-	.header__text {
-		padding-left: 1.5rem;
-	}
 	.offerpage__greenBg {
 		background-color: var(--bg-color);
 	}

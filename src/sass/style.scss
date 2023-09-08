@@ -27,6 +27,7 @@ button {
 	--bg-color: #ffffff;
 	--dark-bg: #2e4734;
 	--font-color: #141414;
+	--btn-hover: #87fa6f;
 }
 $navbarHeight: 67px;
 
@@ -50,50 +51,6 @@ body {
 // ==========================
 // INDEPENDENT ELEMENTS
 // ==========================
-.cookie {
-	position: fixed;
-	bottom: 0;
-	width: 100%;
-	height: 140px;
-	padding: 3rem;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.767);
-	opacity: 0;
-	transform: translateY(100%);
-	animation: show-cookies 0.5s 0.5s forwards;
-	z-index: 500;
-	&__p {
-		margin-bottom: 2rem;
-		font-size: 2rem;
-		color: var(--bg-color);
-	}
-	&__img {
-		position: absolute;
-		top: 27px;
-		height: 30px;
-		margin-left: 5px;
-	}
-	&__btn {
-		padding: 1rem 2rem;
-		color: var(--bg-color);
-		font-family: 'Ralewaybold', sans-serif;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		background-color: #87fa6f;
-		color: var(--font-color);
-		border-radius: 8px;
-		box-shadow: 0 2px 4px 1px rgba(66, 68, 90, 0.45);
-		transition: background-color 0.3s;
-	}
-	&__btn:hover,
-	&__btn:active {
-		background-color: #62b751;
-	}
-}
-.cookiehide {
-	display: none;
-}
-
 .logo {
 	display: flex;
 	align-items: center;
@@ -159,17 +116,50 @@ body {
 	border: none;
 	border-radius: 8px;
 	box-shadow: 0px 2px 4px 1px rgba(66, 68, 90, 0.45);
-	background-color: var(--main-color);
+	background-color: var(--btn-hover);
 	transition: background-color 0.3s, box-shadow 0.3s;
 	cursor: pointer;
 }
 
 .regular-button:hover,
 .regular-button:focus {
-	background-color: #87fa6f;
+	background-color: var(--main-color);
 	box-shadow: 0px 2px 4px 1px rgba(105, 239, 105, 0.6);
 }
 
+.cookie {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 140px;
+	padding: 3rem;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.767);
+	opacity: 0;
+	transform: translateY(100%);
+	animation: show-cookies 0.5s 0.5s forwards;
+	z-index: 500;
+	&__p {
+		margin-bottom: 2rem;
+		font-size: 2rem;
+		color: var(--bg-color);
+	}
+	&__img {
+		position: absolute;
+		top: 27px;
+		height: 30px;
+		margin-left: 5px;
+	}
+	&__btn {
+		color: var(--font-color);
+		font-family: 'Ralewaybold', sans-serif;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+	}
+}
+.cookiehide {
+	display: none;
+}
 // =====================================
 // NAV
 // =====================================
@@ -204,7 +194,50 @@ body {
 			background-color: var(--font-color);
 		}
 	}
+	&__btn {
+		height: 35px;
+		width: 29px;
+		position: absolute;
+		top: 1.5rem;
+		right: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		&-bar,
+		&-bar::before,
+		&-bar::after {
+			width: 100%;
+			height: 3px;
+			border-radius: 3px;
+			background-color: var(--font-color);
+			transition: all 0.5s ease-in-out;
+		}
+		&-bar::before,
+		&-bar::after {
+			content: '';
+			position: absolute;
+		}
+		&-bar::before {
+			transform: translateY(9px);
+		}
+		&-bar::after {
+			transform: translateY(-9px);
+		}
+	}
 }
+//BURGER BTN ANIMATION
+//========================================
+.nav__btn.open .nav__btn-bar {
+	background-color: transparent;
+}
+.nav__btn.open .nav__btn-bar::before {
+	transform: rotate(45deg);
+}
+.nav__btn.open .nav__btn-bar::after {
+	transform: rotate(-45deg);
+}
+
 //ACTIVE LIST ITEM WHILE SCROLLING
 .active {
 	color: var(--bg-color);
@@ -461,10 +494,13 @@ body {
 		transition: background-color 0.3s, box-shadow 0.3s;
 	}
 	&__btn:hover,
-	&__btn:active {
+	&__btn:focus {
 		background-color: var(--main-color);
 		box-shadow: 0px 2px 4px 1px rgba(105, 239, 105, 0.6);
 	}
+}
+.offersection-activebtn {
+	background-color: var(--main-color);
 }
 .card:hover {
 	transform: scale(1.02);
@@ -747,7 +783,7 @@ body {
 .sending-msg {
 	position: absolute;
 	position: fixed;
-	top: 60vh;
+	top: 90vh;
 	left: 50%;
 	transform: translateX(-50%);
 	padding: 2.5rem 5rem;

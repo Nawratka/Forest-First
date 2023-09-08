@@ -1,11 +1,14 @@
 const body = document.querySelector('body');
 const html = document.querySelector('html');
+const nav = document.querySelector('.main-wrapper');
 const burgerBtn = document.querySelector('.nav__btn');
+let menuOpen = false;
 const sideMenu = document.querySelector('.side-menu');
+const sideMenuNavList = sideMenu.querySelector('.nav__list');
+const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const year = document.getElementById('year');
 const menuItems = document.querySelectorAll('.nav__list-link');
 const scrollSpySections = document.querySelectorAll('.scroll-section');
-// const media = window.matchMedia('(min-width: 463px)');
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
 
@@ -21,34 +24,6 @@ const handleCookieBox = () => {
 	localStorage.setItem('cookie', 'true');
 	cookieBox.classList.add('cookiehide');
 };
-
-// SHOW AND HIDE SIDE MENU FOR MOBILE DEVICES & DISABLE SCROLLING
-// ==============================================
-const classCheck = () => {
-	if (sideMenu.classList.contains('show')) {
-		body.classList.remove('bodyHidden');
-		body.classList.add('bodyShow');
-		sideMenu.classList.remove('show');
-		sideMenu.classList.add('close');
-	} else {
-		body.classList.remove('bodyShow');
-		body.classList.add('bodyHidden');
-		sideMenu.classList.remove('close');
-		sideMenu.classList.add('show');
-	}
-};
-
-// CHECKS IF MEDIA MATHCES AND DELETES FALSE VISIBILITY OF NAVBAR-UL LIST BY PAGE RESIZING
-//==============================================
-// function testMedia(media) {
-// 	if (media.matches) {
-// 		sideMenu.classList.add('show2');
-// 		sideMenu.classList.remove('close');
-// 	} else {
-// 		sideMenu.classList.remove('show');
-// 		sideMenu.classList.remove('show2');
-// 	}
-// }
 
 //REFRESH YEAR IN FOOTER
 // ==============================================
@@ -77,6 +52,13 @@ const handleScrollSpy = () => {
 		});
 	}
 };
+
+const closingSideMenu = () => {
+	sideMenu.classList.remove('show');
+	body.classList.remove('bodyHidden');
+	menuOpen = false;
+	burgerBtn.classList.remove('open');
+}
 
 // IF CONTACT PAGE -> FORM VALIDATION
 // ==============================================
@@ -151,6 +133,7 @@ const whatsPage = () => {
 
 		// CONTACT-PAGE LISTENERS
 		// ==============================================
+		body.onload = clearStuff();
 		clearBtn.addEventListener('click', (e) => {
 			e.preventDefault();
 			clearStuff();
@@ -168,7 +151,6 @@ const whatsPage = () => {
 				sendingMsg.classList.add('afterSendingMsg');
 			}
 		});
-		body.onload = clearStuff();
 		// LABEL FLOATING HANDLE FOR INPUT TYPE = 'EMAIL'
 		// ==============================================
 		document.addEventListener('click', (e) => {
@@ -191,17 +173,27 @@ const whatsPage = () => {
 
 // MAIN LISTENERS
 // ==============================================
-burgerBtn.addEventListener('click', classCheck);
-window.addEventListener('click', (e) =>
-	e.target === sideMenu ? classCheck() : false
-);
-// media.addEventListener('change', testMedia);
+burgerBtn.addEventListener('click', () => {
+	body.classList.toggle('bodyHidden');
+	sideMenu.classList.toggle('show')
+	if(!menuOpen) {
+		burgerBtn.classList.add('open');
+		menuOpen = true;
+	} else {
+		burgerBtn.classList.remove('open')
+		menuOpen = false;
+	}
+})
+window.addEventListener('click', (e) => {
+	if(e.target === sideMenu || e.target === sideMenuNavList || e.target === nav) {
+		closingSideMenu();
+	}
+})
 window.addEventListener('scroll', handleScrollSpy);
 cookieBtn.addEventListener('click', handleCookieBox);
 
 // MAIN FUNCTIONS AT START
 // =============================================
-// testMedia(media);
 whatsPage();
 showYear();
 showCookie();

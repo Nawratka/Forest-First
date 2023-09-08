@@ -17,30 +17,34 @@
     <div class="cookie">
         <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
                 class="cookie__img"></p>
-        <button class="cookie__btn" tabindex="1">Akceptuję</button>
+        <button class="regular-button cookie__btn" tabindex="1">Akceptuję</button>
     </div>
-<!-- =====================================
+  <!-- =====================================
 NAV
 ====================================== -->
-    <nav class="nav">
-        <div class="main-wrapper">
-            <div class="logo">
-                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-                <p class="logo__text"><a href="index.html" class="logo__link" tabindex="2">Forest</a></p>
-            </div>
-            <button class="nav__btn" tabindex="3">
-                <img src="dist/img/menu.svg" class="nav__btn-img" alt="burger button">
-            </button>
-            <div class="side-menu">
-                <ul class="nav__list" onclick="classCheck()">
-                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link" tabindex="4">Home</a></li>
-                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5">O nas</a></li>
-                    <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" tabindex="6">Oferta</a></li>
-                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link active" tabindex="7">Kontakt</a></li>
-                </ul>
-            </div>
+<nav class="nav">
+    <div class="main-wrapper">
+        <div class="logo">
+            <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+            <p class="logo__text"><a href="index.html#home" class="logo__link" tabindex="2" onclick="closingSideMenu()">Forest</a></p>
         </div>
-    </nav>
+        <div class="nav__btn" tabindex="3">
+            <div class="nav__btn-bar"></div>
+        </div>
+        <div class="side-menu">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="index.html#home" class="nav__list-link"
+                        tabindex="4" onclick="closingSideMenu()">Home</a></li>
+                <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5" onclick="closingSideMenu()">O
+                        nas</a></li>
+                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" tabindex="6" onclick="closingSideMenu()">Oferta</a>
+                </li>
+                <li class="nav__list-item"><a href="contact.html" class="nav__list-link active" tabindex="7" onclick="closingSideMenu()">Kontakt</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 <!-- =====================================
 HEADER
 ====================================== -->
