@@ -17,35 +17,34 @@
     <div class="cookie">
         <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
                 class="cookie__img"></p>
-        <button class="regular-button cookie__btn" tabindex="1">Akceptuję</button>
+        <button class="regular-button cookie__btn">Akceptuję</button>
     </div>
-  <!-- =====================================
+    <!-- =====================================
 NAV
 ====================================== -->
-<nav class="nav">
-    <div class="main-wrapper">
-        <div class="logo">
-            <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="index.html#home" class="logo__link" tabindex="2" onclick="closingSideMenu()">Forest</a></p>
+    <nav class="nav">
+        <div class="main-wrapper">
+            <div class="logo">
+                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                <p class="logo__text"><a href="index.html#home" class="logo__link">Forest</a></p>
+            </div>
+            <div class="nav__btn">
+                <div class="nav__btn-bar"></div>
+            </div>
+            <div class="side-menu">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link">Home</a></li>
+                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link">O
+                            nas</a></li>
+                    <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link">Oferta</a>
+                    </li>
+                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link active">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="nav__btn" tabindex="3">
-            <div class="nav__btn-bar"></div>
-        </div>
-        <div class="side-menu">
-            <ul class="nav__list">
-                <li class="nav__list-item"><a href="index.html#home" class="nav__list-link"
-                        tabindex="4" onclick="closingSideMenu()">Home</a></li>
-                <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5" onclick="closingSideMenu()">O
-                        nas</a></li>
-                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link" tabindex="6" onclick="closingSideMenu()">Oferta</a>
-                </li>
-                <li class="nav__list-item"><a href="contact.html" class="nav__list-link active" tabindex="7" onclick="closingSideMenu()">Kontakt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- =====================================
+    </nav>
+    <!-- =====================================
 HEADER
 ====================================== -->
     <header class="header header--subpage">
@@ -81,20 +80,22 @@ CONTACT PAGE
                         <div class="address-data__line-container">
                             <div class="icon-box"><img src="./dist/img/mail.svg" alt="email icon" class="icon-box__img">
                             </div>
-                            <p class="address-data__p"><a href="mailto:kontakt@forest.pl" class="address-data__mail-link" tabindex="8">kontakt@forest.pl</a></p>
+                            <p class="address-data__p"><a href="mailto:kontakt@forest.pl"
+                                    class="address-data__mail-link">kontakt@forest.pl</a></p>
                         </div>
                     </div>
                     <div class="address-data__socials">
-                        <div class="icon-box"><a href="https://www.facebook.com/" target="_blank"
-                                rel="noopener" class="icon-box__a" tabindex="9"><img
-                                    src="./dist/img/facebook.svg" alt="facebook icon-box" class="icon-box__img"></a>
+                        <div class="icon-box"><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                                class="icon-box__a"><img src="./dist/img/facebook.svg" alt="facebook icon-box"
+                                    class="icon-box__img"></a>
                         </div>
-                        <div class="icon-box"><a href="https://www.instagram.com/" target="_blank"
-                                rel="noopener" class="icon-box__a" tabindex="10"><img
-                                    src="./dist/img/instagram.svg" alt="instagram icon-box" class="icon-box__img"></a>
+                        <div class="icon-box"><a href="https://www.instagram.com/" target="_blank" rel="noopener"
+                                class="icon-box__a"><img src="./dist/img/instagram.svg" alt="instagram icon-box"
+                                    class="icon-box__img"></a>
                         </div>
-                        <div class="icon-box"><a href="https://twitter.com/" target="_blank"
-                                rel="noopener" class="icon-box__a" tabindex="11"><img src="./dist/img/twitter.svg" alt="twitter icon-box" class="icon-box__img"></a></div>
+                        <div class="icon-box"><a href="https://twitter.com/" target="_blank" rel="noopener"
+                                class="icon-box__a"><img src="./dist/img/twitter.svg" alt="twitter icon-box"
+                                    class="icon-box__img"></a></div>
                     </div>
                 </div>
                 <div class="address__map">
@@ -121,14 +122,17 @@ CONTACT PAGE
                 </div>
                 <div class="form-box">
                     <textarea id="msg" maxlength="1000" class="form-box__textarea" required></textarea>
-                    <label for="msg" class="form-box__label"><span class="form-box__span">Treść wiadomości</span></label>
+                    <label for="msg" class="form-box__label"><span class="form-box__span">Treść
+                            wiadomości</span></label>
                     <p class="form-box__error-text">error</p>
                 </div>
                 <div class="form-box agreement-box">
                     <input type="checkbox" id="agreement" name="agreement" class="agreement-box__checkbox" required />
-                        <label for="agreement" class="agreement-box__text">Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą
-                            o ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia zapytania. Administratorem danych osobowych jest Forest Group
-                            Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.</label>
+                    <label for="agreement" class="agreement-box__text">Wyrażam zgodę na przetwarzanie moich danych
+                        osobowych zgodnie z ustawą
+                        o ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia
+                        zapytania. Administratorem danych osobowych jest Forest Group
+                        Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.</label>
                 </div>
                 <div class="form__control-buttons">
                     <button class="regular-button clear-btn" onclick="this.blur()">Wyczyść</button>
@@ -137,7 +141,7 @@ CONTACT PAGE
             </div>
         </form>
     </main>
-<!--=====================================
+    <!--=====================================
 "PREFOOTER" SECTION && FOOTER
 ======================================= -->
     <footer class="footer">
@@ -176,6 +180,8 @@ CONTACT PAGE
         </section>
         <p class="footer__p">&copy; <span id="year"></span> Forest Group Company Ltd.</p>
     </footer>
-    <script src="dist/js/main.min.js"></script>
+    <script type="module" src="dist/js/main.min.js"></script>
+    <!-- <script type="module" src="dist/js/contact.min.js"></script> -->
 </body>
+
 </html>

@@ -17,34 +17,33 @@
     <div class="cookie">
         <p class="cookie__p">Nasza strona korzysta z ciasteczek! <img src="dist/img/cookie.svg" alt=""
                 class="cookie__img"></p>
-        <button class="regular-button cookie__btn" tabindex="1">Akceptuję</button>
+        <button class="regular-button cookie__btn">Akceptuję</button>
     </div>
-  <!-- =====================================
+    <!-- =====================================
 NAV
 ====================================== -->
-<nav class="nav">
-    <div class="main-wrapper">
-        <div class="logo">
-            <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
-            <p class="logo__text"><a href="index.html#home" class="logo__link" tabindex="2" onclick="closingSideMenu()">Forest</a></p>
+    <nav class="nav">
+        <div class="main-wrapper">
+            <div class="logo">
+                <img src="dist/img/pine-icon.png" class="logo__img" alt="pine tree icon">
+                <p class="logo__text"><a href="index.html#home" class="logo__link">Forest</a></p>
+            </div>
+            <div class="nav__btn">
+                <div class="nav__btn-bar"></div>
+            </div>
+            <div class="side-menu">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="index.html#home" class="nav__list-link">Home</a></li>
+                    <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link">O
+                            nas</a></li>
+                    <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link active">Oferta</a>
+                    </li>
+                    <li class="nav__list-item"><a href="contact.html" class="nav__list-link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="nav__btn" tabindex="3">
-            <div class="nav__btn-bar"></div>
-        </div>
-        <div class="side-menu">
-            <ul class="nav__list">
-                <li class="nav__list-item"><a href="index.html#home" class="nav__list-link"
-                        tabindex="4" onclick="closingSideMenu()">Home</a></li>
-                <li class="nav__list-item"><a href="index.html#about-us" class="nav__list-link" tabindex="5" onclick="closingSideMenu()">O
-                        nas</a></li>
-                <li class="nav__list-item"><a href="index.html#offer" class="nav__list-link active" tabindex="6" onclick="closingSideMenu()">Oferta</a>
-                </li>
-                <li class="nav__list-item"><a href="contact.html" class="nav__list-link" tabindex="7" onclick="closingSideMenu()">Kontakt</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+    </nav>
 
     <!-- =====================================
 HEADER
@@ -64,7 +63,7 @@ HEADER
     <main>
         <section class="section offerpage">
             <h1 class="section__title subpage-title">oferta</h1>
-            <div class="offerpage__greenBg"></div>
+            <div class="offerpage__green-bg"></div>
             <div class="offerpage__box main-wrapper">
                 <div class="subpage-card subpage-card--first">
                     <div class="subpage-card__picture">
@@ -80,17 +79,19 @@ HEADER
                     <div class="subpage-price">
                         <p class="subpage-price__name">Demo</p>
                         <p class="subpage-price__value">$0</p>
-                        <ul class="subpage-price__list">
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li class="negative-item"><img src="dist/img/minus.svg" alt=""
-                                    class="card__list-icon">opcja poza pakietem</li>
-                            <li class="negative-item"><img src="dist/img/minus.svg" alt=""
-                                    class="card__list-icon">opcja poza pakietem</li>
-                            <li class="negative-item"><img src="dist/img/minus.svg" alt=""
-                                    class="card__list-icon">opcja poza pakietem</li>
+                        <ul class="subpage-list">
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item subpage-list__item--negative"><img src="dist/img/minus.svg"
+                                    alt="" class="card__list-icon">opcja poza pakietem</li>
+                            <li class="subpage-list__item subpage-list__item--negative"><img src="dist/img/minus.svg"
+                                    alt="" class="card__list-icon">opcja poza pakietem</li>
+                            <li class="subpage-list__item subpage-list__item--negative"><img src="dist/img/minus.svg"
+                                    alt="" class="card__list-icon">opcja poza pakietem</li>
                         </ul>
-                        <button class="regular-button subpage-price__btn" tabindex="8">Wybierz</button>
+                        <button class="regular-button subpage-price__btn">Wybierz</button>
                     </div>
                 </div>
                 <div class="subpage-card subpage-card--second">
@@ -108,16 +109,19 @@ HEADER
                     <div class="subpage-price">
                         <p class="subpage-price__name">Standard</p>
                         <p class="subpage-price__value">$99</p>
-                        <ul class="subpage-price__list">
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li class="negative-item"><img src="dist/img/minus.svg" alt=""
-                                    class="card__list-icon">opcja poza pakietem</li>
-                            <li class="negative-item"><img src="dist/img/minus.svg" alt=""
-                                    class="card__list-icon">opcja poza pakietem</li>
+                        <ul class="subpage-list">
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item subpage-list__item--negative"><img src="dist/img/minus.svg"
+                                    alt="" class="card__list-icon">opcja poza pakietem</li>
+                            <li class="subpage-list__item subpage-list__item--negative"><img src="dist/img/minus.svg"
+                                    alt="" class="card__list-icon">opcja poza pakietem</li>
                         </ul>
-                        <button class="regular-button subpage-price__btn" tabindex="9">Wybierz</button>
+                        <button class="regular-button subpage-price__btn">Wybierz</button>
                     </div>
                 </div>
                 <div class="subpage-card subpage-card--third">
@@ -135,14 +139,19 @@ HEADER
                     <div class="subpage-price">
                         <p class="subpage-price__name">Premium</p>
                         <p class="subpage-price__value">$299</p>
-                        <ul class="subpage-price__list">
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
-                            <li><img src="dist/img/check2.svg" alt="" class="card__list-icon">opcja w pakiecie</li>
+                        <ul class="subpage-list">
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
+                            <li class="subpage-list__item"><img src="dist/img/check2.svg" alt=""
+                                    class="card__list-icon">opcja w pakiecie</li>
                         </ul>
-                        <button class="regular-button subpage-price__btn" tabindex="10">Wybierz</button>
+                        <button class="regular-button subpage-price__btn">Wybierz</button>
                     </div>
                 </div>
             </div>

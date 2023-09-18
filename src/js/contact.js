@@ -1,75 +1,75 @@
-// import { user, sayHello } from '../../dist/js/contact.min.js';
-const user = require('./contact.js');
-const user2 = require('./contact.min.js');
-console.log('main js file');
-console.log(user2);
-const getFullName = require('./contact.js');
-console.log(getFullName('John', 'Doe'));
-sayHello();
+const user = {name: 'Jon'};
+const sayHello = () => {
+    console.log('Hello from contact.js');
+}
+const getFullName = (firstname, lastName) => {
+    return `My fullname is ${firstname} ${lastName}`;}
 
+module.exports = sayHello;
+module.exports = getFullName;
 
-const body = document.querySelector('body');
-const html = document.querySelector('html');
-const nav = document.querySelector('.main-wrapper');
-const burgerBtn = document.querySelector('.nav__btn');
-let menuOpen = false;
-const sideMenu = document.querySelector('.side-menu');
-const sideMenuNavList = sideMenu.querySelector('.nav__list');
-const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
-const logo = document.querySelector('.logo__link');
-const year = document.getElementById('year');
-const menuItems = document.querySelectorAll('.nav__list-link');
-const scrollSpySections = document.querySelectorAll('.scroll-section');
-const cookieBox = document.querySelector('.cookie');
-const cookieBtn = document.querySelector('.cookie__btn');
+// const body = document.querySelector('body');
+// const html = document.querySelector('html');
+// const nav = document.querySelector('.main-wrapper');
+// const burgerBtn = document.querySelector('.nav__btn');
+// let menuOpen = false;
+// const sideMenu = document.querySelector('.side-menu');
+// const sideMenuNavList = sideMenu.querySelector('.nav__list');
+// const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
+// const logo = document.querySelector('.logo__link');
+// const year = document.getElementById('year');
+// const menuItems = document.querySelectorAll('.nav__list-link');
+// const scrollSpySections = document.querySelectorAll('.scroll-section');
+// const cookieBox = document.querySelector('.cookie');
+// const cookieBtn = document.querySelector('.cookie__btn');
 
-// COOKIES HANDLE
-// ==============================================
-const showCookie = () => {
-	const cookieAcceptation = localStorage.getItem('cookie');
-	if (cookieAcceptation) {
-		cookieBox.classList.add('cookiehide');
-	}
-};
-const handleCookieBox = () => {
-	localStorage.setItem('cookie', 'true');
-	cookieBox.classList.add('cookiehide');
-};
+// // COOKIES HANDLE
+// // ==============================================
+// const showCookie = () => {
+// 	const cookieAcceptation = localStorage.getItem('cookie');
+// 	if (cookieAcceptation) {
+// 		cookieBox.classList.add('cookiehide');
+// 	}
+// };
+// const handleCookieBox = () => {
+// 	localStorage.setItem('cookie', 'true');
+// 	cookieBox.classList.add('cookiehide');
+// };
 
-//REFRESH YEAR IN FOOTER
-// ==============================================
-const showYear = () => {
-	const today = new Date();
-	year.textContent = today.getFullYear();
-};
+// //REFRESH YEAR IN FOOTER
+// // ==============================================
+// const showYear = () => {
+// 	const today = new Date();
+// 	year.textContent = today.getFullYear();
+// };
 
-// SCROLLSPY
-// ==============================================
-const handleScrollSpy = () => {
-	if (document.body.classList.contains('main-page')) {
-		const sections = [];
-		scrollSpySections.forEach((section) => {
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
-				sections.push(section.id);
+// // SCROLLSPY
+// // ==============================================
+// const handleScrollSpy = () => {
+// 	if (document.body.classList.contains('main-page')) {
+// 		const sections = [];
+// 		scrollSpySections.forEach((section) => {
+// 			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
+// 				sections.push(section.id);
 
-				const activeSection = document.querySelector(
-					`[href*="${sections[0]}"]`
-				);
+// 				const activeSection = document.querySelector(
+// 					`[href*="${sections[0]}"]`
+// 				);
 
-				menuItems.forEach((item) => item.classList.remove('active'));
+// 				menuItems.forEach((item) => item.classList.remove('active'));
 
-				activeSection.classList.add('active');
-			}
-		});
-	}
-};
+// 				activeSection.classList.add('active');
+// 			}
+// 		});
+// 	}
+// };
 
-const closingSideMenu = () => {
-	sideMenu.classList.remove('show');
-	body.classList.remove('bodyHidden');
-	menuOpen = false;
-	burgerBtn.classList.remove('open');
-};
+// const closingSideMenu = () => {
+// 	sideMenu.classList.remove('show');
+// 	body.classList.remove('bodyHidden');
+// 	menuOpen = false;
+// 	burgerBtn.classList.remove('open');
+// };
 
 // // IF CONTACT PAGE -> FORM VALIDATION
 // // ==============================================
@@ -181,32 +181,32 @@ const closingSideMenu = () => {
 // 	}
 // };
 
-// MAIN LISTENERS
-// ==============================================
-burgerBtn.addEventListener('click', () => {
-	body.classList.toggle('bodyHidden');
-	sideMenu.classList.toggle('show');
-	menuOpen = !menuOpen;
-	burgerBtn.classList.toggle('open', menuOpen);
-});
-window.addEventListener('click', (e) => {
-	if (
-		e.target === sideMenu ||
-		e.target === sideMenuNavList ||
-		e.target === nav ||
-		e.target === logo
-	) {
-		closingSideMenu();
-	}
-});
-window.addEventListener('scroll', handleScrollSpy);
-cookieBtn.addEventListener('click', handleCookieBox);
-sideMenuListLink.forEach((link) =>
-	link.addEventListener('click', closingSideMenu)
-);
+// // MAIN LISTENERS
+// // ==============================================
+// burgerBtn.addEventListener('click', () => {
+// 	body.classList.toggle('bodyHidden');
+// 	sideMenu.classList.toggle('show');
+// 	menuOpen = !menuOpen;
+// 	burgerBtn.classList.toggle('open', menuOpen);
+// });
+// window.addEventListener('click', (e) => {
+// 	if (
+// 		e.target === sideMenu ||
+// 		e.target === sideMenuNavList ||
+// 		e.target === nav ||
+// 		e.target === logo
+// 	) {
+// 		closingSideMenu();
+// 	}
+// });
+// window.addEventListener('scroll', handleScrollSpy);
+// cookieBtn.addEventListener('click', handleCookieBox);
+// sideMenuListLink.forEach((link) =>
+// 	link.addEventListener('click', closingSideMenu)
+// );
 
-// MAIN FUNCTIONS AT START
-// =============================================
+// // MAIN FUNCTIONS AT START
+// // =============================================
 // whatsPage();
-showYear();
-showCookie();
+// showYear();
+// showCookie();

@@ -70,9 +70,6 @@ $navbarHeight: 67px;
 // TABLETS
 // =====================================
 @media (max-width: 560px) {
-	body {
-		overflow-x: hidden;
-	}
 	.bodyHidden {
 		overflow: hidden;
 	}
@@ -147,7 +144,7 @@ $navbarHeight: 67px;
 	}
 
 	.header {
-		width: 100vw;
+		width: 100%;
 		height: 90vh;
 		&__hero-img {
 			aspect-ratio: auto 640 / 360;
@@ -170,7 +167,7 @@ $navbarHeight: 67px;
 			padding: 1rem 2rem;
 			width: 50%;
 			height: 4rem;
-			border: 1px solid white;
+			border: none;
 			border-radius: 10px;
 			transform: translate(50%);
 			font-size: 1.5rem;
@@ -178,7 +175,7 @@ $navbarHeight: 67px;
 			text-transform: uppercase;
 			text-align: center;
 			letter-spacing: 3px;
-			background-color: transparent;
+			background-color: var(--main-color);
 			color: #fff;
 			transition: background-color 0.3s, color 0.3s;
 		}
@@ -195,17 +192,17 @@ $navbarHeight: 67px;
 			padding: 2rem 1.5rem;
 		}
 		.header__hero-img {
-			background-size: 176%;
-			.header__text {
-				top: 49%;
-			}
-			.header__text-title {
-				font-size: 2.2rem;
-				letter-spacing: 0;
-				.brMobile {
-					display: inline;
-				}
-			}
+			background-size: 100%;
+		}
+		.header__text {
+			top: 49%;
+		}
+		.header__text-title {
+			font-size: 2.2rem;
+			letter-spacing: 0;
+		}
+		.brMobile {
+			display: inline;
 		}
 	}
 	.about-us {
@@ -215,7 +212,7 @@ $navbarHeight: 67px;
 		padding: 0;
 		padding-bottom: 3rem;
 		&__picture {
-			width: 100vw;
+			width: 100%;
 		}
 		&__text {
 			margin: 0;
@@ -266,8 +263,7 @@ $navbarHeight: 67px;
 			font-size: 1.5rem;
 		}
 		&__box--second {
-			margin-left: 0rem;
-			margin-right: 0rem;
+			margin: 0;
 		}
 	}
 	.page404 {
@@ -364,6 +360,12 @@ $navbarHeight: 67px;
 	}
 }
 
+@media (min-width: 825px) {
+	.subpage-card__tag {
+		display: none;
+	}
+}
+
 @media (max-width: 680px) {
 	.address__map {
 		height: 30rem;
@@ -396,7 +398,7 @@ $navbarHeight: 67px;
 // WHEN VW > 1000PX (main-wrapper)
 // -------------------
 @media (max-width: 1030px) {
-	.offerpage__greenBg {
+	.offerpage__green-bg {
 		background-color: var(--bg-color);
 	}
 }
