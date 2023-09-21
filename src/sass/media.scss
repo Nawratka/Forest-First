@@ -412,3 +412,9 @@ $navbarHeight: 67px;
 		padding-left: 0;
 	}
 }
+@media (min-width: 1700px) {
+	.header__hero-img {
+		background-image: url('../img/jungle-1807476_1920.jpg');
+		background-position-y: 56%;
+	}
+}
