@@ -111,17 +111,17 @@ CONTACT PAGE
                 <h2 class="section__title contact__heading">napisz do nas</h2>
                 <p class="sending-msg">Dziękujemy za wiadomość!</p>
                 <div class="form-box">
-                    <input type="text" name="name" id="name" class="form-box__input" required>
+                    <input type="text" name="name" id="name" class="form-box__input" required data-minLength="3" data-errorText="Wprowadź swoje imię, min. 3 znaki" data-textinput>
                     <label for="name" class="form-box__label"><span>Imię</span></label>
                     <p class="form-box__error-text">error</p>
                 </div>
                 <div class="form-box">
-                    <input type="email" name="email" id="email" class="form-box__input" required>
+                    <input type="email" name="email" id="email" class="form-box__input" required data-minLength="7" data-errorText="Wprowadź adres mailowy" data-textinput>
                     <label for="email" class="form-box__label"><span class="form-box__span">Adres mailowy</span></label>
                     <p class="form-box__error-text">error</p>
                 </div>
                 <div class="form-box">
-                    <textarea id="msg" maxlength="1000" class="form-box__textarea" required></textarea>
+                    <textarea id="msg" maxlength="1000" class="form-box__textarea" required data-minLength="30" data-errorText="Wprowadź treść wiadomości, min. 30 znaków" data-textinput></textarea>
                     <label for="msg" class="form-box__label"><span class="form-box__span">Treść
                             wiadomości</span></label>
                     <p class="form-box__error-text">error</p>

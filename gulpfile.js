@@ -15,7 +15,7 @@ const reload = browserSync.reload;
 const paths = {
 	html: './html/**/*.kit',
 	sass: './src/sass/**/*.scss',
-	js: './src/js/*.js',
+	js: './src/js/**/*.js',
 	img: './src/img/*',
 	dist: './dist',
 	sassDest: './dist/css',

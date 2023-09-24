@@ -2,49 +2,51 @@ const name = document.querySelector('#name');
 const email = document.querySelector('#email');
 const emailLabel = email.nextElementSibling;
 const msg = document.querySelector('#msg');
+const formTextInputs = document.querySelectorAll('[data-textinput]');
 const clearBtn = document.querySelector('.clear-btn');
 const sendBtn = document.querySelector('.send-btn');
-let errorText = document.getElementsByClassName('form-box__error-text');
 const sendingMsg = document.querySelector('.sending-msg');
 const checkbox = document.querySelector('.agreement-box__checkbox');
 const allErrors = document.querySelectorAll('.form-box__error-text');
 let correctFieldsArray = [];
 checkbox.checked = false;
 
-// FUNCTION CHECKS ALL INPUTS LENGTH AND MATCHES ID WITH SERIAL NR TO CONNECT WITH RIGHT errorText UNDER INPUT. FOR EACH INPUT ARE DEDICATED ERROR MESSAGES. WHEN ERROR DISAPPEARS FUNCTION PUSHES [1] TO correctFieldsArray. 3 ELEMENTS = SUCCESS
+// FUNCTION CHECKS ALL TEXT INPUTS USING DATASETS VALUES - MIN.LENGTH, DEDICATED ERROR TEXT (SEE IN HTML). WHEN ERRORS DISAPPEARS FUNCTION PUSHES [1] TO correctFieldsArray. 3 ITEMS = SUCCESS
 // ==============================================
-const engine = (id, serial, valueMinLength, msgerror) => {
-	const innerValue = id.value;
-	if (innerValue.trim() === '' || innerValue.trim().length < valueMinLength) {
-		errorText[serial].textContent = msgerror;
-		errorText[serial].style.opacity = '1';
+const handleFormInputs = (item) => {
+	const innerValue = item.value;
+	let errorText = item.nextElementSibling.nextElementSibling;
+	if (innerValue.trim() === '' || innerValue.trim().length < item.dataset.minlength) {
+		errorText.innerText = item.dataset.errortext;
+		errorText.style.opacity = '1';
 		return;
 	}
-	if (id === email) {
-		checkEmail(id, serial);
+	if (item === email) {
+		checkEmail(item);
 		return;
 	}
-	errorText[serial].style.opacity = '0';
+	errorText.style.opacity = '0';
 	correctFieldsArray.push(1);
 };
 
 // REGEX FOR EMAIL
 // ==============================================
-const checkEmail = (id, serial) => {
+const checkEmail = (item) => {
+	let errorText = item.nextElementSibling.nextElementSibling;
 	const re =
 		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-	if (re.test(id.value)) {
-		errorText[serial].style.opacity = '0';
+	if (re.test(item.value)) {
+		errorText.style.opacity = '0';
 		correctFieldsArray.push(1);
 	} else {
-		errorText[serial].textContent = 'Email nie jest poprawny';
-		errorText[serial].style.opacity = '1';
+		errorText.textContent = 'Email nie jest poprawny';
+		errorText.style.opacity = '1';
 	}
 };
 
 const clearStuff = () => {
-	[name, email, msg].forEach((item) => {
+	formTextInputs.forEach((item) => {
 		item.value = '';
 		allErrors.forEach((el) => {
 			el.style.opacity = '0';
@@ -73,9 +75,9 @@ sendBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 	correctFieldsArray = [];
 	sendingMsg.classList.remove('afterSendingMsg');
-	engine(name, 0, 3, 'Wprowadź swoje imię, min. 3 znaki');
-	engine(email, 1, 7, 'Wprowadź adres mailowy');
-	engine(msg, 2, 30, 'Wprowadź treść wiadomości, min. 30 znaków');
+	formTextInputs.forEach(item => {
+		handleFormInputs(item)
+	})
 	checkboxControl();
 	if ((correctFieldsArray.length === 3) & (checkbox.checked === true)) {
 		clearStuff();
