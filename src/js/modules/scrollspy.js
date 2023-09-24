@@ -2,7 +2,7 @@ const scrollSpySections = document.querySelectorAll('.scroll-section');
 const menuItems = document.querySelectorAll('.nav__list-link');
 
 const handleScrollSpy = () => {
-	if (document.body.classList.contains('main-page')) {
+	{
 		const sections = [];
 		scrollSpySections.forEach((section) => {
 			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {

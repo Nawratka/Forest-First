@@ -11,6 +11,7 @@ const year = document.getElementById('year');
 
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
+const mobileViewWidth = 560;
 
 // COOKIES HANDLE
 // ==============================================
@@ -39,6 +40,13 @@ const closingSideMenu = () => {
 	burgerBtn.classList.remove('open');
 };
 
+const deleteShowClass = () => {
+	if (window.innerWidth <= mobileViewWidth) {
+		console.log('mniejsze niz 560');
+		closingSideMenu();
+	}
+};
+
 // MAIN LISTENERS
 // ==============================================
 burgerBtn.addEventListener('click', () => {
@@ -57,11 +65,15 @@ window.addEventListener('click', (e) => {
 		closingSideMenu();
 	}
 });
-
 cookieBtn.addEventListener('click', handleCookieBox);
 sideMenuListLink.forEach((link) =>
 	link.addEventListener('click', closingSideMenu)
 );
+window.addEventListener('resize', () => {
+	if (window.innerWidth < mobileViewWidth) {
+		closingSideMenu();
+	}
+});
 
 // MAIN FUNCTIONS AT START
 // =============================================
