@@ -79,7 +79,7 @@ sendBtn.addEventListener('click', (e) => {
 		handleFormInputs(item)
 	})
 	checkboxControl();
-	if ((correctFieldsArray.length === 3) & (checkbox.checked === true)) {
+	if ((correctFieldsArray.length === formTextInputs.length) & (checkbox.checked === true)) {
 		clearStuff();
 		sendingMsg.classList.add('afterSendingMsg');
 	}
