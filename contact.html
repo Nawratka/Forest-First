@@ -47,16 +47,16 @@ NAV
     <!-- =====================================
 HEADER
 ====================================== -->
-<header class="header header--subpage scroll-section" id="home">
-    <div class="header__hero-img">
-        <div class="header__bg"></div>
-        <div class="header__text main-wrapper">
-            <p class="header__text-p">Forest Group</p>
-            <h1 class="header__text-title">Najpiękniejszy park <br class="break__line">w Twojej okolicy!</h1>
-            <a href="#about-us" class="header__link">Odkryj</a>
+    <header class="header header--subpage scroll-section" id="home">
+        <div class="header__hero-img">
+            <div class="header__bg"></div>
+            <div class="header__text main-wrapper">
+                <p class="header__text-p">Forest Group</p>
+                <h1 class="header__text-title">Najpiękniejszy park <br class="break__line">w Twojej okolicy!</h1>
+                <a href="#about-us" class="header__link">Odkryj</a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
     <!-- =====================================
 CONTACT PAGE
 =======================================  -->
@@ -81,8 +81,10 @@ CONTACT PAGE
                         <div class="address-data__line-container">
                             <div class="icon-box"><img src="./dist/img/mail.svg" alt="email icon" class="icon-box__img">
                             </div>
-                            <p class="address-data__p"><a href="mailto:kontakt@forest.pl"
-                                    class="address-data__mail-link">kontakt@forest.pl</a></p>
+                            <p class="address-data__p">
+                                <a href="mailto:kontakt@forest.pl" class="address-data__mail-link">kontakt@forest.pl
+                                </a>
+                            </p>
                         </div>
                     </div>
                     <div class="address-data__socials">
@@ -107,22 +109,26 @@ CONTACT PAGE
                 </div>
             </div>
         </section>
+
         <form action="" class="form">
             <div class="form__innerContainer smaller-wrapper">
                 <h2 class="section__title contact__heading">napisz do nas</h2>
                 <p class="sending-msg">Dziękujemy za wiadomość!</p>
                 <div class="form-box">
-                    <input type="text" name="name" id="name" class="form-box__input" required data-minLength="3" data-errorText="Wprowadź swoje imię, min. 3 znaki" data-textinput>
+                    <input type="text" name="name" id="name" class="form-box__input" required data-minLength="3"
+                        data-errorText="Wprowadź swoje imię, min. 3 znaki" data-textinput>
                     <label for="name" class="form-box__label"><span>Imię</span></label>
                     <p class="form-box__error-text">error</p>
                 </div>
                 <div class="form-box">
-                    <input type="email" name="email" id="email" class="form-box__input" required data-minLength="7" data-errorText="Wprowadź adres mailowy" data-textinput>
+                    <input type="email" name="email" id="email" class="form-box__input" required data-minLength="7"
+                        data-errorText="Wprowadź adres mailowy" data-textinput>
                     <label for="email" class="form-box__label"><span class="form-box__span">Adres mailowy</span></label>
                     <p class="form-box__error-text">error</p>
                 </div>
                 <div class="form-box">
-                    <textarea id="msg" maxlength="1000" class="form-box__textarea" required data-minLength="30" data-errorText="Wprowadź treść wiadomości, min. 30 znaków" data-textinput></textarea>
+                    <textarea id="msg" maxlength="1000" class="form-box__textarea" required data-minLength="30"
+                        data-errorText="Wprowadź treść wiadomości, min. 30 znaków" data-textinput></textarea>
                     <label for="msg" class="form-box__label"><span class="form-box__span">Treść
                             wiadomości</span></label>
                     <p class="form-box__error-text">error</p>

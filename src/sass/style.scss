@@ -24,7 +24,8 @@ button {
 // ==========================
 :root {
 	--main-color: rgb(115, 209, 97);
-	--bg-color: #ffffff;
+	--pale-green: #e7f3e1;
+	--bg-color: #fff;
 	--dark-bg: #2e4734;
 	--font-color: #141414;
 	--btn-hover: #87fa6f;
@@ -429,21 +430,29 @@ body {
 		text-align: center;
 		font-size: 1.7rem;
 		&--last {
-			padding: 5rem 0 0;
+			padding: 7rem 0 2rem;
 		}
 	}
 	&__link {
-		font-size: 1.7rem;
+		margin-top: 20px;
+		padding: 1.5rem 2.5rem;
+		border: none;
+		border-radius: 10px;
+		transform: translate(50%);
+		font-size: 1.5rem;
+		text-transform: uppercase;
 		text-align: center;
-		color: var(--font-color);
-		transition: color 0.2s;
-		&--bold {
-			font-family: 'Ralewaybold', sans-serif;
-		}
+		letter-spacing: 1px;
+		background-color: var(--dark-bg);
+		box-shadow: 0 2px 5px 1px rgba(66, 68, 90, 0.45);
+		color: var(--bg-color);
+		transition: background-color 0.3s, color 0.3s;
 	}
 	&__link:hover,
 	&__link:focus {
-		color: var(--main-color);
+		background-color: var(--main-color);
+		box-shadow: 0 2px 5px 1px var(--main-color);
+		color: var(--font-color);
 	}
 }
 
@@ -455,9 +464,11 @@ body {
 	height: 31.5rem;
 	padding: 2.5rem;
 	border: none;
+	background-color: var(--bg-color);
 	box-shadow: 0px 2px 5px 1px rgba(66, 68, 90, 0.45);
 	text-align: center;
-	transition: transform 0.2s;
+	transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+		background-color 0.2s ease-in-out;
 	&__name {
 		font-size: 2.2rem;
 	}
@@ -493,19 +504,20 @@ body {
 		border-radius: 8px;
 		background-color: var(--bg-color);
 		box-shadow: 0px 2px 4px 1px rgba(66, 68, 90, 0.45);
-		transition: background-color 0.3s, box-shadow 0.3s;
-	}
-	&__btn:hover,
-	&__btn:focus {
-		background-color: var(--main-color);
-		box-shadow: 0px 2px 4px 1px rgba(105, 239, 105, 0.6);
+		transition: all 0.2s ease-in-out;
 	}
 }
 .offersection-activebtn {
 	background-color: var(--main-color);
 }
 .card:hover {
-	transform: scale(1.02);
+	transform: scale(1.05);
+	background-color: var(--pale-green);
+	box-shadow: 0 5px 10px 1px var(--main-color);
+}
+.card:hover .card__btn {
+	background-color: var(--main-color);
+	box-shadow: 0px 2px 4px 1px rgba(105, 239, 105, 0.6);
 }
 
 // =====================================
