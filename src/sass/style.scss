@@ -296,13 +296,14 @@ body {
 
 //HEADER USED OUTTA INDEX.HTML
 .header--subpage {
-	height: 20rem;
-	.main-wrapper {
-		padding: 2rem 1.5rem;
-	}
-	.brMobile {
-		display: none;
-	}
+	display: block;
+	// height: 20rem;
+	// .main-wrapper {
+	// 	padding: 2rem 1.5rem;
+	// }
+	// .brMobile {
+	// 	display: none;
+	// }
 }
 
 // =====================================
@@ -647,7 +648,7 @@ body {
 	list-style-type: none;
 	line-height: 2rem;
 	margin-bottom: 1.8rem;
-	&__item{
+	&__item {
 		color: var(--bg-color);
 		margin-bottom: 3px;
 		&--negative {
