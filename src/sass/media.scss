@@ -259,6 +259,12 @@ $navbarHeight: 67px;
 			height: 25rem;
 		}
 	}
+	.social-media {
+		min-height: 60px;
+	}
+	.social-media__text {
+		display: none;
+	}
 }
 
 @media (min-width: 560px) {
