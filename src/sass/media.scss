@@ -162,23 +162,23 @@ $navbarHeight: 67px;
 				margin-bottom: 1rem;
 			}
 		}
-		&__link {
-			margin-top: 20px;
-			padding: 1rem 2rem;
-			width: 50%;
-			height: 4rem;
-			border: none;
-			border-radius: 10px;
-			transform: translate(50%);
-			font-size: 1.5rem;
-			font-family: 'Ralewaybold', sans-serif;
-			text-transform: uppercase;
-			text-align: center;
-			letter-spacing: 3px;
-			background-color: var(--main-color);
-			color: #fff;
-			transition: background-color 0.3s, color 0.3s;
-		}
+		// &__link {
+		// 	margin-top: 20px;
+		// 	padding: 1rem 2rem;
+		// 	width: 50%;
+		// 	height: 4rem;
+		// 	border: none;
+		// 	border-radius: 10px;
+		// 	transform: translate(50%);
+		// 	font-size: 1.5rem;
+		// 	font-family: 'Ralewaybold', sans-serif;
+		// 	text-transform: uppercase;
+		// 	text-align: center;
+		// 	letter-spacing: 3px;
+		// 	background-color: var(--main-color);
+		// 	color: #fff;
+		// 	transition: background-color 0.3s, color 0.3s;
+		// }
 		&__link:hover,
 		&__link:active {
 			background-color: var(--bg-color);
@@ -269,7 +269,6 @@ $navbarHeight: 67px;
 
 @media (min-width: 560px) {
 	.nav__btn,
-	.header__link,
 	.break__line {
 		display: none;
 	}

@@ -29,6 +29,7 @@ button {
 	--dark-bg: #2e4734;
 	--font-color: #141414;
 	--btn-hover: #87fa6f;
+	--header-hover: rgb(84, 164, 68);
 }
 $navbarHeight: 67px;
 
@@ -251,7 +252,7 @@ body {
 // =====================================
 .header {
 	width: 100%;
-	height: 30rem;
+	height: 38rem;
 	position: relative;
 	top: 0;
 	left: 0;
@@ -269,42 +270,89 @@ body {
 	&__bg {
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.6);
+		background-color: rgba(0, 0, 0, 0.3);
 		z-index: 15;
 	}
 	&__text {
+		height: 100%;
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		top: 0;
 		left: 0;
 		right: 0;
+		bottom: 0;
 		display: flex;
 		flex-direction: column;
 		font-family: 'Raleway';
 		color: var(--bg-color);
 		z-index: 2000;
 		&-title {
-			margin-top: 5px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			padding-bottom: 10px;
 			font-family: 'Ralewaybold';
 			font-size: 3rem;
 			letter-spacing: 1px;
+			border-bottom: 3px solid var(--main-color);
 		}
-		&-p {
-			font-size: 2rem;
+		&-promo {
+			position: absolute;
+			bottom: 20px;
 		}
+		&-offer {
+			font-size: 1.7rem;
+		}
+		&-highlight {
+			color: var(--btn-hover);
+			font-family: 'Ralewaybold';
+			font-size: larger;
+		}
+	}
+	&__btn {
+		position: relative;
+		width: max-content;
+		margin-top: 10px;
+		padding: 1rem 2rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		border: none;
+		border-radius: 10px;
+		font-size: 1.5rem;
+		font-family: 'Ralewaybold', sans-serif;
+		text-transform: uppercase;
+		text-align: center;
+		letter-spacing: 1px;
+		background-color: var(--main-color);
+		color: #fff;
+		transition: background-color 0.3s, color 0.3s;
+		&-icon {
+			width: 25px;
+			height: 25px;
+			margin-left: 10px;
+		}
+	}
+	&__btn:hover {
+		background-color: var(--header-hover);
+		color: var(--bg-color);
+	}
+	&__link {
+		color: #fff;
+	}
+	&__socials {
+		position: absolute;
+		top: 0;
+		right: -10px;
+	}
+	.icon-box__img:hover {
+		color: var(--main-color);
 	}
 }
 
 //HEADER USED OUTTA INDEX.HTML
 .header--subpage {
 	display: block;
-	// height: 20rem;
-	// .main-wrapper {
-	// 	padding: 2rem 1.5rem;
-	// }
-	// .brMobile {
-	// 	display: none;
-	// }
 }
 
 // =====================================
@@ -387,7 +435,7 @@ body {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(7, 19, 9, 0.6);
+		background-color: rgba(7, 19, 9, 0.5);
 		z-index: 30;
 	}
 	&__text {
