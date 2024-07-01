@@ -12,6 +12,61 @@ $navbarHeight: 67px;
 			font-size: 1.2rem;
 		}
 	}
+
+	.bodyHidden {
+		overflow: hidden;
+	}
+	.main-wrapper {
+		width: 100%;
+	}
+	// BREAKS LINE IN 2 PARAGRAPHS (HERO-IMG AND OFFER). ONLY MOBILE DEVICES on INDEX.HTML
+	.break__line {
+		display: block;
+	}
+
+	.header {
+		width: 100%;
+		height: 90vh;
+		&__hero-img {
+			aspect-ratio: auto 640 / 360;
+			background-position-x: 42%;
+		}
+		&__text {
+			width: 100%;
+			text-align: center;
+			&-title {
+				font-size: 2.5rem;
+				top: 40%;
+			}
+			&-p {
+				margin-bottom: 1rem;
+			}
+			&-promo {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				bottom: 60px;
+			}
+		}
+		&__socials {
+			right: 0;
+			left: 0;
+		}
+		&__btn {
+			margin-top: 35px;
+		}
+		&__link:hover,
+		&__link:active {
+			background-color: var(--bg-color);
+			color: var(--font-color);
+		}
+	}
+	.header--subpage {
+		display: none;
+	}
+
 	.hero-img {
 		background-image: url('../img/girl-5785590_640.jpg');
 		&__bg {
@@ -70,17 +125,6 @@ $navbarHeight: 67px;
 // TABLETS
 // =====================================
 @media (max-width: 560px) {
-	.bodyHidden {
-		overflow: hidden;
-	}
-	.main-wrapper {
-		width: 100%;
-	}
-	// BREAKS LINE IN 2 PARAGRAPHS (HERO-IMG AND OFFER). ONLY MOBILE DEVICES on INDEX.HTML
-	.break__line {
-		display: block;
-	}
-
 	.nav {
 		&__list {
 			flex-direction: column;
@@ -143,51 +187,6 @@ $navbarHeight: 67px;
 		}
 	}
 
-	.header {
-		width: 100%;
-		height: 90vh;
-		&__hero-img {
-			aspect-ratio: auto 640 / 360;
-			background-position-x: 42%;
-		}
-		&__text {
-			width: 100%;
-			top: 37%;
-			padding-left: 0;
-			text-align: center;
-			&-title {
-				font-size: 2.5rem;
-			}
-			&-p {
-				margin-bottom: 1rem;
-			}
-		}
-		// &__link {
-		// 	margin-top: 20px;
-		// 	padding: 1rem 2rem;
-		// 	width: 50%;
-		// 	height: 4rem;
-		// 	border: none;
-		// 	border-radius: 10px;
-		// 	transform: translate(50%);
-		// 	font-size: 1.5rem;
-		// 	font-family: 'Ralewaybold', sans-serif;
-		// 	text-transform: uppercase;
-		// 	text-align: center;
-		// 	letter-spacing: 3px;
-		// 	background-color: var(--main-color);
-		// 	color: #fff;
-		// 	transition: background-color 0.3s, color 0.3s;
-		// }
-		&__link:hover,
-		&__link:active {
-			background-color: var(--bg-color);
-			color: var(--font-color);
-		}
-	}
-	.header--subpage {
-		display: none;
-	}
 	.about-us {
 		display: flex;
 		flex-direction: column;
@@ -272,18 +271,20 @@ $navbarHeight: 67px;
 	.break__line {
 		display: none;
 	}
-	.about-us__picture {
-		padding-left: 1.5rem;
-	}
-	.header__text {
+	.about-us__picture, .header__text {
 		padding-left: 1.5rem;
 	}
 	.header__hero-img {
 		background-image: url('../img/jungle-1807476_1280.jpg');
 	}
+
 }
 
 @media (min-width: 463px) and (max-width: 620px) {
+	.header__text {
+		padding-inline: 1.5rem;
+	}
+
 	.about-us__picture {
 		height: 32rem;
 	}
@@ -354,6 +355,10 @@ $navbarHeight: 67px;
 	}
 	.subpage-card__info {
 		font-size: 1.4rem;
+	}
+	.header__text-title {
+		padding-bottom: 10px;
+		border-bottom: 3px solid var(--main-color);
 	}
 }
 
