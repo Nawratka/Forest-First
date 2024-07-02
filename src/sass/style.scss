@@ -623,7 +623,7 @@ body {
 .card:hover {
 	transform: scale(1.05);
 	background-color: var(--pale-green);
-	box-shadow: 0 5px 10px 1px var(--main-color);
+	box-shadow: 15px 15px 22px var(--btn-hover);
 }
 .card:hover .card__btn {
 	background-color: var(--main-color);
