@@ -2,6 +2,19 @@ $navbarHeight: 67px;
 
 // MOBILE DEVICES
 // =====================================
+@media (max-width: 380px) {
+	.service-box {
+		width: 100%;
+		height: 85px;
+		display: flex;
+		flex-direction: row;
+		box-shadow: 5px 5px 12px gray;
+		&__icon{
+			margin-right: 17px;
+		}
+	}
+}
+
 @media (max-width: 463px) {
 	.cookie {
 		&__p {
@@ -271,13 +284,13 @@ $navbarHeight: 67px;
 	.break__line {
 		display: none;
 	}
-	.about-us__picture, .header__text {
+	.about-us__picture,
+	.header__text {
 		padding-left: 1.5rem;
 	}
 	.header__hero-img {
 		background-image: url('../img/jungle-1807476_1280.jpg');
 	}
-
 }
 
 @media (min-width: 463px) and (max-width: 620px) {
@@ -356,9 +369,8 @@ $navbarHeight: 67px;
 	.subpage-card__info {
 		font-size: 1.4rem;
 	}
-	.header__text-title {
-		padding-bottom: 10px;
-		border-bottom: 3px solid var(--main-color);
+	.services {
+		justify-content: space-between;
 	}
 }
 

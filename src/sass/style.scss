@@ -23,7 +23,7 @@ button {
 // MAIN STYLE PROPERTIES
 // ==========================
 :root {
-	--main-color: rgb(115, 209, 97);
+	--main-color: #73d161;
 	--pale-green: #e7f3e1;
 	--bg-color: #fff;
 	--dark-bg: #2e4734;
@@ -270,7 +270,7 @@ body {
 	&__bg {
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-color: rgba(0, 0, 0, 0.5);
 		z-index: 15;
 	}
 	&__text {
@@ -398,6 +398,36 @@ body {
 			letter-spacing: 1px;
 			line-height: 1.3;
 		}
+	}
+}
+.services {
+	padding-bottom: 5rem;
+	max-width: 800px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+.service-box {
+	min-width: 165px;
+	height: 165px;
+	padding: 2.3rem 1.5rem;
+	background-color: var(--bg-color);
+	color: var(--dark-bg);
+	box-shadow: 15px 15px 22px gray;
+	border-radius: 10px;
+	&__icon {
+		width: 44px;
+		height: 44px;
+		margin-bottom: 10px;
+	}
+	&__title {
+		font-size: 1.8rem;
+		margin-bottom: 10px;
+	}
+	&__text {
+		font-size: 1.3rem;
 	}
 }
 
