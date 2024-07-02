@@ -94,6 +94,16 @@ body {
 }
 
 .section {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	scroll-margin-top: $navbarHeight;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--bg-color);
+	z-index: 25;
 	background-color: var(--bg-color);
 	padding-bottom: 5rem;
 	&__title {
@@ -104,6 +114,9 @@ body {
 		font-family: 'Ralewaylight', sans-serif;
 		text-transform: uppercase;
 		text-align: center;
+	}
+	&__inner-container {
+		max-width: 1000px;
 	}
 }
 
@@ -365,19 +378,31 @@ body {
 // "O NAS" SECTION
 // =====================================
 .about-us {
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	scroll-margin-top: $navbarHeight;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background-color: var(--bg-color);
-	z-index: 25;
-	&__inner-container {
-		max-width: 1000px;
-	}
+	// position: relative;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// scroll-margin-top: $navbarHeight;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// background-color: var(--bg-color);
+	// z-index: 25;
+
+	// position: relative;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// scroll-margin-top: $navbarHeight;
+	// display: flex;
+	// flex-direction: column;
+	// align-items: center;
+	// background-color: var(--bg-color);
+	// z-index: 25;
+
+	// &__inner-container {
+	// 	max-width: 1000px;
+	// }
 	&__picture {
 		display: inline-block;
 		vertical-align: top;
@@ -423,7 +448,6 @@ body {
 	gap: 20px;
 }
 
-
 .service-box {
 	min-width: 165px;
 	height: 165px;
@@ -444,16 +468,16 @@ body {
 	&__text {
 		font-size: 1.3rem;
 	}
-	&:nth-child(1){
+	&:nth-child(1) {
 		animation-delay: 0s;
 	}
-	&:nth-child(2){
+	&:nth-child(2) {
 		animation-delay: 0.1s;
 	}
-	&:nth-child(3){
+	&:nth-child(3) {
 		animation-delay: 0.2s;
 	}
-	&:nth-child(4){
+	&:nth-child(4) {
 		animation-delay: 0.3s;
 	}
 }
@@ -623,7 +647,7 @@ body {
 .card:hover {
 	transform: scale(1.05);
 	background-color: var(--pale-green);
-	box-shadow: 15px 15px 22px var(--btn-hover);
+	box-shadow: 13px 13px 18px var(--btn-hover);
 }
 .card:hover .card__btn {
 	background-color: var(--main-color);
@@ -780,6 +804,54 @@ body {
 }
 
 // =====================================
+// OPINIONS
+// =====================================
+.opinions {
+	background-color: #232724;
+	.section__title {
+		color: var(--bg-color);
+	}
+	.smaller-wrapper {
+		height: 300px;
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	&__img {
+		height: 100%;
+		width: 300px;
+		object-fit: cover;
+	}
+	&__text {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		padding-right: 2rem;
+		color: var(--bg-color);
+	}
+	&__icon {
+		height: 55px;
+		width: 55px;
+		transform: rotate(180deg);
+	}
+	&__content {
+		font-size: 2rem;
+		color: var(--pale-green);
+	}
+	&__name {
+		font-size: 1.8rem;
+		font-weight: bold;
+	}
+	&__icon:nth-last-of-type(1) {
+		-webkit-transform: scaleX(-1);
+		transform: scaleX(-1);
+		align-self: end;
+	}
+}
+
+// =====================================
 // "PREFOOTER" SECTION && FOOTER
 // =====================================
 .footer {
@@ -793,6 +865,9 @@ body {
 	}
 }
 
+// =====================================
+// SOCIAL MEDIA
+// =====================================
 .social-media {
 	width: 100%;
 	min-height: 150px;

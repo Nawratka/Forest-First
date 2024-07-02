@@ -80,15 +80,26 @@ window.addEventListener('resize', () => {
 });
 offerCards.forEach((card) => {
 	card.addEventListener('mouseenter', (e) => {
+		console.log(e.target.dataset.offerNr)
 		if(e.target.dataset.offerNr !== "2"){
 		secondOfferCardBtn.classList.remove('offersection-activebtn');}
 	});
 
 	card.addEventListener('mouseleave', (e) => {
+		console.log(e.target.dataset.offerNr)
 		if(e.target.dataset.offerNr !== "2"){
 		secondOfferCardBtn.classList.add('offersection-activebtn');}
 	});
 });
+// console.log(offerBox);
+// offerBox.addEventListener('mouseenter', () => {
+// 	console.log('wjazd');
+// 	secondOfferCardBtn.classList.remove('offersection-activebtn');
+// });
+// offerBox.addEventListener('mouseout', () => {
+// 	console.log('WYJAZD');
+// 	secondOfferCardBtn.classList.add('offersection-activebtn');
+// });
 
 // MAIN FUNCTIONS AT START
 // =============================================
