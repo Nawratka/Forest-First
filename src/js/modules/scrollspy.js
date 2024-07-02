@@ -3,8 +3,10 @@ const menuItems = document.querySelectorAll('.nav__list-link');
 
 const handleScrollSpy = () => {
 	{
+		
 		const sections = [];
 		scrollSpySections.forEach((section) => {
+			
 			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
 				sections.push(section.id);
 
@@ -15,8 +17,10 @@ const handleScrollSpy = () => {
 				menuItems.forEach((item) => item.classList.remove('active'));
 
 				activeSection.classList.add('active');
+				console.log(section);
 			}
 		});
+		
 	}
 };
 

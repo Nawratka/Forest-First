@@ -24,3 +24,21 @@
 		opacity: 1;
 	}
 }
+
+// =============================
+// SERVICE SECTION ANIMATION
+// =============================
+@keyframes showIcons {
+	0% {
+		opacity: 0;
+		transform: translateZ(-1rem) scale(0.8);
+	}
+	50% {
+		opacity: 0;
+		transform: translateZ(-0.5rem) scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: translateZ(0) scale(1);
+	}
+}

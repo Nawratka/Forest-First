@@ -97,7 +97,8 @@ body {
 	background-color: var(--bg-color);
 	padding-bottom: 5rem;
 	&__title {
-		padding: 5rem 0 3.3rem 0;
+		position: relative;
+		padding: 5rem 0 0.5rem 0;
 		font-size: 3rem;
 		font-weight: 300;
 		font-family: 'Ralewaylight', sans-serif;
@@ -161,6 +162,13 @@ body {
 }
 .cookiehide {
 	display: none;
+}
+
+.underline {
+	margin: 0 auto 5rem;
+	width: 60px;
+	height: 4px;
+	background-color: var(--main-color);
 }
 // =====================================
 // NAV
@@ -400,6 +408,11 @@ body {
 		}
 	}
 }
+
+#services {
+	background-color: var(--pale-green);
+}
+
 .services {
 	padding-bottom: 5rem;
 	max-width: 800px;
@@ -409,14 +422,16 @@ body {
 	justify-content: center;
 	gap: 20px;
 }
+
+
 .service-box {
 	min-width: 165px;
 	height: 165px;
 	padding: 2.3rem 1.5rem;
-	background-color: var(--bg-color);
+	background-color: transparent;
 	color: var(--dark-bg);
-	box-shadow: 15px 15px 22px gray;
-	border-radius: 10px;
+	text-align: center;
+	opacity: 0;
 	&__icon {
 		width: 44px;
 		height: 44px;
@@ -429,6 +444,22 @@ body {
 	&__text {
 		font-size: 1.3rem;
 	}
+	&:nth-child(1){
+		animation-delay: 0s;
+	}
+	&:nth-child(2){
+		animation-delay: 0.1s;
+	}
+	&:nth-child(3){
+		animation-delay: 0.2s;
+	}
+	&:nth-child(4){
+		animation-delay: 0.3s;
+	}
+}
+
+.showing-icons {
+	animation: showIcons 0.5s ease-in 1 normal forwards;
 }
 
 // =====================================
@@ -491,9 +522,6 @@ body {
 	scroll-margin-top: $navbarHeight;
 	position: relative;
 	z-index: 35;
-	.section__title {
-		padding-bottom: 3rem;
-	}
 	&__box {
 		padding: 0 1.5rem;
 		display: flex;
