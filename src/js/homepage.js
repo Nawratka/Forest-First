@@ -194,5 +194,3 @@ function pause() {
 }
 // Resume sliding when mouse is out of the indicators
 indicatorsBox.addEventListener('mouseout', autoSliding);
-
-

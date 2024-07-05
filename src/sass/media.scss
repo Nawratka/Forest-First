@@ -9,6 +9,9 @@ $navbarHeight: 67px;
 	.services {
 		gap: 0;
 	}
+	.opinions__img {
+		width: 35%;
+	}
 }
 
 @media (max-width: 463px) {
@@ -273,6 +276,9 @@ $navbarHeight: 67px;
 	.social-media__text {
 		display: none;
 	}
+	.opinions____test-item {
+		padding-inline: 1.5rem;
+	}
 }
 
 @media (min-width: 560px) {
@@ -367,6 +373,9 @@ $navbarHeight: 67px;
 	}
 	.services {
 		justify-content: space-between;
+	}
+	.opinions__test-item {
+		padding-inline: 0;
 	}
 }
 
