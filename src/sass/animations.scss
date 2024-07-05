@@ -26,7 +26,7 @@
 }
 
 // =============================
-// SERVICE SECTION ANIMATION
+// SERVICES SECTION ANIMATION
 // =============================
 @keyframes showIcons {
 	0% {
@@ -40,5 +40,42 @@
 	100% {
 		opacity: 1;
 		transform: translateZ(0) scale(1);
+	}
+}
+
+// =============================
+// TESTIMONIALS
+// =============================
+@keyframes next1 {
+	from {
+		left: 0%;
+	}
+	to {
+		left: -100%;
+	}
+}
+@keyframes next2 {
+	from {
+		left: 100%;
+	}
+	to {
+		left: 0%;
+	}
+}
+
+@keyframes prev1 {
+	from {
+		left: 0%;
+	}
+	to {
+		left: 100%;
+	}
+}
+@keyframes prev2 {
+	from {
+		left: -100%;
+	}
+	to {
+		left: 0%;
 	}
 }

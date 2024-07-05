@@ -8,10 +8,6 @@ const sideMenuNavList = sideMenu.querySelector('.nav__list');
 const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
-const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
-	.childNodes[9];
-const offerCards = document.querySelectorAll('.card');
-const offerBox = document.querySelector('.offer__box');
 
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
@@ -78,28 +74,6 @@ window.addEventListener('resize', () => {
 		closingSideMenu();
 	}
 });
-offerCards.forEach((card) => {
-	card.addEventListener('mouseenter', (e) => {
-		console.log(e.target.dataset.offerNr)
-		if(e.target.dataset.offerNr !== "2"){
-		secondOfferCardBtn.classList.remove('offersection-activebtn');}
-	});
-
-	card.addEventListener('mouseleave', (e) => {
-		console.log(e.target.dataset.offerNr)
-		if(e.target.dataset.offerNr !== "2"){
-		secondOfferCardBtn.classList.add('offersection-activebtn');}
-	});
-});
-// console.log(offerBox);
-// offerBox.addEventListener('mouseenter', () => {
-// 	console.log('wjazd');
-// 	secondOfferCardBtn.classList.remove('offersection-activebtn');
-// });
-// offerBox.addEventListener('mouseout', () => {
-// 	console.log('WYJAZD');
-// 	secondOfferCardBtn.classList.add('offersection-activebtn');
-// });
 
 // MAIN FUNCTIONS AT START
 // =============================================
@@ -137,3 +111,88 @@ const handleScrollSpy = () => {
 };
 
 window.addEventListener('scroll', handleScrollSpy);
+
+// TESTIMONIALS HANDLE
+// ==============================================
+const testSlides = document.querySelectorAll('.opinions__test-item');
+const dots = document.querySelectorAll('.dot');
+const indicatorsBox = document.querySelector('.opinions__indicators');
+
+let counter = 0;
+let deleteInterval;
+
+function removeAnimationsClasses() {
+	testSlides.forEach((testimonial) =>
+		testimonial.classList.remove(
+			'active-test',
+			'next1',
+			'next2',
+			'prev1',
+			'prev2'
+		)
+	);
+}
+
+function switchTest(currentDot) {
+	removeAnimationsClasses();
+	let testId = currentDot.getAttribute('attr');
+
+	testSlides[testId].classList.add('active-test');
+
+	if (testId > counter) {
+		testSlides[counter].classList.add('next1');
+		counter = testId;
+		testSlides[counter].classList.add('next2');
+	} else if (testId === counter) {
+		return;
+	} else {
+		testSlides[counter].classList.add('prev1');
+		counter = testId;
+		testSlides[counter].classList.add('prev2');
+	}
+	indicators();
+}
+
+dots.forEach((dot) => {
+	dot.addEventListener('click', (e) => {
+		switchTest(e.target);
+	});
+});
+
+function indicators() {
+	for (const dot of dots) {
+		dot.classList.remove('active-dot');
+	}
+	dots[counter].classList.add('active-dot');
+}
+
+function slideNext() {
+	removeAnimationsClasses();
+	testSlides[counter].classList.add('next1');
+	if (counter >= testSlides.length - 1) {
+		counter = 0;
+	} else {
+		counter++;
+	}
+	testSlides[counter].classList.add('next2');
+	indicators();
+}
+
+function autoSliding() {
+	deleteInterval = setInterval(timer, 2000);
+	function timer() {
+		slideNext();
+		indicators();
+	}
+}
+autoSliding();
+
+// Stop auto sliding when mouse is over the indicators
+indicatorsBox.addEventListener('mouseover', pause);
+function pause() {
+	clearInterval(deleteInterval);
+}
+// Resume sliding when mouse is out of the indicators
+indicatorsBox.addEventListener('mouseout', autoSliding);
+
+
