@@ -8,6 +8,10 @@ const sideMenuNavList = sideMenu.querySelector('.nav__list');
 const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
+const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
+	.childNodes[9];
+const offerCards = document.querySelectorAll('.card');
+const offerBox = document.querySelector('.offer__box');
 
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
@@ -73,6 +77,17 @@ window.addEventListener('resize', () => {
 	if (window.innerWidth < mobileViewWidth) {
 		closingSideMenu();
 	}
+});
+offerCards.forEach((card) => {
+	card.addEventListener('mouseenter', (e) => {
+		if(e.target.dataset.offerNr !== "2"){
+		secondOfferCardBtn.classList.remove('offersection-activebtn');}
+	});
+
+	card.addEventListener('mouseleave', (e) => {
+		if(e.target.dataset.offerNr !== "2"){
+		secondOfferCardBtn.classList.add('offersection-activebtn');}
+	});
 });
 
 // MAIN FUNCTIONS AT START

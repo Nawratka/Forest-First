@@ -316,7 +316,8 @@ body {
 		}
 		&-promo {
 			position: absolute;
-			bottom: 20px;
+			bottom: 55px;
+			letter-spacing: 1px;
 		}
 		&-offer {
 			font-size: 1.7rem;
@@ -838,7 +839,7 @@ body {
 		transform: rotate(180deg);
 	}
 	&__content {
-		margin-top: 1.5rem;
+		margin: 1.5rem 0;
 		font-size: 1.7rem;
 		font-style: italic;
 		color: var(--pale-green);
@@ -847,7 +848,7 @@ body {
 		font-size: 1.7rem;
 		font-weight: bold;
 	}
-	&__icon:nth-last-of-type(1) {
+	.second-quote-mark {
 		-webkit-transform: scaleX(-1);
 		transform: scaleX(-1);
 		align-self: end;

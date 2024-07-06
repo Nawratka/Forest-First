@@ -9,8 +9,9 @@ $navbarHeight: 67px;
 	.services {
 		gap: 0;
 	}
-	.opinions__img {
-		width: 35%;
+	.opinions__content,
+	.opinions__name {
+		font-size: 1.4rem;
 	}
 }
 
@@ -55,11 +56,11 @@ $navbarHeight: 67px;
 			}
 			&-promo {
 				width: 100%;
+				top: 33%;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
-				bottom: 60px;
 			}
 		}
 		&__socials {
@@ -131,6 +132,12 @@ $navbarHeight: 67px;
 				left: auto;
 			}
 		}
+	}
+	.opinions__img {
+		width: 35%;
+	}
+	.bike-img {
+		object-position: 70%;
 	}
 }
 
@@ -276,8 +283,20 @@ $navbarHeight: 67px;
 	.social-media__text {
 		display: none;
 	}
-	.opinions____test-item {
+	.opinions___test-item {
 		padding-inline: 1.5rem;
+	}
+
+	.opinions__content,
+	.opinions__name {
+		font-size: 1.4rem;
+	}
+	.opinions__text {
+		justify-content: center;
+	}
+	.opinions__icon {
+		width: 35px;
+		height: 35px;
 	}
 }
 
@@ -388,11 +407,21 @@ $navbarHeight: 67px;
 			padding-bottom: 0;
 		}
 	}
+	.second-quote-mark {
+		display: none;
+	}
+	.opinions__content {
+		margin-bottom: 1.5rem;
+		font-size: 1.4rem;
+	}
+	.opinions__text {
+		justify-content: flex-start;
+	}
 }
 @media (min-width: 680px) {
 	.prefooter-links {
 		width: 50%;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 	.address {
 		display: flex;
