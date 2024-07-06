@@ -9,7 +9,7 @@ const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
 const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
-	.childNodes[9];
+	.childNodes[7];
 const offerCards = document.querySelectorAll('.card');
 const offerBox = document.querySelector('.offer__box');
 
