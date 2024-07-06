@@ -9,7 +9,7 @@ const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
 const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
-	.childNodes[7];
+	.childNodes[9];
 const offerCards = document.querySelectorAll('.card');
 const offerBox = document.querySelector('.offer__box');
 
@@ -101,30 +101,27 @@ const scrollSpySections = document.querySelectorAll('.scroll-section');
 const menuItems = document.querySelectorAll('.nav__list-link');
 
 const handleScrollSpy = () => {
-	{
-		const sections = [];
-		scrollSpySections.forEach((section) => {
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
-				if (section.id === 'services') {
-					if (window.scrollY > 600) {
-						document
-							.querySelectorAll('.service-box')
-							.forEach((box) => box.classList.add('showing-icons'));
-					}
-					return;
+	const sections = [];
+	scrollSpySections.forEach((section) => {
+		if (section.getBoundingClientRect().y < (window.innerHeight / 2)) 			
+			{
+			if (section.id === 'services') {
+				if (window.scrollY > 600) {
+					document
+						.querySelectorAll('.service-box')
+						.forEach((box) => box.classList.add('showing-icons'));
 				}
-				sections.push(section.id);
-
-				const activeSection = document.querySelector(
-					`[href*="${sections[0]}"]`
-				);
-
-				menuItems.forEach((item) => item.classList.remove('active'));
-
-				activeSection.classList.add('active');
+				return;
 			}
-		});
-	}
+			sections.push(section.id);
+
+			const activeSection = document.querySelector(`[href*="${sections[sections.length - 1]}"]`);
+
+			menuItems.forEach((item) => item.classList.remove('active'));
+
+			activeSection.classList.add('active');
+		}
+	});
 };
 
 window.addEventListener('scroll', handleScrollSpy);
@@ -196,7 +193,7 @@ function slideNext() {
 }
 
 function autoSliding() {
-	deleteInterval = setInterval(timer, 2000);
+	deleteInterval = setInterval(timer, 2500);
 	function timer() {
 		slideNext();
 		indicators();
