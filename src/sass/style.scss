@@ -330,7 +330,7 @@ body {
 	}
 	&__btn {
 		position: relative;
-		width: max-content;
+		width: 20rem;
 		margin-top: 10px;
 		padding: 1rem 2rem;
 		display: flex;
@@ -338,7 +338,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		border: none;
-		border-radius: 10px;
+		border-radius: 25px;
 		font-size: 1.5rem;
 		font-family: 'Ralewaybold', sans-serif;
 		text-transform: uppercase;
@@ -541,15 +541,17 @@ body {
 		position: relative;
 		margin-top: 20px;
 		padding: 1.5rem 2.5rem;
-		border: none;
-		border-radius: 10px;
-		transform: translate(50%);
-		font-size: 1.7rem;
+		border-radius: 25px;
+		font-size: 1.5rem;
 		text-align: center;
-		background-color: var(--dark-bg);
-		box-shadow: 0 2px 5px 1px rgba(66, 68, 90, 0.45);
+		font-family: 'Ralewaybold';
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		border: none;
+		box-shadow: 3px 3px 3px 1px rgb(125, 125, 125);
+		background-color: var(--main-color);
 		color: var(--bg-color);
-		transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+		transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 		&-icon {
 			width: 26px;
 			height: 26px;
@@ -560,8 +562,8 @@ body {
 	}
 	&__link:hover,
 	&__link:focus {
-		background-color: var(--main-color);
-		box-shadow: 0 2px 5px 1px var(--main-color);
+		background-color: var(--btn-hover);
+		box-shadow: 3px 3px 3px 1px var(--main-color);
 		color: var(--font-color);
 	}
 }
@@ -919,7 +921,7 @@ body {
 		color: var(--bg-color);
 	}
 	&__icons {
-		width: 320px;
+		width: 300px;
 		margin-inline: auto;
 		display: flex;
 		flex-direction: row;

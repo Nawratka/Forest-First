@@ -9,7 +9,7 @@ const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
 const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
-	.childNodes[9];
+	.childNodes[7];
 const offerCards = document.querySelectorAll('.card');
 const offerBox = document.querySelector('.offer__box');
 
@@ -80,13 +80,15 @@ window.addEventListener('resize', () => {
 });
 offerCards.forEach((card) => {
 	card.addEventListener('mouseenter', (e) => {
-		if(e.target.dataset.offerNr !== "2"){
-		secondOfferCardBtn.classList.remove('offersection-activebtn');}
+		if (e.target.dataset.offerNr !== '2') {
+			secondOfferCardBtn.classList.remove('offersection-activebtn');
+		}
 	});
 
 	card.addEventListener('mouseleave', (e) => {
-		if(e.target.dataset.offerNr !== "2"){
-		secondOfferCardBtn.classList.add('offersection-activebtn');}
+		if (e.target.dataset.offerNr !== '2') {
+			secondOfferCardBtn.classList.add('offersection-activebtn');
+		}
 	});
 });
 
