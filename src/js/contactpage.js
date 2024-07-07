@@ -33,16 +33,10 @@ const setChosenOffer = () => {
 		chosenOffer.children[3].classList.add('offer-vertically-anim');
 		chosenOffer.children[0].classList.add('offer-horizontally-anim');
 		chosenOffer.children[1].classList.add('offer-horizontally-anim');
-		console.log(chosenOffer.offsetTop);
 
-
-		if(offer !== 1) {
-
-			const luka = chosenOffer.getBoundingClientRect(top)
-			// const luka = chosenOffer.previousElementSibling.offsetTop + chosenOffer.previousElementSibling.offsetHeight;
-			window.scrollTo(0, luka);
-		}
-
+		const gap = chosenOffer.getBoundingClientRect(top);
+		// elem hight - nav height - margin
+		window.scrollTo(0, gap.y - 67 - 50);
 	}
 };
 
