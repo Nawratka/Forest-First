@@ -25,6 +25,26 @@ const handleCookieBox = () => {
 	localStorage.setItem('cookie', 'true');
 	cookieBox.classList.add('cookiehide');
 };
+const setChosenOffer = () => {
+	const offer = localStorage.getItem('offer');
+	if (offer) {
+		const chosenOffer = document.querySelector(`[data-offer-nr="${offer}"]`);
+		chosenOffer.children[2].classList.add('offer-vertically-anim');
+		chosenOffer.children[3].classList.add('offer-vertically-anim');
+		chosenOffer.children[0].classList.add('offer-horizontally-anim');
+		chosenOffer.children[1].classList.add('offer-horizontally-anim');
+		console.log(chosenOffer.offsetTop);
+
+
+		if(offer !== 1) {
+
+			const luka = chosenOffer.getBoundingClientRect(top)
+			// const luka = chosenOffer.previousElementSibling.offsetTop + chosenOffer.previousElementSibling.offsetHeight;
+			window.scrollTo(0, luka);
+		}
+
+	}
+};
 
 //REFRESH YEAR IN FOOTER
 // ==============================================
@@ -79,6 +99,7 @@ window.addEventListener('resize', () => {
 // =============================================
 showYear();
 showCookie();
+setChosenOffer();
 
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');

@@ -79,3 +79,31 @@
 		left: 0%;
 	}
 }
+
+// =============================
+// OFFERS SUBPAGE - CHOSEN OFFER ANIMATION
+// =============================
+@keyframes border-vertically {
+	0% {
+		height: 7px;
+		width: 7px;
+		background-color: var(--main-color);
+	}
+	100% {
+		height: 100%;
+		width: 7px;
+		background-color: var(--main-color);
+	}
+}
+@keyframes border-horizontally {
+	0% {
+		height: 7px;
+		width: 7px;
+		background-color: var(--main-color);
+	}
+	100% {
+		height: 7px;
+		width: 100%;
+		background-color: var(--main-color);
+	}
+}

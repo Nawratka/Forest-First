@@ -90,6 +90,10 @@ offerCards.forEach((card) => {
 			secondOfferCardBtn.classList.add('offersection-activebtn');
 		}
 	});
+	card.addEventListener('click', (e) => {
+		if (e.target.classList.contains('card__btn'))
+			localStorage.setItem('offer', e.target.parentElement.dataset.offerNr);
+	});
 });
 
 // MAIN FUNCTIONS AT START
@@ -100,11 +104,10 @@ showCookie();
 const scrollSpySections = document.querySelectorAll('.scroll-section');
 const menuItems = document.querySelectorAll('.nav__list-link');
 
-const handleScrollSpy = () => {
+function handleScrollSpy() {
 	const sections = [];
 	scrollSpySections.forEach((section) => {
-		if (section.getBoundingClientRect().y < (window.innerHeight / 2)) 			
-			{
+		if (section.getBoundingClientRect().y < window.innerHeight / 2) {
 			if (section.id === 'services') {
 				if (window.scrollY > 600) {
 					document
@@ -115,14 +118,16 @@ const handleScrollSpy = () => {
 			}
 			sections.push(section.id);
 
-			const activeSection = document.querySelector(`[href*="${sections[sections.length - 1]}"]`);
+			const activeSection = document.querySelector(
+				`[href*="${sections[sections.length - 1]}"]`
+			);
 
 			menuItems.forEach((item) => item.classList.remove('active'));
 
 			activeSection.classList.add('active');
 		}
 	});
-};
+}
 
 window.addEventListener('scroll', handleScrollSpy);
 
