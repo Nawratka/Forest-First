@@ -157,6 +157,13 @@ $navbarHeight: 67px;
 	.bike-img {
 		object-position: 70%;
 	}
+	.guides__schedule {
+		.table-cell {
+			font-size: 1.2rem;
+			padding: 0;
+			letter-spacing: 0;
+		}
+	}
 }
 
 // TABLETS
@@ -316,6 +323,7 @@ $navbarHeight: 67px;
 		width: 35px;
 		height: 35px;
 	}
+
 }
 
 @media (min-width: 560px) {
@@ -329,6 +337,11 @@ $navbarHeight: 67px;
 	}
 	.header__hero-img {
 		background-image: url('../img/jungle-1807476_1280.jpg');
+	}
+	.guides__schedule {
+		.table-cell {
+			letter-spacing: 1px;
+		}
 	}
 }
 
@@ -401,8 +414,6 @@ $navbarHeight: 67px;
 	}
 }
 
-
-
 @media (max-width: 680px) {
 	.address__map {
 		height: 30rem;
@@ -454,7 +465,7 @@ $navbarHeight: 67px;
 				margin: 0 -20px;
 				object-fit: cover;
 				object-position: center;
-				box-shadow: 0 25px 25px rgba(0,0,0,0.25);
+				box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
 				transition: 0.5s;
 				transform: rotate(calc(var(--r) * 1deg));
 			}

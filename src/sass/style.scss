@@ -1307,17 +1307,38 @@ body {
 	&__list-item::marker {
 		color: var(--main-color);
 	}
-	&__cards {
+}
+.guides__schedule {
+	width: 100%;
+	background-color: var(--dark-bg);
+	color: var(--bg-color);
+	font-size: 1.5rem;
+	&-container {
 		width: 100%;
-		height: 200px;
-		// background-color: violet;
 	}
-	&__green-bg {
+	&-table {
 		width: 100%;
-		height: 50%;
+	}
+	.table-row {
+		height: 65px;
+		overflow: hidden;
+	}
+	.table-row:nth-child(1) {
+		text-transform: uppercase;
+		position: relative;
+	}
+	.table-row:nth-child(1)::after {
+		content: '';
 		position: absolute;
-		bottom: 0;
-		background-color: var(--pale-green);
+		bottom: 0;left: 0;
+		height: 5px;
+		width: 100%;
+		background-color: #46783c;
+	}
+	.table-cell {
+		font-size: 1.6rem;
+		color: var(--bg-color);
+		text-align: center;
 	}
 }
 
