@@ -13,6 +13,24 @@ $navbarHeight: 67px;
 	.opinions__name {
 		font-size: 1.4rem;
 	}
+	.guides {
+		&__program {
+			&-imgs {
+				width: 100%;
+				display: block;
+			}
+			&-img {
+				height: 220px;
+				max-width: 100%;
+				object-fit: cover;
+			}
+			&-img:nth-child(2),
+			&-img:nth-child(3),
+			&-img:nth-child(4) {
+				display: none;
+			}
+		}
+	}
 }
 
 @media (max-width: 463px) {
@@ -383,20 +401,7 @@ $navbarHeight: 67px;
 	}
 }
 
-@media (min-width: 825px) {
-	.subpage-card__tag {
-		display: none;
-	}
-	.subpage-card__info {
-		font-size: 1.4rem;
-	}
-	.services {
-		justify-content: space-between;
-	}
-	.opinions__test-item {
-		padding-inline: 0;
-	}
-}
+
 
 @media (max-width: 680px) {
 	.address__map {
@@ -427,6 +432,34 @@ $navbarHeight: 67px;
 		display: flex;
 		flex-direction: row;
 	}
+	.guides {
+		&__program {
+			&-text {
+				margin-bottom: 0;
+			}
+			&-imgs {
+				height: 280px;
+				display: flex;
+				flex-direction: row;
+				flex-wrap: nowrap;
+				gap: 0;
+			}
+			&-imgs:hover &-img {
+				transform: rotate(0);
+				margin: 0;
+			}
+			&-img {
+				width: 170px;
+				height: 170px;
+				margin: 0 -20px;
+				object-fit: cover;
+				object-position: center;
+				box-shadow: 0 25px 25px rgba(0,0,0,0.25);
+				transition: 0.5s;
+				transform: rotate(calc(var(--r) * 1deg));
+			}
+		}
+	}
 }
 @media (min-width: 770px) {
 	.about-us__text {
@@ -434,6 +467,26 @@ $navbarHeight: 67px;
 	}
 	.about-us__text-p {
 		line-height: 1.9;
+	}
+	.guides__program-imgs {
+		gap: 10px;
+	}
+}
+@media (min-width: 825px) {
+	.subpage-card__tag {
+		display: none;
+	}
+	.subpage-card__info {
+		font-size: 1.4rem;
+	}
+	.services {
+		justify-content: space-between;
+	}
+	.opinions__test-item {
+		padding-inline: 0;
+	}
+	.guides__program-imgs {
+		gap: 20px;
 	}
 }
 

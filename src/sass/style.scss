@@ -1254,6 +1254,73 @@ body {
 	}
 }
 
+// =====================================
+// GUIDES - SUBPAGE
+// =====================================
+.guides {
+	width: 100%;
+	background-color: var(--bg-color);
+	font: var(--font-color);
+	font-size: 1.5rem;
+	&__p {
+		margin-bottom: 15px;
+	}
+	&__list {
+		margin-bottom: 25px;
+	}
+	&__program {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-inline: 1.5rem;
+		&-text {
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+		&-imgs {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+		&-img {
+			max-width: 45%;
+			height: 170px;
+			object-fit: cover;
+			object-position: center;
+			border-radius: 3px;
+			border: 1px solid gray;
+		}
+	}
+	&__list {
+		padding-left: 1.5rem;
+	}
+	&__list-item {
+		padding-left: 1rem;
+		line-height: 27px;
+		list-style-type: disc;
+	}
+	&__list-item::marker {
+		color: var(--main-color);
+	}
+	&__cards {
+		width: 100%;
+		height: 200px;
+		// background-color: violet;
+	}
+	&__green-bg {
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		bottom: 0;
+		background-color: var(--pale-green);
+	}
+}
+
 @import './animations.scss';
 @import './media.scss';
 @import './fontfaces.scss';
