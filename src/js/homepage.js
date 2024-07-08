@@ -8,6 +8,10 @@ const sideMenuNavList = sideMenu.querySelector('.nav__list');
 const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
+const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
+	.childNodes[7];
+const offerCards = document.querySelectorAll('.card');
+const offerBox = document.querySelector('.offer__box');
 
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
@@ -24,20 +28,6 @@ const showCookie = () => {
 const handleCookieBox = () => {
 	localStorage.setItem('cookie', 'true');
 	cookieBox.classList.add('cookiehide');
-};
-const setChosenOffer = () => {
-	const offer = localStorage.getItem('offer');
-	if (offer) {
-		const chosenOffer = document.querySelector(`[data-offer-nr="${offer}"]`);
-		chosenOffer.children[2].classList.add('offer-vertically-anim');
-		chosenOffer.children[3].classList.add('offer-vertically-anim');
-		chosenOffer.children[0].classList.add('offer-horizontally-anim');
-		chosenOffer.children[1].classList.add('offer-horizontally-anim');
-
-		const gap = chosenOffer.getBoundingClientRect(top);
-		// elem hight - nav height - margin
-		window.scrollTo(0, gap.y - 67 - 50);
-	}
 };
 
 //REFRESH YEAR IN FOOTER
@@ -88,37 +78,138 @@ window.addEventListener('resize', () => {
 		closingSideMenu();
 	}
 });
+offerCards.forEach((card) => {
+	card.addEventListener('mouseenter', (e) => {
+		if (e.target.dataset.offerNr !== '2') {
+			secondOfferCardBtn.classList.remove('offersection-activebtn');
+		}
+	});
+
+	card.addEventListener('mouseleave', (e) => {
+		if (e.target.dataset.offerNr !== '2') {
+			secondOfferCardBtn.classList.add('offersection-activebtn');
+		}
+	});
+	card.addEventListener('click', (e) => {
+		if (e.target.classList.contains('card__btn'))
+			localStorage.setItem('offer', e.target.parentElement.dataset.offerNr);
+	});
+});
 
 // MAIN FUNCTIONS AT START
 // =============================================
 showYear();
 showCookie();
-setChosenOffer();
 
 const scrollSpySections = document.querySelectorAll('.scroll-section');
 const menuItems = document.querySelectorAll('.nav__list-link');
 
-const handleScrollSpy = () => {
-	{
-		
-		const sections = [];
-		scrollSpySections.forEach((section) => {
-			
-			if (window.scrollY <= section.offsetTop + section.offsetHeight - 103) {
-				sections.push(section.id);
-
-				const activeSection = document.querySelector(
-					`[href*="${sections[0]}"]`
-				);
-
-				menuItems.forEach((item) => item.classList.remove('active'));
-
-				activeSection.classList.add('active');
-				console.log(section);
+function handleScrollSpy() {
+	const sections = [];
+	scrollSpySections.forEach((section) => {
+		if (section.getBoundingClientRect().y < window.innerHeight / 2) {
+			if (section.id === 'services') {
+				if (window.scrollY > 600) {
+					document
+						.querySelectorAll('.service-box')
+						.forEach((box) => box.classList.add('showing-icons'));
+				}
+				return;
 			}
-		});
-		
-	}
-};
+			sections.push(section.id);
+
+			const activeSection = document.querySelector(
+				`[href*="${sections[sections.length - 1]}"]`
+			);
+
+			menuItems.forEach((item) => item.classList.remove('active'));
+
+			activeSection.classList.add('active');
+		}
+	});
+}
 
 window.addEventListener('scroll', handleScrollSpy);
+
+// TESTIMONIALS HANDLE
+// ==============================================
+const testSlides = document.querySelectorAll('.opinions__test-item');
+const dots = document.querySelectorAll('.dot');
+const indicatorsBox = document.querySelector('.opinions__indicators');
+
+let counter = 0;
+let deleteInterval;
+
+function removeAnimationsClasses() {
+	testSlides.forEach((testimonial) =>
+		testimonial.classList.remove(
+			'active-test',
+			'next1',
+			'next2',
+			'prev1',
+			'prev2'
+		)
+	);
+}
+
+function switchTest(currentDot) {
+	removeAnimationsClasses();
+	let testId = currentDot.getAttribute('attr');
+
+	testSlides[testId].classList.add('active-test');
+
+	if (testId > counter) {
+		testSlides[counter].classList.add('next1');
+		counter = testId;
+		testSlides[counter].classList.add('next2');
+	} else if (testId === counter) {
+		return;
+	} else {
+		testSlides[counter].classList.add('prev1');
+		counter = testId;
+		testSlides[counter].classList.add('prev2');
+	}
+	indicators();
+}
+
+dots.forEach((dot) => {
+	dot.addEventListener('click', (e) => {
+		switchTest(e.target);
+	});
+});
+
+function indicators() {
+	for (const dot of dots) {
+		dot.classList.remove('active-dot');
+	}
+	dots[counter].classList.add('active-dot');
+}
+
+function slideNext() {
+	removeAnimationsClasses();
+	testSlides[counter].classList.add('next1');
+	if (counter >= testSlides.length - 1) {
+		counter = 0;
+	} else {
+		counter++;
+	}
+	testSlides[counter].classList.add('next2');
+	indicators();
+}
+
+function autoSliding() {
+	deleteInterval = setInterval(timer, 2500);
+	function timer() {
+		slideNext();
+		indicators();
+	}
+}
+autoSliding();
+
+// Stop auto sliding when mouse is over the indicators
+indicatorsBox.addEventListener('mouseover', pause);
+function pause() {
+	clearInterval(deleteInterval);
+}
+// Resume sliding when mouse is out of the indicators
+indicatorsBox.addEventListener('mouseout', autoSliding);
