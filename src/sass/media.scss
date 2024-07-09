@@ -323,7 +323,20 @@ $navbarHeight: 67px;
 		width: 35px;
 		height: 35px;
 	}
-
+	.guides__lists {
+		padding-inline: 1.5rem;
+		gap: 35px;
+		align-items: start;
+		justify-content: space-between;
+	}
+	.guides__p {
+		font-size: 1.5rem;
+	}
+	.guides__list-item {
+		font-size: 1.4rem;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
 }
 
 @media (min-width: 560px) {
