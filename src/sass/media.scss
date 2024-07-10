@@ -164,6 +164,83 @@ $navbarHeight: 67px;
 			letter-spacing: 0;
 		}
 	}
+	.guides__lists {
+		flex-direction: column;
+	}
+	.guides__list {
+		margin-bottom: 0;
+	}
+	.guides__people-container {
+		flex-direction: column;
+	}
+	.guides__card {
+		width: auto;
+		height: 120px;
+		box-shadow: none;
+		transform: translateX(-150%);
+		&-img {
+			width: 30%;
+			height: inherit;
+			z-index: 5;
+		}
+		&-text {
+			position: absolute;
+			left: 30%;
+			width: 70%;
+			justify-content: center;
+			align-items: start;
+			font-size: 1.2rem;
+			color: var(--font-color);
+			opacity: 1;
+		}
+		&-name {
+			font-size: 1.3rem;
+			color: var(--dark-bg);
+		}
+		&:nth-child(2) {
+			animation-delay: 0.1s;
+		}
+		&:nth-child(3) {
+			animation-delay: 0.2s;
+		}
+		&:nth-child(4) {
+			animation-delay: 0.3s;
+		}
+		&:hover {
+			box-shadow: 5px 5px 10px rgb(115, 209, 97);
+		}
+	}
+}
+
+.moveCard {
+	animation: move-guides-card 0.5s ease-out forwards 1;
+}
+
+@media (min-width: 463px) {
+	.guides {
+		&__card::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgb(135, 250, 111);
+			background: linear-gradient(
+				0,
+				rgba(23, 130, 0, 0.9),
+				rgba(84, 184, 63, 0.31) 80%
+			);
+			transform: translateY(100%);
+			transition: transform 0.1s;
+		}
+		&__card:hover::after {
+			transform: translateY(0%);
+		}
+		&__card:hover &__card-text {
+			animation: addAnimText 0.1s forwards 0.1s 1;
+		}
+	}
 }
 
 // TABLETS
@@ -325,9 +402,10 @@ $navbarHeight: 67px;
 	}
 	.guides__lists {
 		padding-inline: 1.5rem;
-		gap: 35px;
+		margin-bottom: 20px;
 		align-items: start;
 		justify-content: space-between;
+		gap: 0;
 	}
 	.guides__p {
 		font-size: 1.5rem;
@@ -425,6 +503,20 @@ $navbarHeight: 67px;
 			}
 		}
 	}
+	.guides__card {
+		flex-grow: 0.7;
+		&-text {
+			opacity: 0;
+		}
+	}
+	.guides__card:hover {
+		flex-grow: 10;
+	}
+	@media (min-width: 643px) {
+		.guides__card:hover {
+			flex-grow: 2;
+		}
+	}
 }
 
 @media (max-width: 680px) {
@@ -512,6 +604,12 @@ $navbarHeight: 67px;
 	}
 	.guides__program-imgs {
 		gap: 20px;
+	}
+	.guides__card::after {
+		transition: transform 0.3s;
+	}
+	.guides__card {
+		width: 25%;
 	}
 }
 

@@ -824,7 +824,7 @@ body {
 //                OPINIONS
 // =====================================
 .opinions {
-	padding-bottom: 9rem;
+	padding-bottom: 10rem;
 	background-color: #232724;
 	.section__title {
 		color: var(--bg-color);
@@ -896,7 +896,7 @@ body {
 	}
 	&__indicators {
 		position: absolute;
-		bottom: 30px;
+		bottom: 35px;
 		left: 50%;
 		transform: translateX(-50%);
 		padding: 5px;
@@ -1322,6 +1322,46 @@ body {
 	&__list-item::marker {
 		color: var(--main-color);
 	}
+	&__card {
+		width: 50px;
+		height: 300px;
+		margin: 10px;
+		position: relative;
+		box-shadow: 0 5px 15px #808080;
+		border-radius: 3px;
+		overflow: hidden;
+		transition: 0.3s;
+		&-img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		&-text {
+			padding: 1rem;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			color: var(--bg-color);
+			font-size: 1.7rem;
+			gap: 15px;
+			letter-spacing: 1px;
+			opacity: 0;
+			transition: opacity 0.3s;
+			z-index: 1;
+		}
+		&-name {
+			font-weight: bold;
+		}
+	}
+	.card-woman {
+		object-position: 65%;
+	}
 }
 .guides__schedule {
 	width: 100%;
@@ -1345,6 +1385,9 @@ body {
 	}
 	&-container {
 		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
 	}
 	&-table {
 		width: 100%;
@@ -1376,7 +1419,7 @@ body {
 .guides__people {
 	position: relative;
 	width: 100%;
-	height: 540px;
+	height: max-content;
 	background-color: var(--bg-color);
 	padding-bottom: 7rem;
 	&-bg {
@@ -1405,20 +1448,12 @@ body {
 		left: 50%;
 	}
 	&-container {
+		padding-inline: 1.5rem;
 		display: flex;
 		flex-direction: row;
-	}
-	.person-card {
-		width: 250px;
-		height: 300px;
-		margin: 10px;
-		&__img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: center;
-			border-radius: 3px;
-		}
+		width: 100%;
+		height: 100%;
+		justify-content: space-between;
 	}
 }
 

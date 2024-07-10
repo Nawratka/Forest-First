@@ -25,7 +25,11 @@ const handleCookieBox = () => {
 	localStorage.setItem('cookie', 'true');
 	cookieBox.classList.add('cookiehide');
 };
+
+// OFFER SUBPAGE, ADD ANIMATION TO CHOSEN OFFER FROM HOMEPAGE
 const setChosenOffer = () => {
+	if (body.dataset.subpage !== 'offer') return;
+
 	const offer = localStorage.getItem('offer');
 	if (offer) {
 		const chosenOffer = document.querySelector(`[data-offer-nr="${offer}"]`);
@@ -56,9 +60,24 @@ const closingSideMenu = () => {
 
 const deleteShowClass = () => {
 	if (window.innerWidth <= mobileViewWidth) {
-		console.log('mniejsze niz 560');
 		closingSideMenu();
 	}
+};
+
+const addTextAnimation = () => {
+	if (body.dataset.subpage !== 'guides') return;
+
+	window.addEventListener('scroll', () => {
+		if (window.innerWidth < 463) {
+			const guidesSection = document.querySelector('.guides__people');
+			if (window.scrollY >= guidesSection.offsetTop - 200) {
+				const guidesCards = document.querySelectorAll('.guides__card')
+				guidesCards.forEach(card => {
+					card.classList.add('moveCard')
+				})
+			}
+		}
+	});
 };
 
 // MAIN LISTENERS
@@ -94,3 +113,4 @@ window.addEventListener('resize', () => {
 showYear();
 showCookie();
 setChosenOffer();
+addTextAnimation();
