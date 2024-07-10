@@ -533,30 +533,29 @@ body {
 		padding-bottom: 4rem;
 		text-align: center;
 		font-size: 1.7rem;
-		&--last {
-			padding: 7rem 0 2rem;
-		}
 	}
 	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		position: relative;
-		margin-top: 20px;
-		padding: 1.5rem 2.5rem;
+		margin-top: 5rem;
+		padding: 1.2rem 2.2rem;
 		border-radius: 25px;
 		font-size: 1.5rem;
 		text-align: center;
-		font-family: 'Ralewaybold';
+		font-family: Ralewaybold;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		border: none;
-		box-shadow: 3px 3px 3px 1px rgb(125, 125, 125);
+		box-shadow: 3px 3px 3px 1px #7d7d7d;
 		background-color: var(--main-color);
 		color: var(--bg-color);
-		transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+		transition: background-color .3s,color .3s,box-shadow .3s;
 		&-icon {
 			width: 26px;
 			height: 26px;
 			position: relative;
-			top: 8px;
 			right: -7px;
 		}
 	}
