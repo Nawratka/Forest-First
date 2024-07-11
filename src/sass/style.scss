@@ -899,7 +899,7 @@ body {
 		left: 50%;
 		transform: translateX(-50%);
 		padding: 5px;
-		cursor: pointer;
+		pointer-events: none;
 	}
 	.dot {
 		width: 15px;
@@ -909,6 +909,8 @@ body {
 		border-radius: 50%;
 		display: inline-block;
 		transition: background-color 0.5s ease;
+		cursor: pointer;
+		pointer-events: auto;
 	}
 	.active-dot {
 		background-color: var(--pale-green);

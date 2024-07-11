@@ -12,7 +12,6 @@ const secondOfferCardBtn = document.querySelector('[data-offer-nr="2"]')
 	.childNodes[7];
 const offerCards = document.querySelectorAll('.card');
 const offerBox = document.querySelector('.offer__box');
-const offerLink = document.querySelector('.offer__link')
 
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
@@ -96,9 +95,6 @@ offerCards.forEach((card) => {
 			localStorage.setItem('offer', e.target.parentElement.dataset.offerNr);
 	});
 });
-offerLink.addEventListener('click', () => {
-	localStorage.removeItem('offer')
-})
 
 // MAIN FUNCTIONS AT START
 // =============================================
