@@ -44,6 +44,18 @@ const setChosenOffer = () => {
 	}
 };
 
+const modalHandle = () => {
+	if (body.dataset.subpage !== 'guides') return;
+
+	const modal = document.querySelector('.dialog');
+	modal.showModal();
+
+	const modalBtn = document.querySelector('.dialog-container__btn');
+	modalBtn.addEventListener('click', () => {
+		modal.close();
+	});
+};
+
 //REFRESH YEAR IN FOOTER
 // ==============================================
 const showYear = () => {
@@ -71,10 +83,10 @@ const addTextAnimation = () => {
 		if (window.innerWidth < 463) {
 			const guidesSection = document.querySelector('.guides__people');
 			if (window.scrollY >= guidesSection.offsetTop - 200) {
-				const guidesCards = document.querySelectorAll('.guides__card')
-				guidesCards.forEach(card => {
-					card.classList.add('moveCard')
-				})
+				const guidesCards = document.querySelectorAll('.guides__card');
+				guidesCards.forEach((card) => {
+					card.classList.add('moveCard');
+				});
 			}
 		}
 	});
@@ -114,6 +126,7 @@ showYear();
 showCookie();
 setChosenOffer();
 addTextAnimation();
+modalHandle();
 
 const name = document.querySelector('#name');
 const email = document.querySelector('#email');
