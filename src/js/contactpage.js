@@ -8,13 +8,25 @@ const sideMenuNavList = sideMenu.querySelector('.nav__list');
 const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
-
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
+const name = document.querySelector('#name');
+const email = document.querySelector('#email');
+const emailLabel = email.nextElementSibling;
+const msg = document.querySelector('#msg');
+const formTextInputs = document.querySelectorAll('[data-textinput]');
+const clearBtn = document.querySelector('.clear-btn');
+const sendBtn = document.querySelector('.send-btn');
+const sendingMsg = document.querySelector('.sending-msg');
+const checkbox = document.querySelector('.agreement-box__checkbox');
+const allErrors = document.querySelectorAll('.form-box__error-text');
+
+let correctFieldsArray = [];
 const mobileViewWidth = 560;
+checkbox.checked = false;
 
 // COOKIES HANDLE
-// ==============================================
+// ======================
 const showCookie = () => {
 	const cookieAcceptation = localStorage.getItem('cookie');
 	if (cookieAcceptation) {
@@ -26,38 +38,8 @@ const handleCookieBox = () => {
 	cookieBox.classList.add('cookiehide');
 };
 
-// OFFER SUBPAGE, ADD ANIMATION TO CHOSEN OFFER FROM HOMEPAGE
-const setChosenOffer = () => {
-	if (body.dataset.subpage !== 'offer') return;
-
-	const offer = localStorage.getItem('offer');
-	if (offer) {
-		const chosenOffer = document.querySelector(`[data-offer-nr="${offer}"]`);
-		chosenOffer.children[2].classList.add('offer-vertically-anim');
-		chosenOffer.children[3].classList.add('offer-vertically-anim');
-		chosenOffer.children[0].classList.add('offer-horizontally-anim');
-		chosenOffer.children[1].classList.add('offer-horizontally-anim');
-
-		const gap = chosenOffer.getBoundingClientRect(top);
-		// elem hight - nav height - margin
-		window.scrollTo(0, gap.y - 67 - 50);
-	}
-};
-
-const modalHandle = () => {
-	if (body.dataset.subpage !== 'guides') return;
-
-	const modal = document.querySelector('.dialog');
-	modal.showModal();
-
-	const modalBtn = document.querySelector('.dialog-container__btn');
-	modalBtn.addEventListener('click', () => {
-		modal.close();
-	});
-};
-
 //REFRESH YEAR IN FOOTER
-// ==============================================
+// ======================
 const showYear = () => {
 	const today = new Date();
 	year.textContent = today.getFullYear();
@@ -70,83 +52,15 @@ const closingSideMenu = () => {
 	burgerBtn.classList.remove('open');
 };
 
-const deleteShowClass = () => {
-	if (window.innerWidth <= mobileViewWidth) {
-		closingSideMenu();
-	}
-};
-
-const addTextAnimation = () => {
-	if (body.dataset.subpage !== 'guides') return;
-
-	window.addEventListener('scroll', () => {
-		if (window.innerWidth < 463) {
-			const guidesSection = document.querySelector('.guides__people');
-			if (window.scrollY >= guidesSection.offsetTop - 200) {
-				const guidesCards = document.querySelectorAll('.guides__card');
-				guidesCards.forEach((card) => {
-					card.classList.add('moveCard');
-				});
-			}
-		}
-	});
-};
-
-// MAIN LISTENERS
-// ==============================================
-burgerBtn.addEventListener('click', () => {
-	body.classList.toggle('bodyHidden');
-	sideMenu.classList.toggle('show');
-	menuOpen = !menuOpen;
-	burgerBtn.classList.toggle('open', menuOpen);
-});
-window.addEventListener('click', (e) => {
-	if (
-		e.target === sideMenu ||
-		e.target === sideMenuNavList ||
-		e.target === nav ||
-		e.target === logo
-	) {
-		closingSideMenu();
-	}
-});
-cookieBtn.addEventListener('click', handleCookieBox);
-sideMenuListLink.forEach((link) =>
-	link.addEventListener('click', closingSideMenu)
-);
-window.addEventListener('resize', () => {
-	if (window.innerWidth < mobileViewWidth) {
-		closingSideMenu();
-	}
-});
-
-// MAIN FUNCTIONS AT START
-// =============================================
-showYear();
-showCookie();
-setChosenOffer();
-addTextAnimation();
-modalHandle();
-
-const name = document.querySelector('#name');
-const email = document.querySelector('#email');
-const emailLabel = email.nextElementSibling;
-const msg = document.querySelector('#msg');
-const formTextInputs = document.querySelectorAll('[data-textinput]');
-const clearBtn = document.querySelector('.clear-btn');
-const sendBtn = document.querySelector('.send-btn');
-const sendingMsg = document.querySelector('.sending-msg');
-const checkbox = document.querySelector('.agreement-box__checkbox');
-const allErrors = document.querySelectorAll('.form-box__error-text');
-let correctFieldsArray = [];
-checkbox.checked = false;
-
 // FUNCTION CHECKS ALL TEXT INPUTS USING DATASETS VALUES - MIN.LENGTH, DEDICATED ERROR TEXT (SEE IN HTML). WHEN ERRORS DISAPPEARS FUNCTION PUSHES [1] TO correctFieldsArray. 3 ITEMS = SUCCESS
 // ==============================================
 const handleFormInputs = (item) => {
 	const innerValue = item.value;
 	let errorText = item.nextElementSibling.nextElementSibling;
-	if (innerValue.trim() === '' || innerValue.trim().length < item.dataset.minlength) {
+	if (
+		innerValue.trim() === '' ||
+		innerValue.trim().length < item.dataset.minlength
+	) {
 		errorText.innerText = item.dataset.errortext;
 		errorText.style.opacity = '1';
 		return;
@@ -194,28 +108,76 @@ const checkboxControl = () => {
 	}
 };
 
-// CONTACT-PAGE LISTENERS
+const formHandle = () => {
+	correctFieldsArray = [];
+	sendingMsg.classList.remove('afterSendingMsg');
+	formTextInputs.forEach((item) => {
+		handleFormInputs(item);
+	});
+	checkboxControl();
+	if (
+		(correctFieldsArray.length === formTextInputs.length) &
+		(checkbox.checked === true)
+	) {
+		clearStuff();
+		sendingMsg.classList.add('afterSendingMsg');
+	}
+};
+
+function formSendHandle() {
+	sendBtn.addEventListener('click', (e) => {
+		e.preventDefault();
+		formHandle();
+	});
+
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter') {
+			e.preventDefault();
+			formHandle();
+		}
+	});
+}
+
+// MAIN FUNCTIONS AT START
+// =============================================
+showYear();
+showCookie();
+formSendHandle();
+
+// MAIN LISTENERS
 // ==============================================
 body.onload = clearStuff();
 clearBtn.addEventListener('click', (e) => {
 	e.preventDefault();
 	clearStuff();
 });
-sendBtn.addEventListener('click', (e) => {
-	e.preventDefault();
-	correctFieldsArray = [];
-	sendingMsg.classList.remove('afterSendingMsg');
-	formTextInputs.forEach(item => {
-		handleFormInputs(item)
-	})
-	checkboxControl();
-	if ((correctFieldsArray.length === formTextInputs.length) & (checkbox.checked === true)) {
-		clearStuff();
-		sendingMsg.classList.add('afterSendingMsg');
+burgerBtn.addEventListener('click', () => {
+	body.classList.toggle('bodyHidden');
+	sideMenu.classList.toggle('show');
+	menuOpen = !menuOpen;
+	burgerBtn.classList.toggle('open', menuOpen);
+});
+window.addEventListener('click', (e) => {
+	if (
+		e.target === sideMenu ||
+		e.target === sideMenuNavList ||
+		e.target === nav ||
+		e.target === logo
+	) {
+		closingSideMenu();
 	}
 });
-// LABEL FLOATING HANDLE FOR INPUT TYPE = 'EMAIL'
-// ==============================================
+cookieBtn.addEventListener('click', handleCookieBox);
+sideMenuListLink.forEach((link) =>
+	link.addEventListener('click', closingSideMenu)
+);
+window.addEventListener('resize', () => {
+	if (window.innerWidth < mobileViewWidth) {
+		closingSideMenu();
+	}
+});
+
+// LABEL FLOATING FOR EMAIL INPUT, INPUT TYPE EMAIL CSS ISSUE
 document.addEventListener('click', (e) => {
 	if (e.target === email) {
 		emailLabel.style.top = '-2px';

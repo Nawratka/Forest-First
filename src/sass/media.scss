@@ -31,6 +31,9 @@ $navbarHeight: 67px;
 			}
 		}
 	}
+	.opinion-box__text {
+		font-size: 1.3rem;
+	}
 }
 
 @media (max-width: 463px) {
@@ -209,6 +212,15 @@ $navbarHeight: 67px;
 		&:hover {
 			box-shadow: 5px 5px 10px rgb(115, 209, 97);
 		}
+	}
+	.contact__p {
+		font-size: 1.5rem;
+	}
+	.contact-container__opinions-rate {
+		flex-direction: column;
+		gap: 10px;
+		justify-content: center;
+		align-items: center;
 	}
 }
 
@@ -576,6 +588,11 @@ $navbarHeight: 67px;
 			}
 		}
 	}
+	.contact:nth-child(2) {
+		.section__title {
+			padding-top: 2rem;
+		}
+	}
 }
 @media (min-width: 770px) {
 	.about-us__text {
@@ -590,6 +607,9 @@ $navbarHeight: 67px;
 	.guides__program-imgs:hover .guides__program-img {
 		transform: rotate(0);
 		margin: 0;
+	}
+	.contact__p {
+		padding-inline: 0;
 	}
 }
 @media (min-width: 825px) {
@@ -613,6 +633,37 @@ $navbarHeight: 67px;
 	}
 	.guides__card {
 		width: 25%;
+	}
+}
+
+@media (max-width: 850px) {
+	.contact-container {
+		flex-direction: column;
+	}
+	.form__p,
+	.form__header {
+		text-align: center;
+	}
+	.form-box {
+		max-width: 470px;
+	}
+	.form {
+		align-items: center;
+	}
+	.contact:nth-child(2) {
+		.underline {
+			margin: 0 auto 3rem;
+		}
+	}
+	.form__control-buttons {
+		padding-bottom: 3rem;
+	}
+}
+@media (min-width: 850px) {
+	.contact:nth-child(2) {
+		.underline {
+			margin: 0 auto 7rem;
+		}
 	}
 }
 
