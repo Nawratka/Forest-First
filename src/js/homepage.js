@@ -52,6 +52,13 @@ const deleteShowClass = () => {
 	}
 };
 
+// CLEAR LOCAL STORAGE OFFER CARD NR
+const handleOfferCard = () => {
+	if(localStorage.getItem('offer')) {
+		localStorage.removeItem('offer')
+	}
+}
+
 // MAIN LISTENERS
 // ==============================================
 burgerBtn.addEventListener('click', () => {
@@ -106,6 +113,7 @@ offerLink.addEventListener('click', () => {
 // =============================================
 showYear();
 showCookie();
+handleOfferCard();
 
 const scrollSpySections = document.querySelectorAll('.scroll-section');
 const menuItems = document.querySelectorAll('.nav__list-link');

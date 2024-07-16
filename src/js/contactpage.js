@@ -90,6 +90,7 @@ const checkEmail = (item) => {
 };
 
 const clearStuff = () => {
+	sendingMsg.classList.remove('afterSendingMsg');
 	formTextInputs.forEach((item) => {
 		item.value = '';
 		allErrors.forEach((el) => {
@@ -98,7 +99,6 @@ const clearStuff = () => {
 	});
 	checkbox.classList.remove('checkbox-error');
 	checkbox.checked = false;
-	sendingMsg.classList.remove('afterSendingMsg');
 };
 
 const checkboxControl = () => {
@@ -111,7 +111,6 @@ const checkboxControl = () => {
 
 const formHandle = () => {
 	correctFieldsArray = [];
-	sendingMsg.classList.remove('afterSendingMsg');
 	formTextInputs.forEach((item) => {
 		handleFormInputs(item);
 	});
@@ -128,12 +127,14 @@ const formHandle = () => {
 function formSendHandle() {
 	sendBtn.addEventListener('click', (e) => {
 		e.preventDefault();
+		sendingMsg.classList.remove('afterSendingMsg');
 		formHandle();
 	});
 
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'Enter') {
 			e.preventDefault();
+			sendingMsg.classList.remove('afterSendingMsg');
 			formHandle();
 		}
 	});

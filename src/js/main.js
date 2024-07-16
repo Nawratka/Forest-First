@@ -70,12 +70,6 @@ const closingSideMenu = () => {
 	burgerBtn.classList.remove('open');
 };
 
-const deleteShowClass = () => {
-	if (window.innerWidth <= mobileViewWidth) {
-		closingSideMenu();
-	}
-};
-
 const addTextAnimation = () => {
 	if (body.dataset.subpage !== 'guides') return;
 
