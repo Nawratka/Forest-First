@@ -33,12 +33,12 @@ NAV
             </div>
             <div class="side-menu">
                 <ul class="nav__list">
-                    <li class="nav__list-item"><a href="https://nawratka.github.io/Forest-First/index.html#home" class="nav__list-link">Home</a></li>
-                    <li class="nav__list-item"><a href="https://nawratka.github.io/Forest-First/index.html#about-us" class="nav__list-link">O
+                    <li class="nav__list-item"><a href="./index.html#home" class="nav__list-link">Home</a></li>
+                    <li class="nav__list-item"><a href="./index.html#about-us" class="nav__list-link">O
                             nas</a></li>
-                    <li class="nav__list-item"><a href="https://nawratka.github.io/Forest-First/index.html#offer" class="nav__list-link">Oferta</a>
+                    <li class="nav__list-item"><a href="./index.html#offer" class="nav__list-link">Oferta</a>
                     </li>
-                    <li class="nav__list-item"><a href="https://nawratka.github.io/Forest-First/contact.html" class="nav__list-link active">Kontakt</a>
+                    <li class="nav__list-item"><a href="./contact.html" class="active nav__list-link">Kontakt</a>
                     </li>
                 </ul>
             </div>
@@ -105,9 +105,10 @@ HEADER
                 </div>
                 <h1 class="header__text-title">Najpiękniejszy park <br class="break__line">w Twojej okolicy!</h1>
                 <div class="header__text-promo">
-                    <p class="header__text-offer">Zdobącz <span class="header__text-highlight">do 30%</span> zniżki na wycieczkę <br> z ulubionym przewodnikiem</p>
+                    <p class="header__text-offer">Zdobącz <span class="header__text-highlight">do 30%</span> zniżki na
+                        wycieczkę <br> z ulubionym przewodnikiem</p>
                     <a href="guides.html" class="header__btn header__link" type="button">Wybierz <img
-                        src="dist/img/arrow-right.svg" alt="arrow right" class="header__btn-icon"></a>
+                            src="dist/img/arrow-right.svg" alt="arrow right" class="header__btn-icon"></a>
                 </div>
             </div>
         </div>
@@ -117,32 +118,36 @@ CONTACT PAGE
 =======================================  -->
     <main class="contact-subpage">
         <section class="contact section main-wrapper">
-            <h1 class="section__title subpage-title">kontakt</h1>
-            <p class="contact__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquam saepe alias</p>
+            <h1 class="section__title subpage-title">adres</h1>
+            <div class="underline"></div>
+            <p class="contact__p smaller-wrapper">Nasz wspaniały Park mieści się w Jurze Krakowsko-Częstochowskiej,
+                niedaleko Krakowa. Przyjedź, poznaj i zostań na dłużej. Czeka na Ciebie moc przygód!</p>
             <div class="address">
                 <div class="address-data">
                     <div class="address-data__vertical-container">
                         <div class="address-data__line-container">
-                            <div class="icon-box"><img src="./dist/img/map-pin.svg" alt="address icon"
-                                    class="icon-box__img">
+                            <div class="address-data__icon"><img src="./dist/img/map-pin.svg" alt="address icon"
+                                    class="address-data__icon-img">
                             </div>
                             <p class="address-data__p">ul. Jasnogórska 2<br> 31-000 Kraków</p>
                         </div>
                         <div class="address-data__line-container">
-                            <div class="icon-box"><img src="./dist/img/phone-call.svg" alt="phone number icon"
-                                    class="icon-box__img"></div>
+                            <div class="address-data__icon"><img src="./dist/img/phone-call.svg" alt="phone number icon"
+                                    class="address-data__icon-img"></div>
                             <p class="address-data__p">890 890 890</p>
                         </div>
                         <div class="address-data__line-container">
-                            <div class="icon-box"><img src="./dist/img/mail.svg" alt="email icon" class="icon-box__img">
+                            <div class="address-data__icon"><img src="./dist/img/mail.svg" alt="email icon"
+                                    class="address-data__icon-img">
                             </div>
                             <p class="address-data__p">
-                                <a href="mailto:kontakt@forest.pl" class="address-data__mail-link">kontakt@forest.pl
-                                </a>
+                                <a href="mailto:kontakt@forest.pl" class="address-data__mail-link">kontakt@forest.pl</a>
                             </p>
                         </div>
                     </div>
                 </div>
+
+
                 <div class="address__map">
                     <iframe title="mapWithLocalization"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10244.975805237627!2d19.925234743349026!3d50.06299282571415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b10235794ff%3A0xe0ba86c80b8e37ae!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1689677747871!5m2!1spl!2spl"
@@ -152,82 +157,186 @@ CONTACT PAGE
             </div>
         </section>
 
-        <form action="" class="form">
-            <div class="form__innerContainer smaller-wrapper">
-                <h2 class="section__title contact__heading">napisz do nas</h2>
-                <p class="sending-msg">Dziękujemy za wiadomość!</p>
-                <div class="form-box">
-                    <input type="text" name="name" id="name" class="form-box__input" required data-minLength="3"
-                        data-errorText="Wprowadź swoje imię, min. 3 znaki" data-textinput>
-                    <label for="name" class="form-box__label"><span>Imię</span></label>
-                    <p class="form-box__error-text">error</p>
+        <section class="contact section main-wrapper">
+            <h1 class="section__title subpage-title">kontakt</h1>
+            <div class="underline"></div>
+
+            <div class="contact-container main-wrapper">
+                <div class="contact-container__form">
+                    <form action="" class="form">
+                        <p class="form__p">Daj się zapamiętać!</p>
+                        <h2 class="form__header">Masz pytanie lub opnię o nas? Napisz!</h2>
+                        <p class="sending-msg">Dziękujemy za wiadomość!</p>
+                        <div class="form-box">
+                            <input type="text" name="name" id="name" class="form-box__input" required data-minLength="3"
+                                data-errorText="Wprowadź swoje imię, min. 3 znaki" data-textinput>
+                            <label for="name" class="form-box__label"><span>Imię</span></label>
+                            <p class="form-box__error-text">error</p>
+                        </div>
+                        <div class="form-box">
+                            <input type="email" name="email" id="email" class="form-box__input" required
+                                data-minLength="7" data-errorText="Wprowadź adres mailowy" data-textinput>
+                            <label for="email" class="form-box__label"><span class="form-box__span">Adres
+                                    mailowy</span></label>
+                            <p class="form-box__error-text">error</p>
+                        </div>
+                        <div class="form-box">
+                            <textarea id="msg" maxlength="1000" class="form-box__textarea" required data-minLength="30"
+                                data-errorText="Wprowadź treść wiadomości, min. 30 znaków" data-textinput></textarea>
+                            <label for="msg" class="form-box__label"><span class="form-box__span">Treść
+                                    wiadomości</span></label>
+                            <p class="form-box__error-text">error</p>
+                        </div>
+                        <div class="form-box agreement-box">
+                            <input type="checkbox" id="agreement" name="agreement" class="agreement-box__checkbox"
+                                required />
+                            <label for="agreement" class="agreement-box__text">Wyrażam zgodę na przetwarzanie moich
+                                danych osobowych zgodnie z ustawą
+                                o ochronie danych osobowych. Administratorem danych osobowych jest Forest, ul. Jasnogórska 2, 31-000
+                                Kraków.</label>
+                        </div>
+                        <div class="form__control-buttons">
+                            <button class="contact-container__btn clear-btn" onclick="this.blur()">Wyczyść</button>
+                            <button class="contact-container__btn send-btn" onclick="this.blur()">Wyślij</button>
+                        </div>
+
+                    </form>
                 </div>
-                <div class="form-box">
-                    <input type="email" name="email" id="email" class="form-box__input" required data-minLength="7"
-                        data-errorText="Wprowadź adres mailowy" data-textinput>
-                    <label for="email" class="form-box__label"><span class="form-box__span">Adres mailowy</span></label>
-                    <p class="form-box__error-text">error</p>
-                </div>
-                <div class="form-box">
-                    <textarea id="msg" maxlength="1000" class="form-box__textarea" required data-minLength="30"
-                        data-errorText="Wprowadź treść wiadomości, min. 30 znaków" data-textinput></textarea>
-                    <label for="msg" class="form-box__label"><span class="form-box__span">Treść
-                            wiadomości</span></label>
-                    <p class="form-box__error-text">error</p>
-                </div>
-                <div class="form-box agreement-box">
-                    <input type="checkbox" id="agreement" name="agreement" class="agreement-box__checkbox" required />
-                    <label for="agreement" class="agreement-box__text">Wyrażam zgodę na przetwarzanie moich danych
-                        osobowych zgodnie z ustawą
-                        o ochronie danych osobowych. Podanie danych jest dobrowolne, ale niezbędne do przetworzenia
-                        zapytania. Administratorem danych osobowych jest Forest Group
-                        Company Ltd., ul. Jasnogórska 2, 31-000 Kraków.</label>
-                </div>
-                <div class="form__control-buttons">
-                    <button class="regular-button clear-btn" onclick="this.blur()">Wyczyść</button>
-                    <button class="regular-button send-btn" onclick="this.blur()">Wyślij</button>
+
+                <div class="contact-container__opinions">
+                    <div class="contact-container__opinions-rate">
+                        <span>
+                            <img src="./dist/img/star.svg" alt="">
+                            <img src="./dist/img/star.svg" alt="">
+                            <img src="./dist/img/star.svg" alt="">
+                            <img src="./dist/img/star.svg" alt="">
+                            <img src="./dist/img/star.svg" alt="">
+                        </span>
+                        <p>4.9 na 5 z 800 opnii Google</p>
+                    </div>
+                    <p class="contact-container__opinions-p">Dołącz do <span
+                            style="text-decoration: underline;">3000+</span> zadowolonych klientów</p>
+
+                    <div class="contact-container__opinions-container">
+                        <div class="outer">
+                            <div class="opinion-box" style="--delay: -1;">
+                                <div class="opinion-box__img">
+                                    <img src="./dist/img/test-man1.jpg" alt="">
+                                </div>
+                                <div class="opinion-box__text">
+                                    <p class="opinion-box__content">
+                                        Jestem bardzo zadowolony, chcę tu wrócić z całą rodziną!
+                                    </p>
+                                    <p class="opinion-box__name">Marek Nowak</p>
+                                </div>
+                            </div>
+
+                            <div class="opinion-box" style="--delay: 0;">
+                                <div class="opinion-box__img">
+                                    <img src="./dist/img/test-woman1.jpg" alt="">
+                                </div>
+                                <div class="opinion-box__text">
+                                    <p class="opinion-box__content">Wybrałam opcję Premium i muszę ochłonąć z ilości
+                                        wrażeń.
+                                        Super!</p>
+                                    <p class="opinion-box__name">Lena Nowak</p>
+                                </div>
+                            </div>
+                            <div class="opinion-box" style="--delay: 1;">
+                                <div class="opinion-box__img">
+                                    <img src="./dist/img/test-man2.jpg" alt="">
+                                </div>
+                                <div class="opinion-box__text">
+                                    <p class="opinion-box__content">
+                                        Integracja z pracy, komplet ludzi, pełen sukces ;)
+                                    </p>
+                                    <p class="opinion-box__name">Marek Nowak</p>
+                                </div>
+                            </div>
+                            <div class="opinion-box" style="--delay: 2;">
+                                <div class="opinion-box__img">
+                                    <img src="./dist/img/test-woman2.jpg" alt="">
+                                </div>
+                                <div class="opinion-box__text">
+                                    <p class="opinion-box__content">Idealne miejsce dla poszukiwaczy przygód!</p>
+                                    <p class="opinion-box__name">Maja Nowak</p>
+                                </div>
+                            </div>
+                            <div class="opinion-box" style="--delay: 3;">
+                                <div class="opinion-box__img">
+                                    <img src="./dist/img/guide1.jpg" alt="">
+                                </div>
+                                <div class="opinion-box__text">
+                                    <p class="opinion-box__content">Chętnie wrócę i poznam więcej możliwości parku!
+                                        Widok na
+                                        góry jest wspaniały!</p>
+                                    <p class="opinion-box__name">Daniel Nowak</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </form>
+        </section>
     </main>
 
     <!-- ===================================== -->
     <!-- FOOTER -->
     <!-- ===================================== -->
     <footer class="footer">
-    <!-- ======================================= -->
-    <!-- FOOTER / SOCIAL MEDIA -->
-    <!-- ======================================= -->
+        <!-- ======================================= -->
+        <!-- FOOTER / SOCIAL MEDIA -->
+        <!-- ======================================= -->
         <section class="social-media">
             <p class="social-media__text">Zobacz nas w Social Mediach!</p>
             <div class="social-media__icons">
                 <div class="icon-box"><a href="https://www.facebook.com/" target="_blank" rel="noopener"
                         class="icon-box__a">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook icon-box__img" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" color="#fff">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-brand-facebook icon-box__img" width="35" height="35"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" color="#fff">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
-                         </svg>
+                        </svg>
                         <!-- <img src="./dist/img/facebook.svg" alt="facebook icon-box" class="icon-box__img"> -->
-                        </a>
+                    </a>
                 </div>
                 <div class="icon-box"><a href="https://www.instagram.com/" target="_blank" rel="noopener"
                         class="icon-box__a">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram icon-box__img" color="#fff"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-instagram icon-box__img" color="#fff">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
                         <!-- <img src="./dist/img/instagram.svg" alt="instagram icon-box" class="icon-box__img"> -->
                     </a>
                 </div>
-                <div class="icon-box"><a href="https://twitter.com/" target="_blank" rel="noopener"
-                        class="icon-box__a">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter icon-box__img" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" color="#fff">
+                <div class="icon-box"><a href="https://twitter.com/" target="_blank" rel="noopener" class="icon-box__a">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="icon icon-tabler icon-tabler-brand-twitter icon-box__img" width="35" height="35"
+                            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round" color="#fff">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
-                         </svg>
+                            <path
+                                d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z">
+                            </path>
+                        </svg>
                         <!-- <img src="./dist/img/twitter.svg" alt="twitter icon-box" class="icon-box__img"> -->
                     </a></div>
                 <div class="icon-box"><a href="https://linkedin.com/" target="_blank" rel="noopener"
                         class="icon-box__a">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin icon-box__img" color="#fff"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                        </a></div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-linkedin icon-box__img" color="#fff">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a></div>
             </div>
         </section>
         <section class="prefooter section">
@@ -266,7 +375,6 @@ CONTACT PAGE
         <p class="footer__p">&copy; <span id="year"></span> Forest Group Company Ltd.</p>
     </footer>
     <script type="module" src="dist/js/contactpage.min.js"></script>
-    <!-- <script type="module" src="dist/js/contact.min.js"></script> -->
 </body>
 
 </html>

@@ -132,3 +132,27 @@
 		opacity: 1;
 	}
 }
+
+@keyframes move-opinion-card {
+	0% {
+		opacity: 0;
+		transform: translateY(100%) scale(0.8);
+	}
+	5%,20% {
+		opacity: 0.4;
+		transform: translateY(100%) scale(0.9);
+	}
+	25%,40% {
+		opacity: 1;
+		pointer-events: all;
+		transform: translateY(0%) scale(1);
+	}
+	45%,60% {
+		opacity: 0;
+		transform: translateY(-100%) scale(0.9);
+	}
+	65%,100% {
+		opacity: 0;
+		transform: translateY(-100%) scale(0.8);
+	}
+}

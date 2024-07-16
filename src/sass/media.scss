@@ -547,6 +547,9 @@ $navbarHeight: 67px;
 	.address {
 		display: flex;
 		flex-direction: row;
+		&-data {
+			max-width: 350px;
+		}
 	}
 	.guides {
 		&__program {
