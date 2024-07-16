@@ -98,6 +98,7 @@ const clearStuff = () => {
 	});
 	checkbox.classList.remove('checkbox-error');
 	checkbox.checked = false;
+	sendingMsg.classList.remove('afterSendingMsg');
 };
 
 const checkboxControl = () => {

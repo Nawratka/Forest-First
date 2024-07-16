@@ -147,10 +147,17 @@ body {
 		margin-left: 5px;
 	}
 	&__btn {
-		color: var(--font-color);
-		font-family: 'Ralewaybold', sans-serif;
+		padding: 1rem 2rem;
+		font-family: Ralewaybold, sans-serif;
 		letter-spacing: 2px;
 		text-transform: uppercase;
+		color: var(--font-color);
+		border-radius: 25px;
+		background-color: var(--main-color);
+		transition: background-color 0.2s;
+	}
+	&__btn:hover {
+		background-color: var(--btn-hover);
 	}
 }
 .cookiehide {

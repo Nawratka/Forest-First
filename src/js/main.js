@@ -2,15 +2,15 @@ const body = document.querySelector('body');
 const html = document.querySelector('html');
 const nav = document.querySelector('.main-wrapper');
 const burgerBtn = document.querySelector('.nav__btn');
-let menuOpen = false;
 const sideMenu = document.querySelector('.side-menu');
 const sideMenuNavList = sideMenu.querySelector('.nav__list');
 const sideMenuListLink = sideMenuNavList.querySelectorAll('a.nav__list-link');
 const logo = document.querySelector('.logo__link');
 const year = document.getElementById('year');
-
 const cookieBox = document.querySelector('.cookie');
 const cookieBtn = document.querySelector('.cookie__btn');
+
+let menuOpen = false;
 const mobileViewWidth = 560;
 
 // COOKIES HANDLE
