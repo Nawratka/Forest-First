@@ -972,7 +972,7 @@ body {
 		width: 15px;
 		height: 15px;
 		margin: 0px 3px;
-		border: 3px solid #aaa;
+		background-color: #808080;
 		border-radius: 50%;
 		display: inline-block;
 		transition: background-color 0.5s ease;
@@ -980,7 +980,7 @@ body {
 		pointer-events: auto;
 	}
 	.active-dot {
-		background-color: var(--pale-green);
+		background-color: var(--main-color);
 	}
 }
 

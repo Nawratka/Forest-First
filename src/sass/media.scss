@@ -91,11 +91,6 @@ $navbarHeight: 67px;
 		&__btn {
 			margin-top: 35px;
 		}
-		&__link:hover,
-		&__link:active {
-			background-color: var(--bg-color);
-			color: var(--font-color);
-		}
 	}
 	.header--subpage {
 		display: none;
