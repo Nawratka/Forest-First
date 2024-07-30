@@ -104,20 +104,20 @@ window.addEventListener('click', (e) => {
 		closingSideMenu();
 	}
 });
-cookieBtn.addEventListener('click', handleCookieBox);
-sideMenuListLink.forEach((link) =>
-	link.addEventListener('click', closingSideMenu)
-);
 window.addEventListener('resize', () => {
 	if (window.innerWidth < mobileViewWidth) {
 		closingSideMenu();
 	}
 });
+window.addEventListener('pageshow', setChosenOffer);
+cookieBtn.addEventListener('click', handleCookieBox);
+sideMenuListLink.forEach((link) =>
+	link.addEventListener('click', closingSideMenu)
+);
 
 // MAIN FUNCTIONS AT START
 // =============================================
 showYear();
 showCookie();
-setChosenOffer();
 addTextAnimation();
 modalHandle();
